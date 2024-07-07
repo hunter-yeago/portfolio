@@ -7,7 +7,7 @@ export default function ProjectSection() {
 return (
 <div className='grid grid-cols-1'>
 
-    <h2 className='text-3xl mx-8'> My Projects </h2>
+    <h2 className='text-3xl text-center'> Projects </h2>
 <div className="portfolio-container grid gap-4 p-4 justify-center">
 
         <div className="portfolio-item bg-white p-4 rounded shadow min-h-[20rem] grid grid-rows-[20%,70%,10%]">
