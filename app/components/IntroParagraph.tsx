@@ -48,7 +48,7 @@ const IntroParagraph: React.FC = () => {
         <div className='flex flex-col items-center justify-center m-8 gap-4'>
             <h1 className='text-2xl'>Hello! I'm Hunter, a developer based in <span id="chicago">Chicago</span>.</h1>
             <p> I love building tools that are <span id="user-friendly">user-friendly,</span> simple, and <span id="delightful">delightful.</span></p> 
-            <p className=''> I'm a web developer for Lettuce Entertain You, Chicago's largest restaurant company, where I manage and create new websites for <span id="70websites">70+ websites.</span></p>
+            <p className='max-w-3xl'> I'm a web developer for Lettuce Entertain You, Chicago's largest restaurant company, where I manage and create new websites for <span id="70websites">70+ </span>websites.</p>
 
             <div className='flex gap-4 mt-4'>
                 <span id="linkedin" className='flex'><a className='bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600' href="https://www.linkedin.com/in/hunter-yeago/" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn - opens in a new tab">View LinkedIn</a></span>
