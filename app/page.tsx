@@ -3,12 +3,14 @@ import Image from "next/image";
 import Navbar from '../app/components/Navbar';
 import IntroParagraph from '../app/components/IntroParagraph';
 import ProjectSection from '../app/components/ProjectSection';
+import ArticleCTA from '../app/components/ArticleCTA';
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <IntroParagraph />
+      <ArticleCTA />
       <ProjectSection />
 
       {/* footer stuff */}

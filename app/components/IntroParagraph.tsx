@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { annotate, annotationGroup } from 'rough-notation';
 
+import Image from 'next/image';
+import hunterHeadshot from '../../public/images/hunter-headshot.jpg';
+import rainImage from '../../public/images/rain-image.jpg';
+
 interface Annotation {
     id: string;
     type: 'underline' | 'highlight' | 'circle'; // Define types for annotation types
@@ -45,16 +49,33 @@ const IntroParagraph: React.FC = () => {
     }, []); // Empty dependency array ensures useEffect runs only once
 
     return (
-        <div className='flex flex-col items-center justify-center m-8 gap-4'>
-            <h1 className='text-2xl'>Hello! I'm Hunter, a developer based in <span id="chicago">Chicago</span>.</h1>
-            <p> I love building tools that are <span id="user-friendly">user-friendly,</span> simple, and <span id="delightful">delightful.</span></p> 
-            <p className='max-w-3xl'> I'm a web developer for Lettuce Entertain You, Chicago's largest restaurant company, where I manage and create new websites for <span id="70websites">70+ </span>websites.</p>
+        <section className='flex flex-col items-center'>
+            <div className='grid grid-rows mt-12 w-[80vw]
+            md-custom:grid-cols-[70%,30%]'>
 
-            <div className='flex gap-4 mt-4'>
-                <span id="linkedin" className='flex'><a className='bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600' href="https://www.linkedin.com/in/hunter-yeago/" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn - opens in a new tab">View LinkedIn</a></span>
-                <a className='bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600' href="https://github.com/hyradar" target="_blank" rel="noopener noreferrer" aria-label="View my Github - opens in a new tab">View Github</a>
+                {/* Left Side Info */}
+                <div className="flex flex-col justify-center gap-4 pr-4">
+                    <h1 className='text-4xl font-semibold'>Hello! I&#39;m Hunter, a developer based in <span id="chicago">Chicago</span>.</h1>
+                    <p> I love building tools that are <span id="user-friendly">user-friendly,</span> simple, and <span id="delightful">delightful.</span></p> 
+                    <p className="max-w-3xl"> I specialize in creating tools that are user-friendly, simple, and delightful. As a web developer at Lettuce Entertain You, Chicago's largest restaurant company, I manage and create new websites for over 70+ properties, ensuring each one is optimized for performance and user experience.</p>
+                    <p className="max-w-3xl"> Beyond my technical expertise, My strong communication skills allow me to effectively convey complex technical concepts to non-technical stakeholders, fostering a collaborative and productive working environment.</p>
+                    <p> I love building tools that are user-friendly, simple, and delightful.</p> 
+                    
+                    {/* Buttons */}
+                    <div className='flex justify-center gap-4 mt-4
+                    md-custom:justify-start'>
+                        <span id="linkedin" className='flex'>
+                            <a className='min-w-40 text-center bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600' href="https://www.linkedin.com/in/hunter-yeago/" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn - opens in a new tab">View LinkedIn</a></span>
+                            <a className='min-w-40 text-center bg-white text-black border border-gray-800 p-2 rounded-md hover:bg-yellow-600' href="https://github.com/hyradar" target="_blank" rel="noopener noreferrer" aria-label="View my Github - opens in a new tab">View Github</a>
+                    </div>
+                </div>
+
+                <div className='hidden overflow-hidden rounded-xl
+                md-custom:block'>
+                    <Image className='scale-150 object-left h-full object-cover' src={rainImage} alt="Hunter Headshot" />
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
 
