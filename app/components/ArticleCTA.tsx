@@ -24,8 +24,8 @@ return(
 
                 
             <div className="p-4 flex flex-col gap-4">
-                <p className="text-gray-700"> I went to PHP[TEK] 2024, and here's my article about it , and here's my article about it! , and here's my article about it! , and here's my article about it! </p>
-                <p className="text-gray-700"> I went to PHP[TEK] 2024, and here's my article about it , and here's my article about it! , and here's my article about it! , and here's my article about it!</p>
+                <p className="text-gray-700"> I went to PHP[TEK] 2024, and here&apos;s my article about it , and here&apos;s my article about it! , and here&apos;s my article about it! , and here&apos;s my article about it! </p>
+                <p className="text-gray-700"> I went to PHP[TEK] 2024, and here&apos;s my article about it , and here&apos;s my article about it! , and here&apos;s my article about it! , and here&apos;s my article about it!</p>
                 <Link className='w-40 text-center bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600' href="/articles/php-tek-2024" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn - opens in a new tab">Read Article</Link>
             </div>
 

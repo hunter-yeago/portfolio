@@ -71,7 +71,7 @@ const IntroParagraph: React.FC = () => {
           <p className="max-w-3xl">
             {" "}
             I specialize in creating tools that are user-friendly, simple, and
-            delightful. As a web developer at Lettuce Entertain You, Chicago's{" "}
+            delightful. As a web developer at Lettuce Entertain You, Chicago&apos;s{" "}
             <span id="70websites">largest</span> restaurant company, I manage
             and create new websites for over 70+ properties, ensuring each one
             is optimized for performance and user experience.
