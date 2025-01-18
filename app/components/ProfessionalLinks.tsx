@@ -16,7 +16,7 @@ export default function ProfessionalLinks() {
 
               <a
                 className="md:w-40 text-center bg-white text-black border border-gray-800 p-2 rounded-md hover:bg-yellow-600"
-                href="https://github.com/hyradar"
+                href="https://github.com/hunter-yeago"
                 target="_blank"
                 aria-label="View Hunter Yeagos Github - opens in a new tab"
               >
