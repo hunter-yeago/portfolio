@@ -4,7 +4,9 @@ import { navData } from "../data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => { setIsOpen(!isOpen); };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const navJSX = navData.map((item) => (
     <li key={item.name}>
