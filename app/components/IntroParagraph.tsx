@@ -17,7 +17,7 @@ const IntroParagraph: React.FC = () => {
   useEffect(() => {
     const annotations: Annotation[] = [
       { id: "chicago", type: "highlight", color: "#7FBEEB" }, //blue
-      { id: "user-friendly", type: "highlight", color: "#E4F0D0" }, //light green
+      // { id: "user-friendly", type: "highlight", color: "#E4F0D0" }, //light green
       { id: "delightful", type: "highlight", color: "#FE938C" }, // light red
       { id: "70websites", type: "highlight", color: "#C1D37F" }, //hunter green
       { id: "linkedin", type: "circle", color: "red" }, //hunter green
@@ -42,30 +42,30 @@ const IntroParagraph: React.FC = () => {
       typeof annotate
     >[]; 
 
-    const ag = annotationGroup(annotationInstances);
-    ag.show();
+    const annotation = annotationGroup(annotationInstances);
+    annotation.show();
 
     
     return () => {
-      ag.hide(); 
+      annotation.hide(); 
     };
   }, []); 
 
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center w-full">
       <div
         className="grid grid-rows mt-12 w-[80vw]
             md-custom:grid-cols-[70%,30%]"
       >
-        <div className="flex flex-col justify-center gap-4 pr-4">
-          <h1 className="text-4xl font-semibold">
+        <div className="flex flex-col justify-center gap-4 pb-8 md:pr-4">
+          <h1 className="text-2xl md:text-4xl font-semibold">
             Hello! I&#39;m Hunter, a developer based in{" "}
             <span id="chicago">Chicago</span>.
           </h1>
           <p>
             {" "}
             I love building tools that are{" "}
-            <span id="user-friendly">user-friendly,</span> simple, and{" "}
+            <span>user-friendly,</span> simple, and{" "}
             <span id="delightful">delightful.</span>
           </p>
           <p className="max-w-3xl">
@@ -76,18 +76,6 @@ const IntroParagraph: React.FC = () => {
             and create new websites for over 70+ properties, ensuring each one
             is optimized for performance and user experience.
           </p>
-          <p className="max-w-3xl">
-            {" "}
-            Beyond my technical expertise, My strong communication skills allow
-            me to effectively convey complex technical concepts to non-technical
-            stakeholders, fostering a collaborative and productive working
-            environment.
-          </p>
-          <p>
-            {" "}
-            I love building tools that are user-friendly, simple, and
-            delightful.
-          </p>
 
           <div
             className="flex justify-center gap-4 mt-4
@@ -95,7 +83,7 @@ const IntroParagraph: React.FC = () => {
           >
             <span id="linkedin" className="flex">
               <a
-                className="w-40 text-center bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600"
+                className="md:w-40 text-center bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600"
                 href="https://www.linkedin.com/in/hunter-yeago/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -105,7 +93,7 @@ const IntroParagraph: React.FC = () => {
               </a>
             </span>
             <a
-              className="w-40 text-center bg-white text-black border border-gray-800 p-2 rounded-md hover:bg-yellow-600"
+              className="md:w-40 text-center bg-white text-black border border-gray-800 p-2 rounded-md hover:bg-yellow-600"
               href="https://github.com/hyradar"
               target="_blank"
               rel="noopener noreferrer"
