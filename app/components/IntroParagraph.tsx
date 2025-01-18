@@ -21,7 +21,6 @@ const IntroParagraph: React.FC = () => {
       { id: "delightful", type: "highlight", color: "#FE938C" }, // light red
       { id: "70websites", type: "highlight", color: "#C1D37F" }, //hunter green
       { id: "linkedin", type: "circle", color: "red" }, //hunter green
-      
     ];
 
     const annotationInstances = annotations
@@ -40,16 +39,15 @@ const IntroParagraph: React.FC = () => {
       })
       .filter((annotation) => annotation !== null) as ReturnType<
       typeof annotate
-    >[]; 
+    >[];
 
     const annotation = annotationGroup(annotationInstances);
     annotation.show();
 
-    
     return () => {
-      annotation.hide(); 
+      annotation.hide();
     };
-  }, []); 
+  }, []);
 
   return (
     <section className="flex flex-col items-center w-full">
@@ -59,28 +57,23 @@ const IntroParagraph: React.FC = () => {
       >
         <div className="flex flex-col justify-center gap-4 pb-8 md:pr-4">
           <h1 className="text-2xl md:text-4xl font-semibold">
-            Hello! I&#39;m Hunter, a developer based in{" "}
-            <span id="chicago">Chicago</span>.
+            Hello! I&#39;m Hunter, a web developer based in
+            <span id="chicago"> Chicago</span>.
           </h1>
           <p>
-            {" "}
-            I love building tools that are{" "}
-            <span>user-friendly,</span> simple, and{" "}
-            <span id="delightful">delightful.</span>
+            I love building tools that are simple, user-friendly, simple, and
+            <span id="delightful"> delightful.</span>
           </p>
           <p className="max-w-3xl">
-            {" "}
             I specialize in creating tools that are user-friendly, simple, and
-            delightful. As a web developer at Lettuce Entertain You, Chicago&apos;s{" "}
-            <span id="70websites">largest</span> restaurant company, I manage
+            delightful. As a web developer at Lettuce Entertain You,
+            Chicago&apos;s
+            <span id="70websites"> largest</span> restaurant company, I manage
             and create new websites for over 70+ properties, ensuring each one
             is optimized for performance and user experience.
           </p>
 
-          <div
-            className="flex justify-center gap-4 mt-4
-                    md-custom:justify-start"
-          >
+          <div className="flex justify-center gap-4 mt-4 md-custom:justify-start">
             <span id="linkedin" className="flex">
               <a
                 className="md:w-40 text-center bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600"

@@ -11,8 +11,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="w-4/5 border-black border-2 mx-auto">
-        {children}
-    </main>
+    <main className="w-4/5 border-black border-2 mx-auto">{children}</main>
   );
 }
