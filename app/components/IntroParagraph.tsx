@@ -3,25 +3,12 @@ import { annotate, annotationGroup } from "rough-notation";
 
 import Image from "next/image";
 import rainImage from "../../public/images/rain-image.jpg";
+import { annotations } from "../data";
+import ProfessionalLinks from "./ProfessionalLinks";
 
-interface Annotation {
-  id: string;
-  type: "underline" | "highlight" | "circle"; // Define types for annotation types
-  color: string;
-  padding?: [number, number];
-}
-
-const IntroParagraph: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null); // Use useRef with proper HTMLCanvasElement type
+function IntroParagraph() {
 
   useEffect(() => {
-    const annotations: Annotation[] = [
-      { id: "chicago", type: "highlight", color: "#7FBEEB" }, //blue
-      // { id: "user-friendly", type: "highlight", color: "#E4F0D0" }, //light green
-      { id: "delightful", type: "highlight", color: "#FE938C" }, // light red
-      { id: "70websites", type: "highlight", color: "#C1D37F" }, //hunter green
-      { id: "linkedin", type: "circle", color: "red" }, //hunter green
-    ];
 
     const annotationInstances = annotations
       .map((annotation) => {
@@ -50,11 +37,7 @@ const IntroParagraph: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-center w-full">
-      <div
-        className="grid grid-rows mt-12 w-[80vw]
-            md-custom:grid-cols-[70%,30%]"
-      >
+    <section className="grid grid-rows mt-20 w-[80vw] md-custom:grid-cols-[70%,30%] mx-auto" aria-label="information about hunter yeago and links to his professional profiles">
         <div className="flex flex-col justify-center gap-4 pb-8 md:pr-4">
           <h1 className="text-2xl md:text-4xl font-semibold">
             Hello! I&#39;m Hunter, a web developer based in
@@ -68,46 +51,21 @@ const IntroParagraph: React.FC = () => {
             I specialize in creating tools that are user-friendly, simple, and
             delightful. As a web developer at Lettuce Entertain You,
             Chicago&apos;s
-            <span id="70websites"> largest</span> restaurant company, I manage
-            and create new websites for over 70+ properties, ensuring each one
+            <span id="40websites"> largest</span> restaurant company, I manage
+            and create new websites for over 40+ properties, ensuring each one
             is optimized for performance and user experience.
           </p>
 
-          <div className="flex justify-center gap-4 mt-4 md-custom:justify-start">
-            <span id="linkedin" className="flex">
-              <a
-                className="md:w-40 text-center bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600"
-                href="https://www.linkedin.com/in/hunter-yeago/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View my LinkedIn - opens in a new tab"
-              >
-                View LinkedIn
-              </a>
-            </span>
-            <a
-              className="md:w-40 text-center bg-white text-black border border-gray-800 p-2 rounded-md hover:bg-yellow-600"
-              href="https://github.com/hyradar"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View my Github - opens in a new tab"
-            >
-              View Github
-            </a>
-          </div>
+          <ProfessionalLinks />
         </div>
 
-        <div
-          className="hidden overflow-hidden rounded-xl
-                md-custom:block"
-        >
+        <div className="hidden overflow-hidden rounded-xl md-custom:block">
           <Image
             className="scale-150 object-left h-full object-cover"
             src={rainImage}
             alt="Hunter Headshot"
           />
         </div>
-      </div>
     </section>
   );
 };

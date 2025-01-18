@@ -1,13 +1,22 @@
-// components/Navbar.tsx
 import React, { useState } from "react";
 import Link from "next/link";
+import { navData } from "../data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => { setIsOpen(!isOpen); };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const navJSX = navData.map((item) => (
+    <li key={item.name}>
+      <Link
+        href={item.path}
+        className="hover:text-gray-400"
+        onClick={toggleMenu}
+      >
+        {item.name}
+      </Link>
+    </li>
+  ));
 
   return (
     <nav className="w-[80vw] mx-auto text-black pt-6">
@@ -15,21 +24,7 @@ export default function Navbar() {
         <p className="hidden md:block w-max whitespace-nowrap">Hunter Yeago</p>
 
         <ul className="flex w-full gap-4 justify-center md:justify-end align-center lg:items-center">
-          <li>
-            <Link href="/about" className="hover:text-gray-400">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects" className="hover:text-gray-400">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-gray-400">
-              Contact
-            </Link>
-          </li>
+          {navJSX}
         </ul>
       </div>
     </nav>
