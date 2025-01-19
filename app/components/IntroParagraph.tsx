@@ -36,7 +36,7 @@ function IntroParagraph() {
 
   return (
     <section
-      className="grid grid-rows mt-20 w-[80vw] md-custom:grid-cols-[70%,30%] mx-auto"
+      className="grid grid-rows mt-20 md-custom:grid-cols-[70%,30%] mx-auto"
       aria-label="information about hunter yeago and links to his professional profiles"
     >
       {/* Left Side Info / CTA Buttons */}

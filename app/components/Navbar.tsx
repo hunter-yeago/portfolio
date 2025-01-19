@@ -21,8 +21,8 @@ export default function Navbar() {
   ));
 
   return (
-    <nav className="w-[80vw] mx-auto text-black pt-6">
-      <div className="container text-lg mx-auto flex items-center">
+    <nav className="text-black pt-6">
+      <div className=" text-lg flex items-center">
         <p className="hidden md:block w-max whitespace-nowrap">Hunter Yeago</p>
 
         <ul className="flex w-full gap-4 justify-center md:justify-end align-center lg:items-center">
