@@ -36,15 +36,25 @@ function IntroParagraph() {
 
   return (
     <section
-      className="grid grid-rows mt-20 md-custom:grid-cols-[70%,30%] mx-auto"
+      className="grid grid-rows gap-4 md:mt-16 md-custom:grid-cols-[70%,30%] mx-auto"
       aria-label="information about hunter yeago and links to his professional profiles"
     >
       {/* Left Side Info / CTA Buttons */}
-      <article className="flex flex-col gap-4 pb-8 md:pr-4">
-        <h1 className="text-2xl md:text-4xl font-semibold">
+      <article className="flex text-center md:text-left flex-col gap-4 py-6">
+        <h1 className="text-3xl md:text-4xl font-semibold">
           Hello! I&#39;m Hunter, a web developer based in
           <span id="chicago"> Chicago</span>.
         </h1>
+
+      {/* Mobile Image */}
+      <div className="block max-h-[300px] overflow-hidden rounded-xl md-custom:hidden">
+        <Image
+          className="scale-150 object-left h-full object-cover"
+          priority={true}
+          src={rainImage}
+          alt="a man holding a broken umbrella stands next to a street light in Melbourne, Australia"
+        />
+      </div>
 
         <p>
           I specialize in creating tools that are user-friendly, simple, and
@@ -63,7 +73,7 @@ function IntroParagraph() {
         <ProfessionalLinks />
       </article>
 
-      {/* Right Side Image */}
+      {/* Desktop - Right Side Image */}
       <div className="hidden overflow-hidden rounded-xl md-custom:block">
         <Image
           className="scale-150 object-left h-full object-cover"
