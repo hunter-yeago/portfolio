@@ -40,7 +40,7 @@ function IntroParagraph() {
       aria-label="information about hunter yeago and links to his professional profiles"
     >
       {/* Left Side Info / CTA Buttons */}
-      <div className="flex flex-col gap-4 pb-8 md:pr-4">
+      <article className="flex flex-col gap-4 pb-8 md:pr-4">
         <h1 className="text-2xl md:text-4xl font-semibold">
           Hello! I&#39;m Hunter, a web developer based in
           <span id="chicago"> Chicago</span>.
@@ -61,7 +61,7 @@ function IntroParagraph() {
         </p>
 
         <ProfessionalLinks />
-      </div>
+      </article>
 
       {/* Right Side Image */}
       <div className="hidden overflow-hidden rounded-xl md-custom:block">
