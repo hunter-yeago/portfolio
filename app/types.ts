@@ -4,3 +4,9 @@ export interface Annotation {
   color: string;
   padding?: [number, number];
 }
+
+
+export type NavItem = {
+  name: string;
+  path: string;
+};
