@@ -24,8 +24,7 @@ export default function Navbar() {
     <nav className="text-black pt-6">
       <div className=" text-lg flex items-center">
         <p className="hidden md:block w-max whitespace-nowrap">Hunter Yeago</p>
-
-        <ul className="flex w-full gap-4 justify-center md:justify-end align-center lg:items-center">
+        <ul className="flex flex-wrap w-full gap-4 justify-center md:justify-end align-center lg:items-center">
           {navJSX}
         </ul>
       </div>

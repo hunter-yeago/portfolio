@@ -1,14 +1,32 @@
 import { Annotation } from "./types";
 
 export const annotations: Annotation[] = [
-  { id: "chicago", type: "highlight", color: "#7FBEEB" }, //blue
-  { id: "delightful", type: "highlight", color: "#FE938C" }, // light red
-  { id: "40websites", type: "highlight", color: "#C1D37F" }, //hunter green
-  { id: "linkedin", type: "circle", color: "red" }, //red pen circle
+  { id: "chicago", type: "highlight", color: "#7FBEEB" }, // blue highlight
+  { id: "delightful", type: "highlight", color: "#FE938C" }, // light red highlight
+  { id: "40websites", type: "highlight", color: "#C1D37F" }, // hunter green highlight
+  { id: "linkedin", type: "circle", color: "red" }, // red pen circle
 ];
 
 export const navData = [
   { name: "About", path: "/about" },
   { name: "Projects", path: "/projects" },
   { name: "Contact", path: "/contact" },
+];
+
+export const links = [
+  {
+    id: "LinkedIn",
+    href: "https://www.linkedin.com/in/hunter-yeago/",
+    bgClass: "bg-gray-800 text-white",
+  },
+  {
+    id: "Resume",
+    href: "https://drive.google.com/file/d/1wwDmAvaOK3_vVJL6qeQAVk6Uegp8mUwv/view",
+    bgClass: "bg-[#7fbeeb] text-gold border border-gray-800",
+  },
+  {
+    id: "GitHub",
+    href: "https://github.com/hunter-yeago",
+    bgClass: "bg-white text-black border border-gray-800",
+  },
 ];
