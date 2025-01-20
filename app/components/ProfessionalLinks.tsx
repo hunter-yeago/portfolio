@@ -1,6 +1,5 @@
 import { links } from "../data";
 export default function ProfessionalLinks() {
-
   return (
     <div className="flex flex-wrap justify-center gap-4 mt-4">
       {links.map(({ id, href, bgClass }) => (

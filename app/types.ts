@@ -5,7 +5,6 @@ export interface Annotation {
   padding?: [number, number];
 }
 
-
 export type NavItem = {
   name: string;
   path: string;
