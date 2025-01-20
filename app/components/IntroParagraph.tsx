@@ -30,6 +30,7 @@ function IntroParagraph() {
     const annotation = annotationGroup(annotationInstances);
     annotation.show();
 
+    
     return () => {
       annotation.hide();
     };
