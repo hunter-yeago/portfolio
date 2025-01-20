@@ -64,12 +64,12 @@ function IntroParagraph() {
           technologies such as Next.JS, PHP, and headless WordPress, I focus on
           building systems that streamline workflows and enhance the efficiency
           of the entire development team. For me, success is not just about
-          writing code—it’s about making sure everyone on the team can perform
+          writing code—it&#39;s about making sure everyone on the team can perform
           at their best and contribute to the mission.
         </p>
 
         <p>
-          I’m committed to delivering web solutions that not only meet technical
+          I&#39;m committed to delivering web solutions that not only meet technical
           requirements but also solve real-world challenges. Through my work, I
           aim to contribute to a collective sense of accomplishment, making a{" "}
           <span id="meaningful">meaningful</span> difference both in the
@@ -77,7 +77,7 @@ function IntroParagraph() {
         </p>
 
         <p>
-          Here are a few links if you'd like to get more familiar with my work:
+          Here are a few links if you&#39;d like to get more familiar with my work:
         </p>
 
         <ProfessionalLinks />
