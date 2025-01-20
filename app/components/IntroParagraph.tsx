@@ -43,9 +43,10 @@ function IntroParagraph() {
     >
       {/* Left Side Info / CTA Buttons */}
       <article className="flex text-center md:text-left flex-col gap-4 py-6">
+        
+        {/* Headline */}
         <h1 className="text-3xl md:text-[1.875rem] font-semibold">
-          Hello! I&#39;m Hunter, a web developer based in
-          <span id="chicago"> Chicago</span>.
+          Hello! I&#39;m Hunter, a web developer based in Chicago.
         </h1>
 
         {/* Mobile Image */}
@@ -59,10 +60,9 @@ function IntroParagraph() {
         </div>
 
         <p>
-          As a fullstack web developer, I am passionate about creating
-          <span id="innovative"> innovative</span> solutions that solve
-          real-world problems and make an impact. By combining my expertise in
-          technologies such as Next.JS, PHP, and headless WordPress, I focus on
+          As a fullstack web developer, I am passionate about <span id="creating" className="whitespace-nowrap">creating innovative solutions</span> that solve
+          real-world problems. By combining my expertise in
+          technologies such as <span id="techstack" className="whitespace-nowrap">Next.JS, PHP, and headless WordPress</span> I focus on
           building systems that streamline workflows and enhance the efficiency
           of the entire development team. For me, success is not just about
           writing code—it&#39;s about making sure everyone on the team can perform
@@ -71,9 +71,9 @@ function IntroParagraph() {
 
         <p>
           I&#39;m committed to delivering web solutions that not only meet technical
-          requirements but also solve real-world challenges. Through my work, I
-          aim to contribute to a collective sense of accomplishment, making a{" "}
-          <span id="meaningful">meaningful</span> difference both in the
+          requirements and <span id="solving-challenges" className="whitespace-nowrap">solve real-world challenges.</span> Through my work, I
+          aim to contribute to a collective sense of accomplishment, making a 
+          meaningful difference both in the
           development process and for the end users.
         </p>
 

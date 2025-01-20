@@ -1,12 +1,11 @@
 import { Annotation, NavItem } from "./types";
 
 export const annotations: Annotation[] = [
-  { id: "chicago", type: "highlight", color: "#7FBEEB" }, // blue highlight
-  { id: "40websites", type: "highlight", color: "#C1D37F" }, // hunter green highlight
-  { id: "delightful", type: "highlight", color: "#FE938C" }, // light red highlight
-  { id: "innovative", type: "highlight", color: "#C1D37F" }, // hunter green red highlight
-  { id: "meaningful", type: "highlight", color: "#FE938C" }, // light red highlight
-  { id: "resume", type: "circle", color: "red" }, // red pen circle
+  { id: "creating", type: "highlight", color: "#C1D37F", iterations: 1, multiline: true }, // hunter green highlight
+  { id: "techstack", type: "highlight", color: "#7FBEEB", iterations: 1, multiline: true }, // hunter green red highlight
+  { id: "solving-challenges", type: "highlight", color: "#FE938C", iterations: 1, multiline: true }, // light red highlight
+  
+  { id: "prof-links", type: "box", color: "red" }, // red pen circle
 ];
 
 export const links = [
@@ -28,8 +27,6 @@ export const links = [
 ];
 
 export const navData: NavItem[] = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Contact", path: "/contact" },
+  // { name: "About", path: "/about" },
+  // { name: "Contact", path: "/contact" },
 ];
