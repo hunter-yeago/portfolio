@@ -7,6 +7,7 @@ export interface Annotation {
   multiline?: boolean;
   brackets?: ["left" | "right" | "top" | "bottom", "left" | "right" | "top" | "bottom"];
   strokeWidth?: number;
+  animationDuration?: number;
 }
 
 export type NavItem = {

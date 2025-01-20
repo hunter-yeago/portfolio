@@ -17,6 +17,11 @@ function IntroParagraph() {
             type: annotation.type,
             color: annotation.color,
             padding: annotation.padding,
+            iterations: annotation.iterations,
+            multiline: annotation.multiline,
+            brackets: annotation.brackets,
+            strokeWidth: annotation.strokeWidth,
+            animationDuration: annotation.animationDuration,
           });
         } else {
           console.error(`Target element with id '${annotation.id}' not found.`);
@@ -60,9 +65,9 @@ function IntroParagraph() {
         </div>
 
         <p>
-          As a fullstack web developer, I am passionate about <span id="creating" className="whitespace-nowrap">creating innovative solutions</span> that solve
+          As a fullstack web developer, I am passionate about <span id="creating">creating innovative solutions</span> that solve
           real-world problems. By combining my expertise in
-          technologies such as <span id="techstack" className="whitespace-nowrap">Next.JS, PHP, and headless WordPress</span> I focus on
+          technologies such as <span id="techstack">Next.JS, PHP, and headless WordPress</span> I focus on
           building systems that streamline workflows and enhance the efficiency
           of the entire development team. For me, success is not just about
           writing code—it&#39;s about making sure everyone on the team can perform
@@ -71,7 +76,7 @@ function IntroParagraph() {
 
         <p>
           I&#39;m committed to delivering web solutions that not only meet technical
-          requirements and <span id="solving-challenges" className="whitespace-nowrap">solve real-world challenges.</span> Through my work, I
+          requirements and <span id="solving-challenges">solve real-world challenges.</span> Through my work, I
           aim to contribute to a collective sense of accomplishment, making a 
           meaningful difference both in the
           development process and for the end users.
