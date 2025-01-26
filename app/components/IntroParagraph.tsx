@@ -66,7 +66,7 @@ function IntroParagraph() {
         </div>
 
         <p>
-          I'm a web developer <span id="creating">creating innovative solutions</span> that solve
+          As a fullstack web developer, I am passionate about <span id="creating">creating innovative solutions</span> that solve
           real-world problems. By combining my expertise in
           technologies such as <span id="techstack">Next.JS, PHP, and headless WordPress</span> I focus on
           building systems that streamline workflows and enhance the efficiency
