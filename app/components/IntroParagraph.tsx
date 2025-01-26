@@ -8,6 +8,7 @@ import ProfessionalLinks from "./ProfessionalLinks";
 
 function IntroParagraph() {
   useEffect(() => {
+    
     // Rough Notation JS Library Boilerplate
     const annotationInstances = annotations
       .map((annotation) => {
@@ -65,13 +66,11 @@ function IntroParagraph() {
         </div>
 
         <p>
-          As a fullstack web developer, I am passionate about <span id="creating">creating innovative solutions</span> that solve
+          I'm a web developer <span id="creating">creating innovative solutions</span> that solve
           real-world problems. By combining my expertise in
           technologies such as <span id="techstack">Next.JS, PHP, and headless WordPress</span> I focus on
           building systems that streamline workflows and enhance the efficiency
-          of the entire development team. For me, success is not just about
-          writing code—it&#39;s about making sure everyone on the team can perform
-          at their best and contribute to the mission.
+          of the entire development team. 
         </p>
 
         <p>
