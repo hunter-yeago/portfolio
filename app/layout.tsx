@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="min-w-full w-full" lang="en">
-      <body className="w-[80vw] mx-auto">{children}</body>
+      <body className="">{children}</body>
     </html>
   );
 }

@@ -3,6 +3,9 @@ import { annotate, annotationGroup } from "rough-notation";
 
 import Image from "next/image";
 import rainImage from "../../public/images/rain-image.jpg";
+import hamiltonImage from "../../public/images/hamilton.jpg";
+import bridgeImage from "../../public/images/bridge.jpg";
+import stationImage from "../../public/images/station.jpg";
 import { annotations } from "../data";
 import ProfessionalLinks from "./ProfessionalLinks";
 
@@ -58,9 +61,9 @@ function IntroParagraph() {
         {/* Mobile Image */}
         <div className="block max-h-[300px] overflow-hidden rounded-xl md-custom:hidden">
           <Image
-            className="scale-150 object-left h-full object-cover"
+            className="object-left h-full object-cover"
             priority={true}
-            src={rainImage}
+            src={stationImage}
             alt="a man holding a broken umbrella stands next to a street light in Melbourne, Australia"
           />
         </div>
@@ -91,9 +94,9 @@ function IntroParagraph() {
       {/* Desktop - Right Side Image */}
       <div className="hidden overflow-hidden rounded-xl md-custom:block">
         <Image
-          className="scale-150 object-left h-full object-cover"
+          className="object-left h-full object-cover"
           priority={true}
-          src={rainImage}
+          src={stationImage}
           alt="a man holding a broken umbrella stands next to a street light in Melbourne, Australia"
         />
       </div>
