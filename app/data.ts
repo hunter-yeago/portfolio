@@ -21,7 +21,7 @@ export const links = [
   },
   {
     id: "Resume",
-    href: "https://drive.google.com/file/d/12miEomvQcZ-u2bzJm_Br-pUa4NpY7otL/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/1V4S31joVw0NZeowUtAIvXtexgXu90T7V/view?usp=drive_link",
     bgClass: "bg-[#C1D37F] text-gold",
   },
   {
