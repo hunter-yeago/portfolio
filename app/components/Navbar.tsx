@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { navData } from "../data";
@@ -10,11 +11,7 @@ export default function Navbar() {
 
   const navJSX = navData.map((item) => (
     <li key={item.name}>
-      <Link
-        href={item.path}
-        className="hover:text-gray-400"
-        onClick={toggleMenu}
-      >
+      <Link href={item.path} className="hover:text-gray-400" onClick={toggleMenu}>
         {item.name}
       </Link>
     </li>
@@ -24,9 +21,7 @@ export default function Navbar() {
     <nav className="text-black pt-6">
       <div className=" text-lg flex items-center">
         <p className="hidden md:block w-max whitespace-nowrap">Hunter Yeago</p>
-        <ul className="flex flex-wrap w-full gap-4 justify-center md:justify-end align-center lg:items-center">
-          {navJSX}
-        </ul>
+        <ul className="flex flex-wrap w-full gap-4 justify-center md:justify-end align-center lg:items-center">{navJSX}</ul>
       </div>
     </nav>
   );
