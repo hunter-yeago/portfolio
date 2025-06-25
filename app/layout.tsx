@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html className="min-w-full w-full" lang="en">
       <SpeedInsights />
+
       <body className="w-[90vw] max-w-[1200px] mx-auto">
         <Navbar />
         {children}
