@@ -1,0 +1,29 @@
+{
+  "projects": [
+    {
+      "title": "Essay Writing Project",
+      "preview_description": [
+        "Are you trying to improve your writing skill in a foreign language? Active your vocabulary with this language learning tool.",
+        "This project is built in Laravel."
+      ],
+      "tech_stack": [
+        { "name": "Laravel", "key": "laravel" },
+        { "name": "React.JS", "key": "react" },
+        { "name": "Inertia.js", "key": "inertiajs" },
+        { "name": "Tailwind", "key": "tailwind" }
+      ],
+      "logo": "/images/writing.png"
+    },
+    {
+      "title": "Electrify Chicago",
+      "preview_description": ["Find Out How Much Chicago Buildings Pollute!"],
+      "tech_stack": [
+        { "name": "Vue.js", "key": "vue" },
+        { "name": "Python", "key": "python" },
+        { "name": "Pandas", "key": "pandas" },
+        { "name": "SASS", "key": "sass" }
+      ],
+      "logo": "/images/electrify-chicago-screenshot.png"
+    }
+  ]
+}

@@ -7,10 +7,34 @@ import { Annotation, NavItem } from "./types";
 // https://github.com/linkstrifer/react-rough-notation
 
 export const annotations: Annotation[] = [
-  { id: "creating", type: "highlight", color: "#C1D37F", multiline: true, animationDuration: 800 }, // hunter green highlight
-  { id: "techstack", type: "highlight", color: "#7FBEEB", multiline: true, animationDuration: 1000 }, // hunter green red highlight --increased animation time since there are more characters
-  { id: "solving-challenges", type: "highlight", color: "#FE938C", multiline: true, animationDuration: 900 }, // light red highlight
-  { id: "prof-links", type: "box", color: "red", animationDuration: 1000, iterations: 1 }, // red pen box
+  {
+    id: "creating",
+    type: "highlight",
+    color: "#C1D37F",
+    multiline: true,
+    animationDuration: 800,
+  }, // hunter green highlight
+  {
+    id: "techstack",
+    type: "highlight",
+    color: "#7FBEEB",
+    multiline: true,
+    animationDuration: 1000,
+  }, // hunter green red highlight --increased animation time since there are more characters
+  {
+    id: "solving-challenges",
+    type: "highlight",
+    color: "#FE938C",
+    multiline: true,
+    animationDuration: 900,
+  }, // light red highlight
+  {
+    id: "prof-links",
+    type: "box",
+    color: "red",
+    animationDuration: 1000,
+    iterations: 1,
+  }, // red pen box
 ];
 
 export const links = [

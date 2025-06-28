@@ -15,16 +15,3 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-.portfolio-container {
-  grid-template-columns: repeat(auto-fit, 20rem);
-}

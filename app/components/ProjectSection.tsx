@@ -1,108 +1,21 @@
 "use client";
-import React from "react";
-import Image from "next/image"; // Optional: for optimized image handling
+import { SingleProject } from "../types/ProjectTypes";
+import Project from "./Project";
 
-export default function PHPTEK20242024() {
+interface Props {
+  projects: SingleProject[];
+}
+
+export default function ProjectSection({ projects }: Props) {
+  const renderProjects = (projects: SingleProject[]) => {
+    return projects.map((project: SingleProject) => <Project project={project} />);
+  };
+
   return (
-    <section className="grid grid-cols-1 mt-12 mx-auto w-[90vw]">
-      <h2 className="text-3xl text-center w-fit mx-auto"> Projects </h2>
-      <div className="portfolio-container grid gap-4 p-4 justify-center">
-        <div className="portfolio-item bg-white p-4 rounded shadow min-h-[20rem] grid grid-rows-[20%,70%,10%]">
-          {/* folder icon and links */}
-          <div className="flex justify-between items-center h-fit">
-            <svg className="color000000 svgShape w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="Folder">
-              <path
-                d="M1671.845 984.08q0-32.855-49.752-32.855H600.775q-37.548 0-80.26 20.182-42.71 20.182-67.117 49.282l-275.982 340.753q-16.896 22.529-16.896 37.548 0 32.855 49.751 32.855H1231.59q37.549 0 80.73-20.652 43.18-20.651 66.648-49.751l275.981-340.753q16.897-20.651 16.897-36.61zM600.775 831.07h720.93V680.876q0-37.549-26.283-63.833-26.284-26.283-63.833-26.283H690.892q-37.549 0-63.833-26.284t-26.284-63.833v-60.077q0-37.549-26.284-63.833T510.66 350.45H210.271q-37.548 0-63.832 26.284t-26.284 63.833v800.72l240.31-295.694q41.303-49.751 108.89-82.137 67.588-32.385 131.42-32.385zM1792 984.08q0 58.2-43.18 112.645l-276.92 340.752q-40.365 49.752-108.891 82.137-68.526 32.386-131.42 32.386H210.271q-86.361 0-148.316-61.955T0 1341.729V440.566q0-86.362 61.955-148.317 61.955-61.955 148.316-61.955H510.66q86.361 0 148.316 61.955t61.955 148.317v30.039h510.66q86.36 0 148.316 61.954 61.955 61.955 61.955 148.317V831.07h180.232q50.69 0 92.933 22.998 42.242 22.999 62.893 66.18Q1792 950.285 1792 984.08Z"
-                fill="#1f2937"
-              ></path>
-            </svg>
-            <a className="h-fit" href="#">
-              <Image src="/images/external-link.svg" alt="External Link Icon" width={24} height={24} />
-            </a>
-          </div>
+    <section className="flex flex-col gap-2 justify-center items-center">
+      <h2 className="text-3xl">Projects</h2>
 
-          <div>
-            <h2 className="text-xl font-bold">Cozy Video Corner</h2>
-            <p className="text-gray-700">
-              {" "}
-              Watch YouTube videos in a cozy, distraction free environment! Watch YouTube videos in a cozy, distraction free environment!{" "}
-            </p>
-          </div>
-
-          <div className="flex items-end">
-            <ul className="flex flex-wrap flex-row gap-4 self-end">
-              <li>SASS</li>
-              <li>ReactJS</li>
-              <li>NodeJS</li>
-              <li>ExpressJS</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="portfolio-item bg-white p-4 rounded shadow min-h-[20rem] grid grid-rows-[20%,70%,10%]">
-          {/* folder icon and links */}
-          <div className="flex justify-between items-center h-fit">
-            <svg className="color000000 svgShape w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="Folder">
-              <path
-                d="M1671.845 984.08q0-32.855-49.752-32.855H600.775q-37.548 0-80.26 20.182-42.71 20.182-67.117 49.282l-275.982 340.753q-16.896 22.529-16.896 37.548 0 32.855 49.751 32.855H1231.59q37.549 0 80.73-20.652 43.18-20.651 66.648-49.751l275.981-340.753q16.897-20.651 16.897-36.61zM600.775 831.07h720.93V680.876q0-37.549-26.283-63.833-26.284-26.283-63.833-26.283H690.892q-37.549 0-63.833-26.284t-26.284-63.833v-60.077q0-37.549-26.284-63.833T510.66 350.45H210.271q-37.548 0-63.832 26.284t-26.284 63.833v800.72l240.31-295.694q41.303-49.751 108.89-82.137 67.588-32.385 131.42-32.385zM1792 984.08q0 58.2-43.18 112.645l-276.92 340.752q-40.365 49.752-108.891 82.137-68.526 32.386-131.42 32.386H210.271q-86.361 0-148.316-61.955T0 1341.729V440.566q0-86.362 61.955-148.317 61.955-61.955 148.316-61.955H510.66q86.361 0 148.316 61.955t61.955 148.317v30.039h510.66q86.36 0 148.316 61.954 61.955 61.955 61.955 148.317V831.07h180.232q50.69 0 92.933 22.998 42.242 22.999 62.893 66.18Q1792 950.285 1792 984.08Z"
-                fill="#1f2937"
-              ></path>
-            </svg>
-            <a className="h-fit" href="#">
-              <Image src="/images/external-link.svg" alt="External Link Icon" width={24} height={24} />
-            </a>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold">Cozy Video Corner</h2>
-            <p className="text-gray-700">
-              {" "}
-              Watch YouTube videos in a cozy, distraction free environment! Watch YouTube videos in a cozy, distraction free environment!{" "}
-            </p>
-          </div>
-
-          <div className="flex items-end">
-            <ul className="flex flex-wrap flex-row gap-4 self-end">
-              <li>SASS</li>
-              <li>ReactJS</li>
-              <li>NodeJS</li>
-              <li>ExpressJS</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="portfolio-item bg-white p-4 rounded shadow min-h-[20rem] grid grid-rows-[20%,70%,10%]">
-          {/* folder icon and links */}
-          <div className="flex justify-between items-center h-fit">
-            <svg className="color000000 svgShape w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="Folder">
-              <path
-                d="M1671.845 984.08q0-32.855-49.752-32.855H600.775q-37.548 0-80.26 20.182-42.71 20.182-67.117 49.282l-275.982 340.753q-16.896 22.529-16.896 37.548 0 32.855 49.751 32.855H1231.59q37.549 0 80.73-20.652 43.18-20.651 66.648-49.751l275.981-340.753q16.897-20.651 16.897-36.61zM600.775 831.07h720.93V680.876q0-37.549-26.283-63.833-26.284-26.283-63.833-26.283H690.892q-37.549 0-63.833-26.284t-26.284-63.833v-60.077q0-37.549-26.284-63.833T510.66 350.45H210.271q-37.548 0-63.832 26.284t-26.284 63.833v800.72l240.31-295.694q41.303-49.751 108.89-82.137 67.588-32.385 131.42-32.385zM1792 984.08q0 58.2-43.18 112.645l-276.92 340.752q-40.365 49.752-108.891 82.137-68.526 32.386-131.42 32.386H210.271q-86.361 0-148.316-61.955T0 1341.729V440.566q0-86.362 61.955-148.317 61.955-61.955 148.316-61.955H510.66q86.361 0 148.316 61.955t61.955 148.317v30.039h510.66q86.36 0 148.316 61.954 61.955 61.955 61.955 148.317V831.07h180.232q50.69 0 92.933 22.998 42.242 22.999 62.893 66.18Q1792 950.285 1792 984.08Z"
-                fill="#1f2937"
-              ></path>
-            </svg>
-            <a className="h-fit" href="#">
-              <Image src="/images/external-link.svg" alt="External Link Icon" width={24} height={24} />
-            </a>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold">Cozy Video Corner</h2>
-            <p className="text-gray-700">
-              {" "}
-              Watch YouTube videos in a cozy, distraction free environment! Watch YouTube videos in a cozy, distraction free environment!{" "}
-            </p>
-          </div>
-
-          <div className="flex items-end">
-            <ul className="flex flex-wrap flex-row gap-4 self-end">
-              <li>SASS</li>
-              <li>ReactJS</li>
-              <li>NodeJS</li>
-              <li>ExpressJS</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div className="flex flex-col gap-4 p-4 justify-center">{renderProjects(projects)}</div>
     </section>
   );
 }
