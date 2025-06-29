@@ -18,6 +18,7 @@ import {
   SiPandas,
   SiSass,
 } from "react-icons/si";
+import InertiaLogo from "./logos/InertiaLogo";
 
 interface Props {
   project: SingleProject;
@@ -40,12 +41,13 @@ const techIcons: Record<string, JSX.Element> = {
   python: <SiPython title="Python" />,
   pandas: <SiPandas title="Pandas" />,
   sass: <SiSass title="SASS" />,
+  inertiajs: <InertiaLogo />,
 };
 
 export default function Project({ project }: Props) {
   return (
     <article
-      className="p-6 border-4 flex gap-2 justify-between rounded-xl shadow-lg hover:shadow-xl max-w-[800px]"
+      className="p-6 border-4 flex gap-14 justify-between rounded-xl shadow-lg hover:shadow-xl max-w-[800px]"
       aria-label={`learn about my work on the ${project.title} project`}
     >
       <div className="flex flex-col gap-2">
@@ -63,8 +65,8 @@ export default function Project({ project }: Props) {
 
             return (
               <li key={`${project.title}-${item.key}-${index}`} className="bg-gray-800 px-2 py-1 rounded flex items-center gap-1">
-                {icon && <span className="text-lg">{icon}</span>}
                 <span>{item.name}</span>
+                {icon && <span className="text-lg">{icon}</span>}
               </li>
             );
           })}
