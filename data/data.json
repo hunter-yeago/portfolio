@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Essay Writing Project",
-      "type": "Personal Project",
+      "type": "Personal",
       "slug": "essay-writing-project",
       "preview": {
         "description": [
@@ -42,7 +42,7 @@
     },
     {
       "title": "Electrify Chicago",
-      "type": "Open Source Project",
+      "type": "Open Source",
       "slug": "electrify-chicago",
       "preview": {
         "description": [
@@ -58,7 +58,8 @@
         { "name": "Typescript", "key": "typescript" },
         { "name": "Python", "key": "python" },
         { "name": "Pandas", "key": "pandas" },
-        { "name": "Sass", "key": "sass" }
+        { "name": "Sass", "key": "sass" },
+        { "name": "GraphQL", "key": "graphql" }
       ],
       "sections": [
         {

@@ -15,7 +15,9 @@ export default function ProjectPreview({ project }: Props) {
       href={`/projects/${project.slug}`}
     >
       <div className="flex flex-col gap-2">
-        <h2 className="text-xl font-bold">{project.title}</h2>
+        <h2 className="text-xl font-bold">
+          {project.title} -<span className="text-gray-500"> {project.type}</span>
+        </h2>
 
         <div className="flex flex-col gap-1">
           {project.preview.description.map((paragraph, index) => (
@@ -28,10 +30,7 @@ export default function ProjectPreview({ project }: Props) {
             const icon = techIcons[item.key];
 
             return (
-              <li
-                key={`${project.title}-${item.key}-${index}`}
-                className="bg-gray-800 px-2 py-1 rounded flex items-center gap-2"
-              >
+              <li key={`${project.title}-${item.key}-${index}`} className="bg-gray-800 px-2 py-1 rounded flex items-center gap-2">
                 <span>{item.name}</span>
                 {icon && <span className="text-lg">{icon}</span>}
               </li>
@@ -41,13 +40,7 @@ export default function ProjectPreview({ project }: Props) {
       </div>
 
       <div className="relative min-w-[200px] min-h-[200px] overflow-hidden">
-        <Image
-          className="absolute w-full h-full object-cover"
-          src={project.preview.image}
-          alt={`${project.title} preview image`}
-          width={300}
-          height={300}
-        />
+        <Image className="absolute w-full h-full object-cover" src={project.preview.image} alt={`${project.title} preview image`} width={300} height={300} />
       </div>
     </Link>
   );
