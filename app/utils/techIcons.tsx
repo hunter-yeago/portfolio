@@ -1,5 +1,15 @@
 import React from "react";
-import { SiLaravel, SiReact, SiTailwindcss, SiVuedotjs, SiPython, SiPandas, SiSass, SiTypescript, SiPhp } from "react-icons/si";
+import {
+  SiLaravel,
+  SiReact,
+  SiTailwindcss,
+  SiVuedotjs,
+  SiPython,
+  SiPandas,
+  SiSass,
+  SiTypescript,
+  SiPhp,
+} from "react-icons/si";
 import InertiaLogo from "@/app/components/logos/InertiaLogo";
 
 const techIcons: Record<string, JSX.Element> = {

@@ -1,6 +1,12 @@
 export default function ElectrifyChicagoLogo() {
   return (
-    <svg width="570" height="82" viewBox="0 0 570 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="570"
+      height="82"
+      viewBox="0 0 570 82"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M154.288 69.92L149.424 50.912L130.48 56.16L144.496 42.4L130.48 28.64L149.424 33.888L154.288 14.88L159.216 33.888L178.16 28.64L164.144 42.4L178.16 56.16L159.216 50.912L154.288 69.92Z"
         fill="#E4002B"

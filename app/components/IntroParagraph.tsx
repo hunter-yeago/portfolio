@@ -32,7 +32,9 @@ function IntroParagraph() {
           return null;
         }
       })
-      .filter((annotation) => annotation !== null) as ReturnType<typeof annotate>[];
+      .filter((annotation) => annotation !== null) as ReturnType<
+      typeof annotate
+    >[];
 
     const annotation = annotationGroup(annotationInstances);
     annotation.show();
@@ -50,7 +52,9 @@ function IntroParagraph() {
       {/* Left Side Info / CTA Buttons */}
       <article className="flex text-center md:text-left flex-col gap-4 py-6">
         {/* Headline */}
-        <h1 className="text-3xl md:text-[1.875rem] font-semibold">Hello! I&#39;m Hunter, a web developer based in Chicago.</h1>
+        <h1 className="text-3xl md:text-[1.875rem] font-semibold">
+          Hello! I&#39;m Hunter, a web developer based in Chicago.
+        </h1>
 
         {/* Mobile Image */}
         <div className="block max-h-[300px] overflow-hidden rounded-xl md-custom:hidden">
@@ -63,18 +67,27 @@ function IntroParagraph() {
         </div>
 
         <p>
-          As a fullstack web developer, I am passionate about <span id="creating">creating innovative solutions</span> that solve real-world problems. By
-          combining my expertise in technologies such as <span id="techstack">Next.JS, PHP, and headless WordPress</span> I focus on building systems that
-          streamline workflows and enhance the efficiency of the entire development team.
+          As a fullstack web developer, I am passionate about{" "}
+          <span id="creating">creating innovative solutions</span> that solve
+          real-world problems. By combining my expertise in technologies such as{" "}
+          <span id="techstack">Next.JS, PHP, and headless WordPress</span> I
+          focus on building systems that streamline workflows and enhance the
+          efficiency of the entire development team.
         </p>
 
         <p>
-          I&#39;m committed to delivering web solutions that not only meet technical requirements and{" "}
-          <span id="solving-challenges">solve real-world challenges.</span> Through my work, I aim to contribute to a collective sense of accomplishment, making
-          a meaningful difference both in the development process and for the end users.
+          I&#39;m committed to delivering web solutions that not only meet
+          technical requirements and{" "}
+          <span id="solving-challenges">solve real-world challenges.</span>{" "}
+          Through my work, I aim to contribute to a collective sense of
+          accomplishment, making a meaningful difference both in the development
+          process and for the end users.
         </p>
 
-        <p>Here are a few links if you&#39;d like to get more familiar with my work:</p>
+        <p>
+          Here are a few links if you&#39;d like to get more familiar with my
+          work:
+        </p>
 
         <ProfessionalLinks />
       </article>

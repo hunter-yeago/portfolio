@@ -10,7 +10,7 @@ interface Props {
 export default function ProjectPreview({ project }: Props) {
   return (
     <Link
-      className="p-6 border-4 cursor-pointer flex gap-14 justify-between rounded-xl shadow-lg hover:shadow-xl max-w-[800px]"
+      className="p-6 border-4 cursor-pointer focus:border-gray-800 focus:outline-none flex gap-14 justify-between rounded-xl shadow-lg hover:shadow-xl max-w-[800px]"
       aria-label={`learn about my work on the ${project.title} project`}
       href={`/projects/${project.slug}`}
     >
@@ -28,7 +28,10 @@ export default function ProjectPreview({ project }: Props) {
             const icon = techIcons[item.key];
 
             return (
-              <li key={`${project.title}-${item.key}-${index}`} className="bg-gray-800 px-2 py-1 rounded flex items-center gap-2">
+              <li
+                key={`${project.title}-${item.key}-${index}`}
+                className="bg-gray-800 px-2 py-1 rounded flex items-center gap-2"
+              >
                 <span>{item.name}</span>
                 {icon && <span className="text-lg">{icon}</span>}
               </li>
@@ -38,7 +41,13 @@ export default function ProjectPreview({ project }: Props) {
       </div>
 
       <div className="relative min-w-[200px] min-h-[200px] overflow-hidden">
-        <Image className="absolute w-full h-full object-cover" src={project.preview.image} alt={`${project.title} preview image`} width={300} height={300} />
+        <Image
+          className="absolute w-full h-full object-cover"
+          src={project.preview.image}
+          alt={`${project.title} preview image`}
+          width={300}
+          height={300}
+        />
       </div>
     </Link>
   );
