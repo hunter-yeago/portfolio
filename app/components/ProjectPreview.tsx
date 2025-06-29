@@ -1,70 +1,34 @@
 import Image from "next/image";
-import { SingleProject } from "../types/ProjectTypes";
-import {
-  SiPhp,
-  SiLaravel,
-  SiNextdotjs,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiJavascript,
-  SiPostgresql,
-  SiMysql,
-  SiHtml5,
-  SiCss3,
-  SiDocker,
-  SiVuedotjs,
-  SiPython,
-  SiPandas,
-  SiSass,
-} from "react-icons/si";
-import InertiaLogo from "./logos/InertiaLogo";
+import { SingleProject } from "../types/types";
+import Link from "next/link";
+import techIcons from "@/app/utils/techIcons";
 
 interface Props {
   project: SingleProject;
 }
 
-const techIcons: Record<string, JSX.Element> = {
-  php: <SiPhp title="PHP" />,
-  laravel: <SiLaravel title="Laravel" />,
-  "next.js": <SiNextdotjs title="Next.js" />,
-  react: <SiReact title="React" />,
-  tailwind: <SiTailwindcss title="Tailwind CSS" />,
-  typescript: <SiTypescript title="TypeScript" />,
-  javascript: <SiJavascript title="JavaScript" />,
-  postgresql: <SiPostgresql title="PostgreSQL" />,
-  mysql: <SiMysql title="MySQL" />,
-  html: <SiHtml5 title="HTML5" />,
-  css: <SiCss3 title="CSS3" />,
-  docker: <SiDocker title="Docker" />,
-  vue: <SiVuedotjs title="Vue.js" />,
-  python: <SiPython title="Python" />,
-  pandas: <SiPandas title="Pandas" />,
-  sass: <SiSass title="SASS" />,
-  inertiajs: <InertiaLogo />,
-};
-
 export default function ProjectPreview({ project }: Props) {
   return (
-    <article
-      className="p-6 border-4 flex gap-14 justify-between rounded-xl shadow-lg hover:shadow-xl max-w-[800px]"
+    <Link
+      className="p-6 border-4 cursor-pointer flex gap-14 justify-between rounded-xl shadow-lg hover:shadow-xl max-w-[800px]"
       aria-label={`learn about my work on the ${project.title} project`}
+      href={`/projects/${project.slug}`}
     >
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold">{project.title}</h2>
 
         <div className="flex flex-col gap-1">
-          {project.preview_description.map((paragraph, index) => (
+          {project.preview.description.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
 
         <ul className="flex flex-wrap gap-2 text-lg text-white mt-auto">
           {project.tech_stack.map((item, index) => {
-            const icon = techIcons[item.key.toLowerCase()];
+            const icon = techIcons[item.key];
 
             return (
-              <li key={`${project.title}-${item.key}-${index}`} className="bg-gray-800 px-2 py-1 rounded flex items-center gap-1">
+              <li key={`${project.title}-${item.key}-${index}`} className="bg-gray-800 px-2 py-1 rounded flex items-center gap-2">
                 <span>{item.name}</span>
                 {icon && <span className="text-lg">{icon}</span>}
               </li>
@@ -74,8 +38,8 @@ export default function ProjectPreview({ project }: Props) {
       </div>
 
       <div className="relative min-w-[200px] min-h-[200px] overflow-hidden">
-        <Image className="absolute w-full h-full object-cover" src={project.logo} alt={`${project.title} logo`} width={300} height={300} />
+        <Image className="absolute w-full h-full object-cover" src={project.preview.image} alt={`${project.title} preview image`} width={300} height={300} />
       </div>
-    </article>
+    </Link>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import { SingleProject } from "../types/ProjectTypes";
+import { SingleProject } from "../types/types";
 import ProjectPreview from "./ProjectPreview";
 
 interface Props {

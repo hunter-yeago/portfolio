@@ -2,28 +2,82 @@
   "projects": [
     {
       "title": "Essay Writing Project",
-      "preview_description": [
-        "Are you trying to improve your writing skill in a foreign language? Active your vocabulary with this language learning tool.",
-        "This project is built in Laravel."
-      ],
+      "type": "Personal Project",
+      "slug": "essay-writing-project",
+      "preview": {
+        "description": [
+          "Are you trying to improve your writing skill in a foreign language? Activate your vocabulary with this language learning tool.",
+          "This project is built in Laravel and React using Inertia.js for seamless page transitions."
+        ],
+        "image": "/images/essay/preview.png"
+      },
+      "hero": "/images/essay/hero.png",
       "tech_stack": [
         { "name": "Laravel", "key": "laravel" },
-        { "name": "React.JS", "key": "react" },
+        { "name": "PHP", "key": "php" },
+        { "name": "React.js", "key": "react" },
         { "name": "Inertia.js", "key": "inertiajs" },
         { "name": "Tailwind", "key": "tailwind" }
       ],
-      "logo": "/images/writing.png"
+      "sections": [
+        {
+          "title": "Project Inspiration",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae venenatis ex. Vivamus et lectus non orci feugiat faucibus. Integer fermentum, magna vel bibendum iaculis, leo justo hendrerit lorem, non gravida erat augue vitae massa.",
+          "image": "/images/essay/preview.png",
+          "alt": "a hand writing on a piece of paper with a pen"
+        },
+        {
+          "title": "Vocabulary Tracking",
+          "text": "Nullam congue, sapien sit amet pretium feugiat, sem sem tristique eros, sed lobortis odio sapien nec elit. Morbi vitae odio felis. Proin vel feugiat turpis, sed accumsan purus.",
+          "image": "/images/essay/preview.png",
+          "alt": "a hand writing on a piece of paper with a pen"
+        },
+        {
+          "title": "User Interface Design",
+          "text": "Donec vestibulum rutrum sapien, in tincidunt libero condimentum at. Sed tempor dapibus erat, vitae fringilla diam euismod id. Curabitur vel sapien ac magna imperdiet rutrum.",
+          "image": "/images/essay/preview.png",
+          "alt": "a hand writing on a piece of paper with a pen"
+        }
+      ]
     },
     {
       "title": "Electrify Chicago",
-      "preview_description": ["Find Out How Much Chicago Buildings Pollute!"],
+      "type": "Open Source Project",
+      "slug": "electrify-chicago",
+      "preview": {
+        "description": [
+          "Find out how much Chicago buildings pollute! This public tool helps citizens understand building emissions in the city.",
+          "Built with a modern Jamstack approach using Gridsome and Vue."
+        ],
+        "image": "/images/electrify-chicago/preview.png"
+      },
+      "hero": "/images/electrify-chicago/hero.png",
       "tech_stack": [
         { "name": "Vue.js", "key": "vue" },
+        { "name": "Gridsome", "key": "gridsome" },
+        { "name": "Typescript", "key": "typescript" },
         { "name": "Python", "key": "python" },
         { "name": "Pandas", "key": "pandas" },
-        { "name": "SASS", "key": "sass" }
+        { "name": "Sass", "key": "sass" }
       ],
-      "logo": "/images/electrify-chicago-screenshot.png"
+      "sections": [
+        {
+          "title": "Data Sourcing",
+          "text": "We sourced emissions data from public records and aggregated them using Python and Pandas. The data pipeline ensures regular updates and accuracy."
+        },
+        {
+          "title": "Interactive Visualization",
+          "text": "The front-end allows users to search, filter, and explore emissions by neighborhood or building. Performance and clarity were a top priority.",
+          "image": "/images/electrify-chicago/preview.png",
+          "alt": "a screenshot of the front page of the electrify chicago project"
+        },
+        {
+          "title": "Open Source Collaboration",
+          "text": "This project was built in collaboration with local data scientists and environmental advocates. Contributions are welcome through our GitHub repository.",
+          "image": "/images/electrify-chicago/preview.png",
+          "alt": "a screenshot of the front page of the electrify chicago project"
+        }
+      ]
     }
   ]
 }
