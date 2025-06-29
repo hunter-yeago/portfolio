@@ -1,6 +1,6 @@
 "use client";
 import { SingleProject } from "../types/ProjectTypes";
-import Project from "./Project";
+import ProjectPreview from "./ProjectPreview";
 
 interface Props {
   projects: SingleProject[];
@@ -8,7 +8,7 @@ interface Props {
 
 export default function ProjectSection({ projects }: Props) {
   const renderProjects = (projects: SingleProject[]) => {
-    return projects.map((project: SingleProject) => <Project project={project} />);
+    return projects.map((project: SingleProject) => <ProjectPreview key={project.title} project={project} />);
   };
 
   return (

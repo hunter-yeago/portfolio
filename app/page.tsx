@@ -10,9 +10,8 @@ export default function Home() {
   const fileContents = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(fileContents);
   return (
-    <main>
+    <main className="md:mt-16 flex flex-col gap-8">
       <IntroParagraph />
-      {/* <ArticlesPreview /> */}
       <ProjectSection projects={data.projects} />
     </main>
   );

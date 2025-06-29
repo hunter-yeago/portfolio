@@ -44,7 +44,7 @@ const techIcons: Record<string, JSX.Element> = {
   inertiajs: <InertiaLogo />,
 };
 
-export default function Project({ project }: Props) {
+export default function ProjectPreview({ project }: Props) {
   return (
     <article
       className="p-6 border-4 flex gap-14 justify-between rounded-xl shadow-lg hover:shadow-xl max-w-[800px]"
