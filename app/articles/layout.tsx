@@ -20,5 +20,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="w-4/5 border-black border-2 mx-auto">{children}</main>;
+  return (
+    <main className="w-4/5 border-black border-2 mx-auto">{children}</main>
+  );
 }

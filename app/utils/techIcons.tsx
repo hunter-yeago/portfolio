@@ -1,5 +1,16 @@
 import React from "react";
-import { SiLaravel, SiReact, SiTailwindcss, SiVuedotjs, SiPython, SiPandas, SiSass, SiTypescript, SiPhp, SiGraphql } from "react-icons/si";
+import {
+  SiLaravel,
+  SiReact,
+  SiTailwindcss,
+  SiVuedotjs,
+  SiPython,
+  SiPandas,
+  SiSass,
+  SiTypescript,
+  SiPhp,
+  SiGraphql,
+} from "react-icons/si";
 import InertiaLogo from "@/app/components/logos/InertiaLogo";
 import GridsomeLogo from "../components/logos/GridsomeLogo";
 

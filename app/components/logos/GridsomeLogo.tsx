@@ -1,6 +1,12 @@
 export default function GridsomeLogo() {
   return (
-    <svg width="18" height="18" viewBox="0 0 249 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 249 248"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M170.405 124.39c0-12.221 10.008-22.127 22.354-22.127h32.577c12.346 0 22.664 9.906 22.664 22.127 0 12.22-10.318 22.127-22.664 22.127h-32.577c-12.346 0-22.354-9.907-22.354-22.127z"
         fill="#FFF"
@@ -22,7 +28,14 @@ export default function GridsomeLogo() {
         fill="url(#gridsome-small-white_svg__paint0_linear)"
       ></path>
       <defs>
-        <linearGradient id="gridsome-small-white_svg__paint0_linear" x1="124" y1="247" x2="124" y2="102.23" gradientUnits="userSpaceOnUse">
+        <linearGradient
+          id="gridsome-small-white_svg__paint0_linear"
+          x1="124"
+          y1="247"
+          x2="124"
+          y2="102.23"
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#fff" stopOpacity=".95"></stop>
           <stop offset="1" stopColor="#fff" stopOpacity=".5"></stop>
         </linearGradient>

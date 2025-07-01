@@ -1,7 +1,10 @@
 import { links } from "../data";
 export default function ProfessionalLinks() {
   return (
-    <div id="prof-links" className="flex mx-auto flex-wrap items-center justify-center gap-4 mt-4">
+    <div
+      id="prof-links"
+      className="flex mx-auto flex-wrap items-center justify-center gap-4 mt-4"
+    >
       {links.map(({ id, href, bgClass }) => (
         <a
           key={id}
