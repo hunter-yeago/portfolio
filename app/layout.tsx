@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Lora } from "next/font/google";
+import NavLinks from "./components/Navlinks";
+import Footer from "./components/Footer";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -25,9 +27,11 @@ export default function RootLayout({
     <html lang="en" className={`${lora.variable} font-lora`}>
       <SpeedInsights />
 
-      <body className="w-[90vw] max-w-[1200px] mx-auto">
+      <body className="w-[90vw] max-w-4xl mx-auto">
         <Navbar />
         {children}
+
+        <Footer />
       </body>
     </html>
   );

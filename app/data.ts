@@ -13,28 +13,28 @@ export const annotations: Annotation[] = [
     color: "#C1D37F",
     multiline: true,
     animationDuration: 800,
-  }, // hunter green highlight
+  },
   {
     id: "techstack",
     type: "highlight",
     color: "#7FBEEB",
     multiline: true,
     animationDuration: 1000,
-  }, // hunter green red highlight --increased animation time since there are more characters
+  },
   {
     id: "solving-challenges",
     type: "highlight",
     color: "#FE938C",
     multiline: true,
     animationDuration: 900,
-  }, // light red highlight
+  },
   {
     id: "prof-links",
     type: "box",
     color: "red",
     animationDuration: 1000,
     iterations: 1,
-  }, // red pen box
+  },
 ];
 
 export const links = [
@@ -56,6 +56,9 @@ export const links = [
 ];
 
 export const navData: NavItem[] = [
-  // { name: "About", path: "/about" },
-  // { name: "Contact", path: "/contact" },
+  { name: "Home", path: "/" },
+  { name: "Articles", path: "/articles" },
+  { name: "Projects", path: "/projects" },
+  { name: "Resume", path: "/resume" },
+  { name: "Contact", path: "/contact" },
 ];

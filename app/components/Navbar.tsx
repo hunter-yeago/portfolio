@@ -1,33 +1,19 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { navData } from "../data";
+import NavLinks from "./Navlinks";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const navJSX = navData.map((item) => (
-    <li key={item.name}>
-      <Link
-        href={item.path}
-        className="hover:text-gray-400"
-        onClick={toggleMenu}
-      >
-        {item.name}
-      </Link>
-    </li>
-  ));
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav className="text-black pt-6">
-      <div className=" text-lg flex items-center">
-        <p className="hidden md:block w-max whitespace-nowrap">Hunter Yeago</p>
-        <ul className="flex flex-wrap w-full gap-4 justify-center md:justify-end align-center lg:items-center">
-          {navJSX}
-        </ul>
+      <div className="text-lg flex justify-center lg:justify-between items-center">
+        <Link href="/" className="hidden md:block w-max whitespace-nowrap">
+          Hunter Yeago
+        </Link>
+        <NavLinks onClick={toggleMenu} />
       </div>
     </nav>
   );

@@ -1,5 +1,3 @@
-// Updated Types
-
 export interface TechStackItem {
   name: string;
   key: string;
@@ -7,7 +5,14 @@ export interface TechStackItem {
 
 export interface ProjectSection {
   title?: string;
-  text?: string;
+  text?: {
+    information: string;
+    image?: {
+      url: string;
+      alt: string;
+    };
+  }[];
+  type?: string;
   image?: string;
   alt?: string;
 }
@@ -20,7 +25,10 @@ export interface SingleProject {
     description: string[];
     image: string;
   };
-  hero: string;
+  hero?: {
+    url: string;
+    alt: string;
+  };
   tech_stack: TechStackItem[];
   sections?: ProjectSection[];
 }

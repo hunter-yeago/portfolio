@@ -1,5 +1,4 @@
 import IntroParagraph from "../app/components/IntroParagraph";
-import ArticlesPreview from "./components/ArticlesPreview";
 import ProjectSection from "./components/ProjectSection";
 
 import { getData } from "./utils/utils";
