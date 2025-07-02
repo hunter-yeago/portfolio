@@ -1,0 +1,62 @@
+{
+  "title": "Electrify Chicago",
+  "type": "Open Source",
+  "slug": "electrify-chicago",
+  "preview": {
+    "description": [
+      "Find out how much Chicago buildings pollute! This public tool helps citizens understand building emissions in the city.",
+      "Built with a modern Jamstack approach using Gridsome and Vue."
+    ],
+    "image": "/images/electrify-chicago/preview.png"
+  },
+  "hero": {
+    "url": "/images/electrify-chicago/hero.png",
+    "alt": "a screenshot of the front page of the electrify chicago project"
+  },
+  "tech_stack": [
+    { "name": "Vue.js", "key": "vue" },
+    { "name": "Gridsome", "key": "gridsome" },
+    { "name": "Typescript", "key": "typescript" },
+    { "name": "Python", "key": "python" },
+    { "name": "Pandas", "key": "pandas" },
+    { "name": "Sass", "key": "sass" },
+    { "name": "GraphQL", "key": "graphql" }
+  ],
+  "sections": [
+    {
+      "type": "copy-only",
+      "title": "Data Sourcing",
+      "text": [
+        {
+          "information": "We sourced emissions data from public records and aggregated them using Python and Pandas. The data pipeline ensures regular updates and accuracy."
+        }
+      ]
+    },
+    {
+      "type": "image-and-copy",
+      "title": "Interactive Visualization",
+      "text": [
+        {
+          "information": "The front-end allows users to search, filter, and explore emissions by neighborhood or building. Performance and clarity were a top priority.",
+          "image": {
+            "url": "/images/electrify-chicago/preview.png",
+            "alt": "a screenshot of the front page of the electrify chicago project"
+          }
+        }
+      ]
+    },
+    {
+      "type": "image-and-copy",
+      "title": "Open Source Collaboration",
+      "text": [
+        {
+          "information": "This project was built in collaboration with local data scientists and environmental advocates. Contributions are welcome through our GitHub repository.",
+          "image": {
+            "url": "/images/electrify-chicago/preview.png",
+            "alt": "a screenshot of the front page of the electrify chicago project"
+          }
+        }
+      ]
+    }
+  ]
+}

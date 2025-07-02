@@ -25,7 +25,7 @@ export interface SingleProject {
     description: string[];
     image: string;
   };
-  hero?: {
+  hero: {
     url: string;
     alt: string;
   };

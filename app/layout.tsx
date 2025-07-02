@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/nav/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Lora } from "next/font/google";
-import NavLinks from "./components/Navlinks";
-import Footer from "./components/Footer";
+import NavLinks from "./components/nav/Navlinks";
+import Footer from "./components/footer/Footer";
 
 const lora = Lora({
   subsets: ["latin"],

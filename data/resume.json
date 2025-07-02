@@ -1,0 +1,101 @@
+{
+  "name": "Hunter Yeago",
+  "title": "Fullstack Web Developer",
+  "location": "Chicago, IL",
+  "contact": {
+    "phone": "872-295-9078",
+    "email": "contact@hunteryeago.com",
+    "website": "https://www.hunteryeago.com",
+    "linkedin": "https://www.linkedin.com/in/hunter-yeago"
+  },
+  "languages": ["English", "French (Fluent)"],
+  "experience": [
+    {
+      "title": "Fullstack Web Developer",
+      "company": "Lettuce Entertain You",
+      "location": "Chicago, IL",
+      "start_date": "January 2024",
+      "end_date": "Present",
+      "highlights": [
+        "Built sites using Next.js, PHP, and headless WordPress CMS including Google Cloud Platform infrastructure.",
+        "Maintained and updated 40+ existing WordPress / PHP websites.",
+        "Implemented responsive design and full accessibility for cross-device consistency.",
+        "Managed project budgets and met delivery timelines.",
+        "Used Google Tag Manager and Google Analytics for traffic insights.",
+        "Project lead on: https://www.joes.net · https://www.gussipanddip.com",
+        "Deployed CI/CD pipelines, custom Docker containers, Cloud Run, Load balancers, Bucket Storage, Cloud SQL, and Monitoring tools.",
+        "Streamlined restaurant data integration with WordPress via ACF, enabling marketing team control without code changes.",
+        "Created PHP + GCP CLI script to automate cloud asset transfers across 40+ websites, saving 300+ man-hours/year."
+      ]
+    },
+    {
+      "title": "Laravel Project - Language Learning Tool",
+      "company": "Personal Project",
+      "location": "",
+      "start_date": "September 2024",
+      "end_date": "Present",
+      "highlights": [
+        "Using Laravel, Inertia.js, PostgreSQL, and React.js.",
+        "Designed to give users better insights into essay writing progress by connecting individual word-level feedback.",
+        "Addresses common frustrations with disorganized feedback workflows like using Google Docs."
+      ]
+    },
+    {
+      "title": "Bartender",
+      "company": "The Den Theatre",
+      "location": "Chicago, IL",
+      "start_date": "April 2021",
+      "end_date": "December 2023",
+      "highlights": [
+        "Managed daily bar operations, including inventory, cash handling, and drink preparation.",
+        "Resolved customer concerns and maintained a professional, friendly atmosphere."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Philosophy",
+      "institution": "Stetson University",
+      "location": "DeLand, Florida",
+      "year": "2018"
+    }
+  ],
+  "presentations": [
+    {
+      "event": "Philosophy of Art Conference",
+      "institution": "San Diego State University",
+      "location": "California",
+      "date": "June 2018",
+      "title": "Advertising and Autonomy",
+      "scholarship": true
+    },
+    {
+      "event": "Disquiet International Literary Conference",
+      "institution": "Disquiet",
+      "location": "Lisbon, Portugal",
+      "date": "July 2018",
+      "title": "Novel Presentation",
+      "scholarship": true
+    }
+  ],
+  "skills": [
+    "PHP",
+    "Laravel",
+    "Inertia.js",
+    "Git",
+    "PostgreSQL",
+    "MySQL",
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "JavaScript",
+    "Docker",
+    "Google Cloud Platform",
+    "jQuery",
+    "LAMP",
+    "HTML",
+    "CSS",
+    "SASS",
+    "Tailwind"
+  ]
+}

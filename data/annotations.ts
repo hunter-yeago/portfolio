@@ -1,4 +1,4 @@
-import { Annotation, NavItem } from "./types";
+import { Annotation } from "../app/types";
 
 // Rough Annoation Docs
 // https://roughnotation.com/
@@ -35,30 +35,4 @@ export const annotations: Annotation[] = [
     animationDuration: 1000,
     iterations: 1,
   },
-];
-
-export const links = [
-  {
-    id: "LinkedIn",
-    href: "https://www.linkedin.com/in/hunter-yeago/",
-    bgClass: "bg-[#7FBEEB] text-black",
-  },
-  {
-    id: "Resume",
-    href: "https://drive.google.com/file/d/1V4S31joVw0NZeowUtAIvXtexgXu90T7V/view?usp=drive_link",
-    bgClass: "bg-[#C1D37F] text-gold",
-  },
-  {
-    id: "GitHub",
-    href: "https://github.com/hunter-yeago",
-    bgClass: "bg-[#fe938c] text-black",
-  },
-];
-
-export const navData: NavItem[] = [
-  { name: "Home", path: "/" },
-  { name: "Articles", path: "/articles" },
-  { name: "Projects", path: "/projects" },
-  { name: "Resume", path: "/resume" },
-  { name: "Contact", path: "/contact" },
 ];

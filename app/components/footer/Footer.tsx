@@ -1,6 +1,6 @@
 import GithubIconLink from "./GithubIconLink";
 import LinkedinIconLink from "./LinkedInIconLink";
-import NavLinks from "./Navlinks";
+import NavLinks from "../nav/Navlinks";
 
 export default function Footer() {
   return (

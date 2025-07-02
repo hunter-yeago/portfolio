@@ -1,14 +1,14 @@
-import IntroParagraph from "../app/components/IntroParagraph";
-import ProjectSection from "./components/ProjectSection";
-
-import { getData } from "./utils/utils";
+import { getAllProjects } from "@/lib/projects";
+import IntroParagraph from "./components/home/IntroParagraph";
+import ProjectSection from "./components/projects/ProjectSection";
+import { getIntroParagraph } from "@/lib/intro_paragraph";
 
 export default function Home() {
-  const data = getData();
+  const introData = getIntroParagraph();
   return (
     <main className="md:mt-16 flex flex-col gap-8">
-      <IntroParagraph />
-      <ProjectSection projects={data.projects} />
+      <IntroParagraph data={introData} />
+      <ProjectSection projects={getAllProjects()} />
     </main>
   );
 }
