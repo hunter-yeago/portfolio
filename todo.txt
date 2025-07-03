@@ -1,0 +1,5 @@
+hover (maybe focus) gives a tool tip description of what it is.
+
+hidden button before / after to skip?
+
+so that the user doesn't have to open a new link to go figure out what it is / does
