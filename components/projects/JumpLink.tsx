@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-export default function JumpLink({ section }: { section: string; index: number }) {
+export default function JumpLink({
+  section,
+}: {
+  section: string;
+  index: number;
+}) {
   if (!section) return null;
 
   return (

@@ -1,11 +1,22 @@
-export default function FormStatus({ status }: { status: "success" | "error" | null }) {
-  if (status === "success") {
-    return <p className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">Thank you for your message! We&apos;ll get back to you soon.</p>;
-  }
+interface FormStatusProps {
+  status: "success" | "error" | null;
+}
 
-  if (status === "error") {
-    return <p className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">Sorry, there was an error sending your message. Please try again.</p>;
-  }
+const messages = {
+  success: "Thank you for your message! I will get back to you soon.",
+  error: "Sorry, there was an error sending your message. Please try again.",
+};
 
-  return null;
+export default function FormStatus({ status }: FormStatusProps) {
+  if (!status) return null;
+
+  const isSuccess = status === "success";
+  const message = messages[status];
+  const statusClasses = isSuccess
+    ? "border-green-400 bg-green-100 text-green-700"
+    : "border-red-400 bg-red-100 text-red-700";
+
+  return (
+    <p className={`mb-4 p-4 border rounded ${statusClasses}`}>{message}</p>
+  );
 }

@@ -9,7 +9,10 @@ const contactSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
   email: z.string().email("Invalid email address"),
   subject: z.string().min(1, "Subject is required").max(200),
-  message: z.string().min(10, "Message must be at least 10 characters").max(2000),
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters")
+    .max(2000),
 });
 
 // Rate limiting (simple in-memory store - use Redis in production)
@@ -25,7 +28,9 @@ function checkRateLimit(ip: string): boolean {
     rateLimitStore.set(ip, []);
   }
 
-  const requests = rateLimitStore.get(ip).filter((time: number) => time > windowStart);
+  const requests = rateLimitStore
+    .get(ip)
+    .filter((time: number) => time > windowStart);
   rateLimitStore.set(ip, requests);
 
   if (requests.length >= RATE_LIMIT_MAX_REQUESTS) {
@@ -39,17 +44,26 @@ function checkRateLimit(ip: string): boolean {
 
 // Sanitize input to prevent XSS
 function sanitizeInput(input: string): string {
-  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;").replace(/\//g, "&#x2F;");
+  return input
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;")
+    .replace(/\//g, "&#x2F;");
 }
 
 export async function POST(request: NextRequest) {
   try {
     // Get client IP for rate limiting
-    const ip = request.ip || request.headers.get("x-forwarded-for") || "unknown";
+    const ip =
+      request.ip || request.headers.get("x-forwarded-for") || "unknown";
 
     // Check rate limit
     if (!checkRateLimit(ip)) {
-      return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 });
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 },
+      );
     }
 
     const body = await request.json();
@@ -57,7 +71,10 @@ export async function POST(request: NextRequest) {
     // Validate input
     const validationResult = contactSchema.safeParse(body);
     if (!validationResult.success) {
-      return NextResponse.json({ error: "Invalid input", details: validationResult.error.errors }, { status: 400 });
+      return NextResponse.json(
+        { error: "Invalid input", details: validationResult.error.errors },
+        { status: 400 },
+      );
     }
 
     const { name, email, subject, message } = validationResult.data;
@@ -110,10 +127,16 @@ export async function POST(request: NextRequest) {
       `,
     });
 
-    return NextResponse.json({ success: true, message: "Email sent successfully" });
+    return NextResponse.json({
+      success: true,
+      message: "Email sent successfully",
+    });
   } catch (error) {
     console.error("Contact form error:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }
 
@@ -125,7 +148,13 @@ import sgMail from "@sendgrid/mail";
 // Initialize once with your API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-async function sendEmail(options: { from: string; to: string; subject: string; html: string; text: string }) {
+async function sendEmail(options: {
+  from: string;
+  to: string;
+  subject: string;
+  html: string;
+  text: string;
+}) {
   try {
     const msg = {
       to: options.to,

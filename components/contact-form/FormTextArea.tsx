@@ -10,10 +10,21 @@ interface FormTextareaProps {
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-export default function FormTextarea({ id, label, value, error, placeholder, rows = 5, onChange }: FormTextareaProps) {
+export default function FormTextarea({
+  id,
+  label,
+  value,
+  error,
+  placeholder,
+  rows = 5,
+  onChange,
+}: FormTextareaProps) {
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">
+      <label
+        htmlFor={id}
+        className="block text-sm font-medium text-gray-700 mb-1"
+      >
         {label}
       </label>
       <textarea

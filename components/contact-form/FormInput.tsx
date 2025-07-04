@@ -10,10 +10,21 @@ interface FormInputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function FormInput({ id, label, type = "text", value, error, placeholder, onChange }: FormInputProps) {
+export default function FormInput({
+  id,
+  label,
+  type = "text",
+  value,
+  error,
+  placeholder,
+  onChange,
+}: FormInputProps) {
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">
+      <label
+        htmlFor={id}
+        className="block text-sm font-medium text-gray-700 mb-1"
+      >
         {label}
       </label>
       <input

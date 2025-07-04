@@ -43,7 +43,10 @@ export interface Annotation {
   padding?: [number, number];
   iterations?: number;
   multiline?: boolean;
-  brackets?: ["left" | "right" | "top" | "bottom", "left" | "right" | "top" | "bottom"];
+  brackets?: [
+    "left" | "right" | "top" | "bottom",
+    "left" | "right" | "top" | "bottom",
+  ];
   strokeWidth?: number;
   animationDuration?: number;
 }
