@@ -1,6 +1,6 @@
 import { getAllProjects } from "@/lib/projects";
-import IntroParagraph from "./components/home/IntroParagraph";
-import ProjectSection from "./components/projects/ProjectSection";
+import IntroParagraph from "@components/home/IntroParagraph";
+import ProjectSection from "@components/projects/ProjectSection";
 import { getIntroParagraph } from "@/lib/intro_paragraph";
 
 export default function Home() {

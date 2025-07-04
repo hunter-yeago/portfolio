@@ -3,7 +3,7 @@ export interface TechStackItem {
   key: string;
   url: string;
   tooltip: string;
-  category: "frontend" | "backend" | "data"; // or string for flexibility
+  category: "Frontend" | "Backend" | "Data";
 }
 
 export interface ProjectSection {
@@ -35,3 +35,23 @@ export interface SingleProject {
   tech_stack: TechStackItem[];
   sections?: ProjectSection[];
 }
+
+export interface Annotation {
+  id: string;
+  type: "underline" | "highlight" | "circle" | "bracket" | "box";
+  color: string;
+  padding?: [number, number];
+  iterations?: number;
+  multiline?: boolean;
+  brackets?: [
+    "left" | "right" | "top" | "bottom",
+    "left" | "right" | "top" | "bottom",
+  ];
+  strokeWidth?: number;
+  animationDuration?: number;
+}
+
+export type NavItem = {
+  name: string;
+  path: string;
+};

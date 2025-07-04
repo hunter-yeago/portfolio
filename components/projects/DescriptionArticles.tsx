@@ -12,7 +12,12 @@ export default function DescriptionArticles({ sections }: Props) {
   return (
     <section aria-label="details about this project">
       {sections.map((section, index) => (
-        <article key={index} id={section.title} className="scroll-mt-12 mb-8" aria-label={`${section.title} section`}>
+        <article
+          key={index}
+          id={section.title}
+          className="scroll-mt-12 mb-8"
+          aria-label={`${section.title} section`}
+        >
           {renderSection(section)}
         </article>
       ))}

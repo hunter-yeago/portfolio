@@ -1,5 +1,5 @@
-import { TechStackItem } from "@/app/types/types";
-import techIcons from "@/app/utils/techIcons";
+import { TechStackItem } from "@/types/types";
+import techIcons from "@/utils/techIcons";
 import Link from "next/link";
 
 interface Props {
@@ -29,13 +29,19 @@ export default function TechStackList({ items, useLinks }: Props) {
 
         return (
           <div key={category}>
-            <h3 className="text-xl font-semibold text-primary-300 mb-2 capitalize">{category}</h3>
+            <h3 className="text-xl font-semibold text-primary-300 mb-2 capitalize">
+              {category}
+            </h3>
             <ul className="flex flex-wrap gap-2 text-lg text-white">
               {categoryItems.map((item, index) => {
                 const icon = techIcons[item.key];
 
                 return (
-                  <li className="tooltip relative group" key={`${item.key}-${index}`} title={item.name}>
+                  <li
+                    className="tooltip relative group"
+                    key={`${item.key}-${index}`}
+                    title={item.name}
+                  >
                     {useLinks ? (
                       <Link
                         className="flex justify-center items-center gap-2 bg-gray-800 px-2 py-1 rounded hover:bg-gray-700 transition"

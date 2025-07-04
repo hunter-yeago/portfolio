@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import stationImage from "../../../public/images/station.jpg";
+import stationImage from "@images/station.jpg";
 import ProfessionalLinks from "./ProfessionalLinks";
 import { annotations } from "@/data/annotations";
 import { useAnnotations } from "@/hooks/useAnnotations";
@@ -20,7 +20,9 @@ function IntroParagraph({ data }: Props) {
       aria-label="information about hunter yeago and links to his professional profiles"
     >
       <article className="flex text-center md:text-left flex-col gap-4 py-6">
-        <h1 className="text-3xl md:text-[1.875rem] font-semibold">{data.headline}</h1>
+        <h1 className="text-3xl md:text-[1.875rem] font-semibold">
+          {data.headline}
+        </h1>
 
         <div className="block max-h-[300px] overflow-hidden rounded-xl md-custom:hidden">
           <Image

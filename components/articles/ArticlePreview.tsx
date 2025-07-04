@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import hunterImage from "../../public/images/hunter-at-phptek.png";
+import hunterImage from "@/hunter-at-phptek.png";
 
 export default function ArticlePreview() {
   return (
@@ -10,20 +10,29 @@ export default function ArticlePreview() {
       aria-label="information about my time spent at the PHP conference PHP TEK in twenty twenty four"
     >
       <figure className="relative object-cover h-full">
-        <Image className="object-cover h-full" src={hunterImage} alt="Picture of me at PHP TEK 2024" />
-        <figcaption className="text-center absolute bottom-0 left-1 text-white"> Picture by Dwayne McDaniel</figcaption>
+        <Image
+          className="object-cover h-full"
+          src={hunterImage}
+          alt="Picture of me at PHP TEK 2024"
+        />
+        <figcaption className="text-center absolute bottom-0 left-1 text-white">
+          {" "}
+          Picture by Dwayne McDaniel
+        </figcaption>
       </figure>
 
       <div className="p-4 flex flex-col gap-4">
         <p className="text-gray-700">
           {" "}
-          I went to PHP[TEK] 2024, and here&apos;s my article about it , and here&apos;s my article about it! , and here&apos;s my article about it! , and
-          here&apos;s my article about it!{" "}
+          I went to PHP[TEK] 2024, and here&apos;s my article about it , and
+          here&apos;s my article about it! , and here&apos;s my article about
+          it! , and here&apos;s my article about it!{" "}
         </p>
         <p className="text-gray-700">
           {" "}
-          I went to PHP[TEK] 2024, and here&apos;s my article about it , and here&apos;s my article about it! , and here&apos;s my article about it! , and
-          here&apos;s my article about it!
+          I went to PHP[TEK] 2024, and here&apos;s my article about it , and
+          here&apos;s my article about it! , and here&apos;s my article about
+          it! , and here&apos;s my article about it!
         </p>
         <Link
           className="w-40 text-center bg-gray-800 text-white p-2 rounded-md hover:bg-yellow-600"
