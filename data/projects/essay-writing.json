@@ -18,14 +18,14 @@
       "name": "Laravel",
       "key": "laravel",
       "url": "https://laravel.com/",
-      "tooltip": "Popular PHP web framework known for its elegant syntax and developer-friendly tools.",
+      "tooltip": "PHP web framework known for its elegant syntax and developer-friendly tools.",
       "category": "Backend"
     },
     {
       "name": "PHP",
       "key": "php",
       "url": "https://www.php.net/",
-      "tooltip": "Widely-used server-side scripting language designed for web development.",
+      "tooltip": "Server-side scripting language designed for web development.",
       "category": "Backend"
     },
     {
@@ -39,7 +39,7 @@
       "name": "Inertia.js",
       "key": "inertiajs",
       "url": "https://inertiajs.com/",
-      "tooltip": "Lets you build modern single-page apps using classic server-side routing and controllers.",
+      "tooltip": "Laravel Monolith that lets you build modern single-page apps using classic server-side routing and controllers.",
       "category": "Backend"
     },
     {

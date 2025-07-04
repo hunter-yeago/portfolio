@@ -1,1 +1,21 @@
-instead of copy only, copy/image, etc. make full width, half and half, then pass in params
+
+site
+- contact page
+- resume page
+
+projects
+- electrify chicago copy
+- instead of "projects", do "development experience"?
+- lettuce projects page? go more into details than I could on resume page
+- instead of copy only, copy/image, etc. make full width, half and half, then pass in params
+
+- articles
+- php tek article
+- Can Web Development Help Save Global Conflict article - how to get uncon video
+- how to include d3 into an article with my system
+- op ed about picnic tables (reach out to alderman first and include it in my op ed?)
+
+
+- brand
+- doc with brand identity details
+- list of sites - what do I like? what do I dislike?

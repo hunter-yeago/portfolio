@@ -18,7 +18,7 @@
       "name": "Vue.js",
       "key": "vue",
       "url": "https://vuejs.org",
-      "tooltip": "Progressive JavaScript framework for building user interfaces.",
+      "tooltip": "JavaScript framework for building user interfaces.",
       "category": "Frontend"
     },
     {
@@ -39,7 +39,7 @@
       "name": "Python",
       "key": "python",
       "url": "https://www.python.org/",
-      "tooltip": "Versatile, high-level programming language known for its readability and wide use across data science, web development, and automation.",
+      "tooltip": "High-level programming language known for its readability and wide use across data science, web development, and automation.",
       "category": "Backend"
     },
     {
@@ -53,7 +53,7 @@
       "name": "Pandas",
       "key": "pandas",
       "url": "https://pandas.pydata.org/",
-      "tooltip": "Powerful Python library for data manipulation and analysis.",
+      "tooltip": "Python library for data manipulation and analysis.",
       "category": "Data"
     },
     {
@@ -67,7 +67,7 @@
       "name": "Sass",
       "key": "sass",
       "url": "https://sass-lang.com/",
-      "tooltip": "CSS preprocessor that adds features like variables, nesting, and mixins to regular CSS.",
+      "tooltip": "CSS preprocessor that adds features like variables, nesting, and mixins.",
       "category": "Frontend"
     }
   ],
