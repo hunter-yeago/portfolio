@@ -1,3 +1,6 @@
+import { getAllProjects } from "@/lib/projects";
+import ProjectSection from "../components/projects/ProjectSection";
+
 export default function ProjectsPage() {
-  return <>is it working - ProjectPage</>;
+  return <ProjectSection projects={getAllProjects()} />;
 }

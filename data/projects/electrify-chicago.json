@@ -74,6 +74,24 @@
   "sections": [
     {
       "type": "copy-only",
+      "title": "About the Project",
+      "text": [
+        {
+          "information": "copy about the project"
+        }
+      ]
+    },
+    {
+      "type": "copy-only",
+      "title": "My contributions",
+      "text": [
+        {
+          "information": "copy about my contributions"
+        }
+      ]
+    },
+    {
+      "type": "copy-only",
       "title": "Data Sourcing",
       "text": [
         {

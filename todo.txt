@@ -1,0 +1,1 @@
+instead of copy only, copy/image, etc. make full width, half and half, then pass in params
