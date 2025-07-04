@@ -5,10 +5,9 @@ import { getIntroParagraph } from "@/lib/intro_paragraph";
 import ContactForm from "@/components/contact-form/ContactForm";
 
 export default function Home() {
-  const introData = getIntroParagraph();
   return (
-    <main className="md:mt-16 flex flex-col gap-8">
-      <IntroParagraph data={introData} />
+    <main className="md:mt-16 flex flex-col gap-16">
+      <IntroParagraph data={getIntroParagraph()} />
       <ProjectSection projects={getAllProjects()} />
       <ContactForm />
     </main>

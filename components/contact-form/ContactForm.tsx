@@ -56,45 +56,53 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact</h2>
+    <section className="flex flex-col gap-4 items-center">
+      <h2 className="text-3xl">Contact</h2>
+      <div className="p-6 bg-white rounded-lg shadow-lg w-full">
+        <FormStatus status={submitStatus} />
 
-      <FormStatus status={submitStatus} />
+        {submitStatus !== "success" && (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <FormInput id="name" label="Name *" value={formData.name} error={errors.name} placeholder="Your full name" onChange={handleChange} />
 
-      {submitStatus !== "success" && (
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <FormInput id="name" label="Name *" value={formData.name} error={errors.name} placeholder="Your full name" onChange={handleChange} />
+            <FormInput
+              id="email"
+              label="Email *"
+              type="email"
+              value={formData.email}
+              error={errors.email}
+              placeholder="your.email@example.com"
+              onChange={handleChange}
+            />
 
-          <FormInput
-            id="email"
-            label="Email *"
-            type="email"
-            value={formData.email}
-            error={errors.email}
-            placeholder="your.email@example.com"
-            onChange={handleChange}
-          />
+            <FormInput
+              id="subject"
+              label="Subject *"
+              value={formData.subject}
+              error={errors.subject}
+              placeholder="What's this about?"
+              onChange={handleChange}
+            />
 
-          <FormInput id="subject" label="Subject *" value={formData.subject} error={errors.subject} placeholder="What's this about?" onChange={handleChange} />
+            <FormTextarea
+              id="message"
+              label="Message *"
+              value={formData.message}
+              error={errors.message}
+              placeholder="Your message here..."
+              onChange={handleChange}
+            />
 
-          <FormTextarea
-            id="message"
-            label="Message *"
-            value={formData.message}
-            error={errors.message}
-            placeholder="Your message here..."
-            onChange={handleChange}
-          />
-
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200"
-          >
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      )}
-    </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        )}
+      </div>
+    </section>
   );
 }
