@@ -24,7 +24,7 @@ export default function ProjectPage({ params }: PageProps) {
       <h1 className="text-4xl font-bold">{project.title}</h1>
       <p>{project.preview.description}</p>
       <Image src={project.hero.url} alt={`${project.hero.alt}`} width={800} height={400} className="rounded shadow-md" />
-      <TechStackList items={project.tech_stack} />
+      <TechStackList items={project.tech_stack} useLinks />
 
       {project.sections?.map((section: ProjectSection, index: number) => {
         if (section.type === "copy-only") return <CopyOnly section={section} key={index} />;

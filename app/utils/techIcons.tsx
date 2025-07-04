@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  SiLaravel,
-  SiReact,
-  SiTailwindcss,
-  SiVuedotjs,
-  SiPython,
-  SiPandas,
-  SiSass,
-  SiTypescript,
-  SiPhp,
-  SiGraphql,
-} from "react-icons/si";
+import { SiLaravel, SiReact, SiTailwindcss, SiVuedotjs, SiPython, SiPandas, SiSass, SiTypescript, SiPhp, SiGraphql, SiD3Dotjs } from "react-icons/si";
 import InertiaLogo from "@/app/components/logos/InertiaLogo";
 import GridsomeLogo from "../components/logos/GridsomeLogo";
 
@@ -27,6 +16,7 @@ const techIcons: Record<string, JSX.Element> = {
   php: <SiPhp title="PHP" />,
   gridsome: <GridsomeLogo />,
   graphql: <SiGraphql />,
+  d3js: <SiD3Dotjs />,
 };
 
 export default techIcons;

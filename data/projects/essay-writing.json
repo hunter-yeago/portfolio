@@ -1,7 +1,7 @@
 {
   "title": "Essay Writing Project",
   "type": "Personal",
-  "slug": "essay-writing-project",
+  "slug": "essay-writing",
   "preview": {
     "description": [
       "Are you trying to improve your writing skill in a foreign language? Activate your vocabulary with this language learning tool.",
@@ -14,11 +14,41 @@
     "alt": "a hand writing on a piece of paper with a pen"
   },
   "tech_stack": [
-    { "name": "Laravel", "key": "laravel" },
-    { "name": "PHP", "key": "php" },
-    { "name": "React.js", "key": "react" },
-    { "name": "Inertia.js", "key": "inertiajs" },
-    { "name": "Tailwind", "key": "tailwind" }
+    {
+      "name": "Laravel",
+      "key": "laravel",
+      "url": "https://laravel.com/",
+      "tooltip": "Popular PHP web framework known for its elegant syntax and developer-friendly tools.",
+      "category": "Backend"
+    },
+    {
+      "name": "PHP",
+      "key": "php",
+      "url": "https://www.php.net/",
+      "tooltip": "Widely-used server-side scripting language designed for web development.",
+      "category": "Backend"
+    },
+    {
+      "name": "React.js",
+      "key": "react",
+      "url": "https://react.dev/",
+      "tooltip": "JavaScript library for building user interfaces using a component-based approach.",
+      "category": "Frontend"
+    },
+    {
+      "name": "Inertia.js",
+      "key": "inertiajs",
+      "url": "https://inertiajs.com/",
+      "tooltip": "Lets you build modern single-page apps using classic server-side routing and controllers.",
+      "category": "Backend"
+    },
+    {
+      "name": "Tailwind",
+      "key": "tailwind",
+      "url": "https://tailwindcss.com/",
+      "tooltip": "Utility-first CSS framework for rapidly building custom designs.",
+      "category": "Frontend"
+    }
   ],
   "sections": [
     {

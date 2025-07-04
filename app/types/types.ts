@@ -1,6 +1,9 @@
 export interface TechStackItem {
   name: string;
   key: string;
+  url: string;
+  tooltip: string;
+  category: "frontend" | "backend" | "data"; // or string for flexibility
 }
 
 export interface ProjectSection {

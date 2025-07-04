@@ -25,7 +25,7 @@ export default function ProjectPreview({ project }: Props) {
           ))}
         </div>
 
-        <TechStackList items={project.tech_stack} />
+        <TechStackList items={project.tech_stack} useLinks={false} />
       </div>
 
       <div className="relative min-w-[200px] min-h-[200px] overflow-hidden">
