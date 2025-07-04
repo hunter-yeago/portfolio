@@ -7,7 +7,7 @@
       "Are you trying to improve your writing skill in a foreign language? Activate your vocabulary with this language learning tool.",
       "This project is built in Laravel and React using Inertia.js for seamless page transitions."
     ],
-    "image": "/images/essay/preview.png"
+    "image": "/images/essay/preview.jpg"
   },
   "hero": {
     "url": "/images/essay/hero.png",
@@ -73,7 +73,7 @@
         {
           "information": "Students start by reading something challenging—an article, a chapter from a novel, or a C1 exam prompt. As they encounter new vocabulary, they create a list. Then, they write an essay that intentionally incorporates those words. When submitted, a tutor marks the words as correct, partially correct, or incorrect, and can provide sentence-level feedback.",
           "image": {
-            "url": "/images/essay/preview.png",
+            "url": "/images/essay/preview.jpg",
             "alt": "a hand writing on a piece of paper with a pen"
           }
         },
@@ -110,7 +110,7 @@
         {
           "information": "The community dictionary builds on this idea. When many students are working through the same articles or word lists—like for the DALF C1—those shared experiences create a repository of usage examples, tutor feedback, and best practices. New students can learn from old corrections and see how others successfully used tricky words in context.",
           "image": {
-            "url": "/images/essay/preview.png",
+            "url": "/images/essay/preview.jpg",
             "alt": "a hand writing on a piece of paper with a pen"
           }
         },
