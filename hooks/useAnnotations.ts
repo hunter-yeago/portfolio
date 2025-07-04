@@ -1,6 +1,6 @@
+import { Annotation } from "@/types/types";
 import { useEffect } from "react";
 import { annotate, annotationGroup } from "rough-notation";
-import { Annotation } from "@/app/types";
 
 export function useAnnotations(annotationList: Annotation[]) {
   useEffect(() => {

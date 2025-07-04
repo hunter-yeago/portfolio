@@ -1,10 +1,10 @@
-import { Annotation } from "../app/types";
-
 // Rough Annoation Docs
 // https://roughnotation.com/
 // https://glitch.com/~basic-rough-notation -- sandbox w/code
 // https://basic-rough-notation.glitch.me/
 // https://github.com/linkstrifer/react-rough-notation
+
+import { Annotation } from "@/types/types";
 
 export const annotations: Annotation[] = [
   {

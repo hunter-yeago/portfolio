@@ -1,4 +1,4 @@
-import { NavItem } from "@/app/types";
+import { NavItem } from "@/types/types";
 
 export const navData: NavItem[] = [
   { name: "Home", path: "/" },

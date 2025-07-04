@@ -1,4 +1,4 @@
-import { SingleProject } from "@/app/types/types";
+import { SingleProject } from "@/types/types";
 import fs from "fs";
 import path from "path";
 
@@ -14,12 +14,7 @@ export function getAllProjects(): SingleProject[] {
   return fs
     .readdirSync(projectsDir)
     .filter((f) => f.endsWith(".json"))
-    .map(
-      (file) =>
-        JSON.parse(
-          fs.readFileSync(path.join(projectsDir, file), "utf-8"),
-        ) as SingleProject,
-    );
+    .map((file) => JSON.parse(fs.readFileSync(path.join(projectsDir, file), "utf-8")) as SingleProject);
 
   // optional sort / filter
   // .sort((a, b) => (a.metadata?.year ?? 0) - (b.metadata?.year ?? 0))
