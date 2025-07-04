@@ -5,5 +5,4 @@ export const navData: NavItem[] = [
   { name: "Articles", path: "/articles" },
   { name: "Projects", path: "/projects" },
   { name: "Resume", path: "/resume" },
-  { name: "Contact", path: "/contact" },
 ];

@@ -43,10 +43,7 @@ export interface Annotation {
   padding?: [number, number];
   iterations?: number;
   multiline?: boolean;
-  brackets?: [
-    "left" | "right" | "top" | "bottom",
-    "left" | "right" | "top" | "bottom",
-  ];
+  brackets?: ["left" | "right" | "top" | "bottom", "left" | "right" | "top" | "bottom"];
   strokeWidth?: number;
   animationDuration?: number;
 }
@@ -55,3 +52,17 @@ export type NavItem = {
   name: string;
   path: string;
 };
+
+export interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+export interface FormErrors {
+  name?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
+}

@@ -15,7 +15,7 @@ export default function ProjectSection({ projects }: Props) {
     <section className="flex flex-col gap-2 justify-center items-center">
       <h2 className="text-3xl">Projects</h2>
 
-      <div className="flex flex-col gap-4 p-4 justify-center">{renderProjects(projects)}</div>
+      <div className="flex flex-col gap-4 justify-center">{renderProjects(projects)}</div>
     </section>
   );
 }
