@@ -125,9 +125,6 @@ import sgMail from "@sendgrid/mail";
 // Initialize once with your API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-console.log("sgMail", sgMail);
-console.log("process.env.SENDGRID_API_KEY", process.env.SENDGRID_API_KEY);
-
 async function sendEmail(options: { from: string; to: string; subject: string; html: string; text: string }) {
   try {
     const msg = {

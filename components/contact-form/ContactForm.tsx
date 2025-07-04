@@ -32,7 +32,6 @@ export default function ContactForm() {
 
     try {
       const result = await submitContactForm(formData);
-      console.log("SendGrid response:", result.status, result.body);
 
       if (result.ok) {
         setSubmitStatus("success");
