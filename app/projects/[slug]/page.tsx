@@ -5,6 +5,8 @@ import CopyOnly from "@/app/components/page-sections/CopyOnly";
 import ImageAndCopy from "@/app/components/page-sections/ImageAndCopy";
 import TechStackList from "@/app/components/projects/TechStackList";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
+import JumpLink from "@/app/components/projects/JumpLink";
+import DescriptionArticles from "@/app/components/projects/DescriptionArticles";
 
 interface PageProps {
   params: { slug: string };
@@ -20,16 +22,19 @@ export default function ProjectPage({ params }: PageProps) {
   if (!project) return notFound();
 
   return (
-    <section className="mt-8 space-y-8">
+    <main className="mt-8 flex flex-col gap-4">
       <h1 className="text-4xl font-bold">{project.title}</h1>
       <p>{project.preview.description}</p>
       <Image src={project.hero.url} alt={`${project.hero.alt}`} width={800} height={400} className="rounded shadow-md" />
       <TechStackList items={project.tech_stack} useLinks />
 
-      {project.sections?.map((section: ProjectSection, index: number) => {
-        if (section.type === "copy-only") return <CopyOnly section={section} key={index} />;
-        else if (section.type === "image-and-copy") return <ImageAndCopy section={section} key={index} />;
-      })}
-    </section>
+      <ul className="flex flex-wrap gap-3 mt-8">
+        {project.sections?.map((section: ProjectSection, index: number) => {
+          return <JumpLink section={section.title} index={index} />;
+        })}
+      </ul>
+
+      {project.sections && <DescriptionArticles sections={project.sections} />}
+    </main>
   );
 }

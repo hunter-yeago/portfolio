@@ -7,17 +7,17 @@ export interface TechStackItem {
 }
 
 export interface ProjectSection {
-  title?: string;
-  text?: {
+  title: string;
+  text: {
     information: string;
-    image?: {
+    image: {
       url: string;
       alt: string;
     };
   }[];
-  type?: string;
-  image?: string;
-  alt?: string;
+  type: string;
+  image: string;
+  alt: string;
 }
 
 export interface SingleProject {
