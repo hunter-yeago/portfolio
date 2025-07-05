@@ -1,42 +1,34 @@
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import TechStackList from "@components/projects/TechStackList";
-import { getAllProjects, getProjectBySlug } from "@/lib/projects";
-import JumpLink from "@components/projects/JumpLink";
-import DescriptionArticles from "@components/projects/DescriptionArticles";
-import { ProjectSection } from "@/types/types";
+import fs from "fs";
+import path from "path";
+import { serialize } from "next-mdx-remote/serialize";
+import { getProjectMeta, projectMetaMap, ProjectSlug } from "@/lib/getProjectMeta";
+import MDXContent from "@/components/projects/MDXContent";
 
-interface PageProps {
+interface Props {
   params: { slug: string };
 }
 
 export async function generateStaticParams() {
-  return getAllProjects().map((p) => ({ slug: p.slug }));
+  return Object.keys(projectMetaMap).map((slug) => ({ slug }));
 }
 
-export default function ProjectPage({ params }: PageProps) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectPage({ params }: Props) {
+  const slug = params.slug;
 
-  if (!project) return notFound();
+  if (!(slug in projectMetaMap)) {
+    return null; // 404
+  }
 
-  return (
-    <main className="mt-8 flex flex-col gap-4">
-      <h1 className="text-4xl font-bold">{project.title}</h1>
-      <p>{project.preview.description}</p>
-      <Image src={project.hero.url} alt={`${project.hero.alt}`} width={800} height={400} className="rounded shadow-md" />
-      <TechStackList items={project.tech_stack} useLinks />
+  const mdxFilePath = path.join(process.cwd(), "data/projects", `${slug}.mdx`);
 
-      <ul className="flex flex-wrap gap-3 my-8">
-        {project.sections?.map((section: ProjectSection, index: number) => {
-          return (
-            <li key={index}>
-              <JumpLink section={section.title} index={index} />
-            </li>
-          );
-        })}
-      </ul>
+  if (!fs.existsSync(mdxFilePath)) {
+    return null; // 404
+  }
 
-      {project.sections && <DescriptionArticles sections={project.sections} />}
-    </main>
-  );
+  const mdxContent = fs.readFileSync(mdxFilePath, "utf-8");
+  const mdxSource = await serialize(mdxContent);
+
+  const meta = getProjectMeta(slug as ProjectSlug);
+
+  return <MDXContent source={mdxSource} meta={meta} />;
 }

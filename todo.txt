@@ -21,3 +21,4 @@ projects
 - list of sites - what do I like? what do I dislike?
 
 add caption to images, especially the copyrighted one for the essay project 
+- MDX problem - trash projects/fdjsakl slugs do not show 404
