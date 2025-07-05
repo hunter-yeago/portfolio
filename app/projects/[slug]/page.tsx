@@ -23,16 +23,10 @@ export default function ProjectPage({ params }: PageProps) {
     <main className="mt-8 flex flex-col gap-4">
       <h1 className="text-4xl font-bold">{project.title}</h1>
       <p>{project.preview.description}</p>
-      <Image
-        src={project.hero.url}
-        alt={`${project.hero.alt}`}
-        width={800}
-        height={400}
-        className="rounded shadow-md"
-      />
+      <Image src={project.hero.url} alt={`${project.hero.alt}`} width={800} height={400} className="rounded shadow-md" />
       <TechStackList items={project.tech_stack} useLinks />
 
-      <ul className="flex flex-wrap gap-3 mt-8">
+      <ul className="flex flex-wrap gap-3 my-8">
         {project.sections?.map((section: ProjectSection, index: number) => {
           return (
             <li key={index}>

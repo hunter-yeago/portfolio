@@ -32,14 +32,14 @@
       "name": "Typescript",
       "key": "typescript",
       "url": "https://www.typescriptlang.org",
-      "tooltip": "Superset of JavaScript that adds static typing and modern features.",
+      "tooltip": "Superset of JavaScript that adds static typing and other features.",
       "category": "Frontend"
     },
     {
       "name": "Python",
       "key": "python",
       "url": "https://www.python.org/",
-      "tooltip": "High-level programming language known for its readability and wide use across data science, web development, and automation.",
+      "tooltip": "High-level programming language known for its wide use across data science, web development, and automation.",
       "category": "Backend"
     },
     {
@@ -77,16 +77,22 @@
       "title": "About the Project",
       "text": [
         {
-          "information": "copy about the project"
+          "information": "69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan. Electrify Chicago is a Chi Hack Night project by led by Viktor Köves that transforms data into easy to understand analysis and charts so Chicagoans can understand the impact of their buildings on the climate."
         }
       ]
     },
     {
       "type": "copy-only",
-      "title": "My contributions",
+      "title": "Example Buildings",
       "text": [
         {
-          "information": "copy about my contributions"
+          "information": "Take the following buildings for example: "
+        },
+        {
+          "information": "Marina Towers Condominiums - which we have given an overall grade of A for having low emissions intensity, is 100% electrified, and has consistently reported it’s energy use to the city."
+        },
+        {
+          "information": "Art Institute of Chicago - relies on 66% of it’s energy mix on natural gas, failed to report data for 2021, and emitted 19,08 tons of Co2e into the atmosphere, the 17th highest for buildings in Chicago."
         }
       ]
     },
@@ -100,28 +106,11 @@
       ]
     },
     {
-      "type": "image-and-copy",
-      "title": "Interactive Visualization",
+      "type": "copy-only",
+      "title": "Technical Details",
       "text": [
         {
-          "information": "The front-end allows users to search, filter, and explore emissions by neighborhood or building. Performance and clarity were a top priority.",
-          "image": {
-            "url": "/images/electrify-chicago/preview.png",
-            "alt": "a screenshot of the front page of the electrify chicago project"
-          }
-        }
-      ]
-    },
-    {
-      "type": "image-and-copy",
-      "title": "Open Source Collaboration",
-      "text": [
-        {
-          "information": "This project was built in collaboration with local data scientists and environmental advocates. Contributions are welcome through our GitHub repository.",
-          "image": {
-            "url": "/images/electrify-chicago/preview.png",
-            "alt": "a screenshot of the front page of the electrify chicago project"
-          }
+          "information": "technical details about this project."
         }
       ]
     }
