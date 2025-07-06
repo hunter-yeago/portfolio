@@ -1,0 +1,120 @@
+<ul className="flex flex-wrap gap-2 my-8">
+  <JumpLink id="about-the-project" text="About The Project" />
+  <JumpLink id="my-contributions" text="My Contributions" />
+  <JumpLink id="technical-details" text="Technical Details" />
+</ul>
+
+<Section id="about-the-project">
+  <Title title="About The Project" />
+  <Paragraph>
+    <SectionLink text="Electrify Chicago" link="https://electrifychicago.net/" /> is an independent open-source{" "}
+    <SectionLink text="Chi Hack Night" link="https://chihacknight.org/" /> project led by <SectionLink text="Viktor Köves" link="https://viktorkoves.com/" />
+    looking to shed light onto one of the biggest sources of Chicago's CO2 emissions - buildings. By providing more information about some of the city's largest
+    and most polluting buildings, we hope to encourage these buildings to electrify, particularly by mobilizing people related to the building - whether that be
+    students and faculty for a college building or employees and patients at a hospital.
+  </Paragraph>
+  <Paragraph>
+    {" "}
+    According to the 2022 <SectionLink text="Chicago Climate Action Plan" link="https://www.chicago.gov/city/en/sites/climate-action-plan/home.html" />,{" "}
+    <strong>69% of Chicago's emissions come from buildings</strong>, making building emissions our biggest challenge and our biggest opportunity as a city to
+    tackle climate change. At Electrify Chicago, we showcase building performance using publicly available data supplemented by community-submitted photographs
+    and building owners.{" "}
+  </Paragraph>
+
+  <Paragraph> Check out the data on a few of Chicago's iconic downtown buildings: </Paragraph>
+  <div className="flex flex-wrap justify-center items-center gap-4 my-4">
+    <BuildingCard
+      name="Marina Towers Condominium"
+      note="has low emissions, is 100% electrified, and has consistently reported it’s energy use to the city."
+      grade="A"
+      electrified={true}
+      gasUsage="0"
+      emissions="4,309"
+      path="https://electrifychicago.net/building/marina-towers-condominium-association/"
+      image={{ url: "/images/electrify-chicago/marina-towers.jpg", alt: "The Marina Towers Buildings in Chicago" }}
+      building={{
+        PropertyName: "Marina Towers Condominium",
+        PrimaryPropertyType: "Multifamily Housing",
+        GHGIntensity: 5.6,
+        TotalGHGEmissions: 4309,
+        AvgPercentileLetterGrade: "A",
+        NaturalGasUse: 0,
+        DistrictSteamUse: 0,
+      }}
+    />
+    <BuildingCard
+      name="John G Shedd Aquarium"
+      note="energy demands contribute to a carbon footprint that reflects the difficulty of electrifying older infrastructure."
+      grade="C"
+      electrified={false} 
+      gasUsage="unknown" 
+      emissions="9,640"
+      path="https://electrifychicago.net/building/john-g-shedd-aquarium/"
+      image={{
+        url: "/images/electrify-chicago/shedd-aquarium.webp",
+        alt: "John G Shedd Aquarium",
+      }}
+      building={{
+        PropertyName: "John G Shedd Aquarium",
+        PrimaryPropertyType: "Other",
+        GHGIntensity: 21.3,
+        TotalGHGEmissions: 9640,
+        AvgPercentileLetterGrade: "C",
+        NaturalGasUse: 0, 
+        DistrictSteamUse: 0, 
+      }}
+    />
+
+    <BuildingCard
+      name="The Art Institute of Chicago"
+      note="relies on 66% of it’s energy mix on natural gas and has the 17th highest emissions for buildings in Chicago."
+      grade="D"
+      electrified={false}
+      gasUsage="66"
+      emissions="19,068"
+      path="https://electrifychicago.net/building/the-art-institute-of-chicago/"
+      image={{ url: "/images/electrify-chicago/art-institute.jpg", alt: "The Art Institute of Chicago" }}
+      building={{
+        PropertyName: "The Art Institute of Chicago",
+        PrimaryPropertyType: "Museum",
+        GHGIntensity: 18.9,
+        TotalGHGEmissions: 19068,
+        AvgPercentileLetterGrade: "D",
+        NaturalGasUse: 66,
+        DistrictSteamUse: 0,
+      }}
+    />
+
+  </div>
+</Section>
+
+<Section id="my-contributions">
+  <Title title="My Contributions - Citywide Stats" />
+  <Paragraph>
+    I am currently working on this <SectionLink text=" Citywide Stats Page Github Pull Request" link="https://github.com/vkoves/electrify-chicago/pull/192" />,
+    which will give a year over year analysis of the greenhouse gas emissions and other statistics for all of the buildings we have data for. I used Pandas to
+    take our existing data and organize it by year, pass that data to Vue and render out the information with D3.
+  </Paragraph>
+  <Paragraph>Here are a couple of examples of the charts interactive charts I've created for it:</Paragraph>
+  <CityWideStats />
+</Section>
+
+{" "}
+
+<Section id="next-steps">
+  <Title title="Next Steps" />
+  <Paragraph>
+    The current version only does all buildings but the next step is to make it so that it can be broken down by building type (mixed residential, healthcare,
+    College, Data Center, etc). Once setting up the Pandas data pipeline, I sent that over to my graphs I made in D3 and rendered them to the screen!
+  </Paragraph>
+</Section>
+
+{" "}
+
+<Section id="technical-details">
+  <Title title="Technical Details" />
+  <Paragraph>
+    The frontend is built in VueJS, and uses a Jamstack framework called Gridsome. Data is collected from the{" "}
+    <SectionLink text="Chicago Data Portal" link="https://data.cityofchicago.org/" /> and is sent through a Python / Pandas data pipeline.
+  </Paragraph>
+</Section>

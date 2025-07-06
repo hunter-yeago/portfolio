@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-//
 export default function RootLayout({
   children,
 }: Readonly<{

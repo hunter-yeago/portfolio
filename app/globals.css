@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,15 +20,55 @@
   }
 }
 
-body {
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #1f2937;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: calc(50% + 58px);
+  margin-left: -60px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.portfolio-container {
-  grid-template-columns: repeat(auto-fit, 20rem);
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1f2937 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* BuildingCard.tsx grade colors */
+.grade-A {
+  color: #009f49;
+}
+
+.grade-C {
+  color: #b36a15;
+}
+
+.grade-D {
+  color: #972222;
 }
