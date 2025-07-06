@@ -5,6 +5,7 @@ import CopyOnly from "../page-sections/CopyOnly";
 import Section from "./Section";
 import Title from "./Title";
 import Paragraph from "./Paragraph";
+import CityWideStats from "./CityWideStats";
 
 export const components = {
   EmissionsChart,
@@ -14,4 +15,5 @@ export const components = {
   Section,
   Title,
   Paragraph,
+  CityWideStats,
 };
