@@ -4,7 +4,7 @@ import NavLinks from "../nav/Navlinks";
 
 export default function Footer() {
   return (
-    <footer className="min-h-40 border-t mt-8 p-8">
+    <footer className="flex flex-col gap-4 min-h-40 border-t mt-8 p-8">
       <NavLinks />
 
       <ul className="ml-auto w-fit flex gap-2">

@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en" className={`${lora.variable} font-lora`}>
       <SpeedInsights />
 
-      <body className="w-[90vw] max-w-4xl mx-auto">
+      <body className="w-[min(900px,90vw)] mx-auto">
         <Navbar />
         {children}
 
