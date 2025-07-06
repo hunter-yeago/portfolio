@@ -12,7 +12,7 @@ export const essayWritingMeta: SingleProject = {
     image: "/images/essay/preview.jpg",
   },
   hero: {
-    url: "/images/essay/hero.png",
+    url: "/images/essay/preview.jpg",
     alt: "a hand writing on a piece of paper with a pen",
   },
   tech_stack: [
