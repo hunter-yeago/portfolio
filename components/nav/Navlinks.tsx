@@ -8,7 +8,6 @@ interface Props {
 
 export default function NavLinks({ onClick }: Props) {
   const navData: NavItem[] = [
-    { name: "Home", path: "/" },
     { name: "Electrify Chicago", path: "/projects/electrify-chicago" },
     { name: "Essay Writing", path: "/projects/essay-writing" },
   ];

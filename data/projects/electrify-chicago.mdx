@@ -1,6 +1,5 @@
 <ul className="flex flex-wrap gap-2 my-8">
   <JumpLink id="about-the-project" text="About The Project" />
-  <JumpLink id="example-buildings" text="Example Buildings" />
   <JumpLink id="my-contributions" text="My Contributions" />
   <JumpLink id="technical-details" text="Next Steps" />
   <JumpLink id="technical-details" text="Technical Details" />
@@ -9,17 +8,22 @@
 <Section id="about-the-project">
   <Title title="About The Project" />
   <Paragraph>
-    69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan.{" "}
-    <SectionLink text="Electrify Chicago" link="https://electrifychicago.net/" /> is a <SectionLink text="Chi Hack Night" link="https://chihacknight.org/" />{" "}
-    project led by <SectionLink text="Viktor Köves" link="https://viktorkoves.com/" />
-    that transforms data into easy to understand analysis and charts so Chicagoans can understand the impact of their buildings on the climate.
+    <SectionLink text="Electrify Chicago" link="https://electrifychicago.net/" /> is an independent open-source{" "}
+    <SectionLink text="Chi Hack Night" link="https://chihacknight.org/" /> project led by <SectionLink text="Viktor Köves" link="https://viktorkoves.com/" />
+    looking to shed light onto one of the biggest sources of Chicago's CO2 emissions - buildings. By providing more information about some of the city's largest
+    and most polluting buildings, we hope to encourage these buildings to electrify, particularly by mobilizing people related to the building - whether that be
+    students and faculty for a college building or employees and patients at a hospital.
   </Paragraph>
-</Section>
+  <Paragraph>
+    {" "}
+    According to the 2022 <SectionLink text="Chicago Climate Action Plan" link="https://www.chicago.gov/city/en/sites/climate-action-plan/home.html" />,{" "}
+    <strong>69% of Chicago's emissions come from buildings</strong>, making building emissions our biggest challenge and our biggest opportunity as a city to
+    tackle climate change. At Electrify Chicago, we showcase building performance using publicly available data supplemented by community-submitted photographs
+    and building owners.{" "}
+  </Paragraph>
 
-<Section id="example-buildings">
-  <Title title="Example Buildings" />
-  <Paragraph>Take the following buildings for example:</Paragraph>
-  <div className="flex flex-wrap justify-center items-center gap-4">
+  <Paragraph> Check out the data on a few of Chicago's iconic buildings downtown: </Paragraph>
+  <div className="flex flex-wrap justify-center items-center gap-4 my-4">
     <BuildingCard
       name="Marina Towers Condominium"
       note="has low emissions, is 100% electrified, and has consistently reported it’s energy use to the city."
@@ -40,6 +44,29 @@
       }}
     />
     <BuildingCard
+      name="John G Shedd Aquarium"
+      note="energy demands contribute to a carbon footprint that reflects the difficulty of electrifying older infrastructure."
+      grade="C"
+      electrified={false} 
+      gasUsage="unknown" 
+      emissions="9,640"
+      path="https://electrifychicago.net/building/john-g-shedd-aquarium/"
+      image={{
+        url: "/images/electrify-chicago/shedd-aquarium.webp",
+        alt: "John G Shedd Aquarium",
+      }}
+      building={{
+        PropertyName: "John G Shedd Aquarium",
+        PrimaryPropertyType: "Other",
+        GHGIntensity: 21.3,
+        TotalGHGEmissions: 9640,
+        AvgPercentileLetterGrade: "C",
+        NaturalGasUse: 0, 
+        DistrictSteamUse: 0, 
+      }}
+    />
+
+    <BuildingCard
       name="The Art Institute of Chicago"
       note="relies on 66% of it’s energy mix on natural gas and has the 17th highest emissions for buildings in Chicago."
       grade="D"
@@ -58,10 +85,9 @@
         DistrictSteamUse: 0,
       }}
     />
+
   </div>
 </Section>
-
-<Callout type="info">69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan.</Callout>
 
 <Section id="my-contributions">
   <Title title="My Contributions" />

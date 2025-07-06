@@ -22,13 +22,12 @@ interface Props {
   path: string;
   image?: BuildingImage | null;
   note: string;
+  electrified: boolean;
 }
 
-export function BuildingCard({ building, note, path, image }: Props) {
-  const fullyGasFree = building.NaturalGasUse === 0 && building.DistrictSteamUse === 0;
-
+export function BuildingCard({ building, electrified, note, path, image }: Props) {
   return (
-    <article className="block max-w-80 border my-4 ">
+    <article className="max-w-80 border">
       {note && (
         <p className="w-full p-2">
           <span className="font-bold">{building.PropertyName}</span> - {note}
@@ -41,7 +40,7 @@ export function BuildingCard({ building, note, path, image }: Props) {
         aria-label={`${building.PropertyName} page on Electrify Chicago - opens in a new tab`}
       >
         <div className="relative h-60 bg-gradient-to-br from-pink-200 to-blue-200">
-          {fullyGasFree && (
+          {electrified && (
             <div className="absolute top-2 right-2 bg-yellow-200 text-yellow-800 font-bold text-sm px-3 py-1 rounded-full shadow">⚡ All Electric</div>
           )}
 
