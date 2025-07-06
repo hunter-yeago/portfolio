@@ -1,4 +1,3 @@
-// projects/electrify-chicago.meta.ts
 export const electrifyMeta = {
   title: "Electrify Chicago",
   type: "Open Source",

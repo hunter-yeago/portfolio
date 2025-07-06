@@ -43,10 +43,7 @@ export interface Annotation {
   padding?: [number, number];
   iterations?: number;
   multiline?: boolean;
-  brackets?: [
-    "left" | "right" | "top" | "bottom",
-    "left" | "right" | "top" | "bottom",
-  ];
+  brackets?: ["left" | "right" | "top" | "bottom", "left" | "right" | "top" | "bottom"];
   strokeWidth?: number;
   animationDuration?: number;
 }
@@ -68,4 +65,26 @@ export interface FormErrors {
   email?: string;
   subject?: string;
   message?: string;
+}
+
+export interface ProjectMeta {
+  title: string;
+  type: string;
+  slug: string;
+  preview: {
+    description: string[];
+    image: string;
+  };
+  hero: {
+    url: string;
+    alt: string;
+  };
+  tech_stack: {
+    name: string;
+    key: string;
+    url: string;
+    tooltip: string;
+    category: "Frontend" | "Backend" | "Data" | (string & {}); // allow custom categories
+  }[];
+  // sections: ProjectSection[];
 }

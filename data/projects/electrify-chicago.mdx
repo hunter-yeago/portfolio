@@ -1,48 +1,85 @@
-# About the Project
+<>
+  <Callout type="info">
+    69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan.
+  </Callout>
 
-<Callout type="info">69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan.</Callout>
+<Section>
+  <Title title="About The Project" />
+  <Paragraph
+    paragraph="69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan. Electrify Chicago is a Chi Hack Night project led by
+    Viktor Köves that transforms data into easy to understand analysis and charts so Chicagoans can understand the impact of their buildings on the climate."
+  />
+</Section>
 
-# Example Buildings
+<Section>
+  <Title title="Example Buildings" />
+  <Paragraph paragraph="Take the following buildings for example:" />
+  <div className="flex flex-wrap justify-center items-center gap-4">
+    <BuildingCard
+      name="Marina Towers Condominium"
+      note="has low emissions, is 100% electrified, and has consistently reported it’s energy use to the city."
+      grade="A"
+      electrified={true}
+      gasUsage="0"
+      emissions="4,309"
+      path="https://electrifychicago.net/building/marina-towers-condominium-association/"
+      image={{ url: "/images/electrify-chicago/marina-towers.jpg", alt: "The Marina Towers Buildings in Chicago" }}
+      building={{
+        PropertyName: "Marina Towers Condominium",
+        PrimaryPropertyType: "Multifamily Housing",
+        GHGIntensity: 5.6,
+        TotalGHGEmissions: 4309,
+        AvgPercentileLetterGrade: "A",
+        NaturalGasUse: 0,
+        DistrictSteamUse: 0,
+      }}
+    />
+    <BuildingCard
+      name="The Art Institute of Chicago"
+      note="relies on 66% of it’s energy mix on natural gas and has the 17th highest emissions for buildings in Chicago."
+      grade="D"
+      electrified={false}
+      gasUsage="66"
+      emissions="19,068"
+      path="https://electrifychicago.net/building/the-art-institute-of-chicago/"
+      image={{ url: "/images/electrify-chicago/art-institute.jpg", alt: "The Art Institute of Chicago" }}
+      building={{
+        PropertyName: "The Art Institute of Chicago",
+        PrimaryPropertyType: "Museum",
+        GHGIntensity: 18.9,
+        TotalGHGEmissions: 19068,
+        AvgPercentileLetterGrade: "D",
+        NaturalGasUse: 66,
+        DistrictSteamUse: 0,
+      }}
+    />
+  </div>
+</Section>
 
-<div class="flex flex-wrap justify-center items-center gap-4">
-<BuildingCard
-  name="Marina Towers Condominium Association"
-  grade="A"
-  electrified={true}
-  gasUsage="0"
-  emissions="4,309"
-  path="https://electrifychicago.net/building/marina-towers-condominium-association/"
-  buildingImg={{ imgUrl: "/images/electrify-chicago/marina-towers.jpg" }}
-  building={{
-    PropertyName: "Marina Towers Condominium Association",
-    PrimaryPropertyType: "Multifamily Housing",
-    GHGIntensity: 5.6,
-    TotalGHGEmissions: 4309,
-    AvgPercentileLetterGrade: "A",
-    NaturalGasUse: 0,
-    DistrictSteamUse: 0,
-  }}
-/>
+{" "}
 
-<BuildingCard
-  name="The Art Institute of Chicago"
-  grade="D"
-  electrified={false}
-  gasUsage="66"
-  emissions="19,068"
-  path="https://electrifychicago.net/building/the-art-institute-of-chicago/"
-  buildingImg={{ imgUrl: "/images/electrify-chicago/art-institute.jpg" }}
-  building={{
-    PropertyName: "The Art Institute of Chicago",
-    PrimaryPropertyType: "Museum",
-    GHGIntensity: 18.9,
-    TotalGHGEmissions: 19068,
-    AvgPercentileLetterGrade: "D",
-    NaturalGasUse: 66,
-    DistrictSteamUse: 0,
-  }}
-/></div>
+<Section>
+  <Title title="My Contributions" />
+  <Paragraph
+    paragraph="I am currently working on the City-Wide statistics page, which will give a year over year analysis of the greenhouse gas emissions and other statistics for
+    all of the buildings we have data for."
+  />
+  <Paragraph paragraph="I used Pandas to take our existing data and organize it by year, pass that data to Vue and render out the information with D3." />
+  <EmissionsChart />
+</Section>
 
-# Emissions Chart
+{" "}
 
-<EmissionsChart />
+<Section>
+  <Title title="Next Steps" />
+  <Paragraph
+    paragraph="The current version only does all buildings but the next step is to make it so that it can be broken down by building type (mixed residential, healthcare,
+    College, Data Center, etc). Once setting up the Pandas data pipeline, I sent that over to my graphs I made in D3 and rendered them to the screen!"
+  />
+</Section>
+
+  <Section>
+    <Title title="Technical Details" />
+    <Paragraph paragraph="The frontend is built in VueJS, and uses the Gridsome Jamstack framework." />
+  </Section>
+</>
