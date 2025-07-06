@@ -59,3 +59,12 @@ html {
   visibility: visible;
   opacity: 1;
 }
+
+/* BuildingCard.tsx grade colors */
+.grade-A {
+  color: #009f49;
+}
+
+.grade-D {
+  color: #972222;
+}

@@ -4,9 +4,44 @@
 
 # Example Buildings
 
-<BuildingCard name="Marina Towers Condominiums" grade="A" electrified={true} gasUsage={0} failedReportYear={null} emissions={10} rank={1} />
+<div class="flex flex-wrap justify-center items-center gap-4">
+<BuildingCard
+  name="Marina Towers Condominium Association"
+  grade="A"
+  electrified={true}
+  gasUsage="0"
+  emissions="4,309"
+  path="https://electrifychicago.net/building/marina-towers-condominium-association/"
+  buildingImg={{ imgUrl: "/images/electrify-chicago/marina-towers.jpg" }}
+  building={{
+    PropertyName: "Marina Towers Condominium Association",
+    PrimaryPropertyType: "Multifamily Housing",
+    GHGIntensity: 5.6,
+    TotalGHGEmissions: 4309,
+    AvgPercentileLetterGrade: "A",
+    NaturalGasUse: 0,
+    DistrictSteamUse: 0,
+  }}
+/>
 
-<BuildingCard name="Art Institute of Chicago" grade="F" electrified={false} gasUsage={66} failedReportYear={2021} emissions={19.08} rank={17} />
+<BuildingCard
+  name="The Art Institute of Chicago"
+  grade="D"
+  electrified={false}
+  gasUsage="66"
+  emissions="19,068"
+  path="https://electrifychicago.net/building/the-art-institute-of-chicago/"
+  buildingImg={{ imgUrl: "/images/electrify-chicago/art-institute.jpg" }}
+  building={{
+    PropertyName: "The Art Institute of Chicago",
+    PrimaryPropertyType: "Museum",
+    GHGIntensity: 18.9,
+    TotalGHGEmissions: 19068,
+    AvgPercentileLetterGrade: "D",
+    NaturalGasUse: 66,
+    DistrictSteamUse: 0,
+  }}
+/></div>
 
 # Emissions Chart
 

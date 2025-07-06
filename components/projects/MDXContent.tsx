@@ -10,7 +10,6 @@ interface MDXContentProps {
 export default function MDXContent({ source, meta }: MDXContentProps) {
   return (
     <main className="prose mx-auto px-4">
-      test
       <h1>{meta.title}</h1>
       <MDXRemote {...source} components={components} />
     </main>
