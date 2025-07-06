@@ -1,9 +1,11 @@
+type TechCategories = "Frontend" | "Backend" | "Data" | (string & {}); // allow custom categories
+
 export interface TechStackItem {
   name: string;
   key: string;
   url: string;
   tooltip: string;
-  category: "Frontend" | "Backend" | "Data";
+  category: TechCategories;
 }
 
 export interface ProjectSection {
@@ -84,7 +86,6 @@ export interface ProjectMeta {
     key: string;
     url: string;
     tooltip: string;
-    category: "Frontend" | "Backend" | "Data" | (string & {}); // allow custom categories
+    category: TechCategories;
   }[];
-  // sections: ProjectSection[];
 }

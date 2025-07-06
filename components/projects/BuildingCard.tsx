@@ -45,7 +45,7 @@ export function BuildingCard({ building, note, path, image }: Props) {
             <div className="absolute top-2 right-2 bg-yellow-200 text-yellow-800 font-bold text-sm px-3 py-1 rounded-full shadow">⚡ All Electric</div>
           )}
 
-          {image && <Image src={image.url} alt={image.alt} fill className="w-full h-full object-cover object-[50%_10%]" />}
+          {image && <Image src={image.url} alt={image.alt} width={300} height={240} className="w-full h-full object-cover object-[50%_10%]" />}
         </div>
 
         <div className="p-4">

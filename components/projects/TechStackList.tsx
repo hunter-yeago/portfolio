@@ -7,7 +7,6 @@ interface Props {
   useLinks: boolean;
 }
 
-// Helper to group by category
 function groupByCategory(items: TechStackItem[]) {
   return items.reduce<Record<string, TechStackItem[]>>((acc, item) => {
     if (!acc[item.category]) acc[item.category] = [];
@@ -22,26 +21,20 @@ export default function TechStackList({ items, useLinks }: Props) {
   const groupedItems = groupByCategory(items);
 
   return (
-    <div className="flex flex-col gap-4 flex-wrap">
+    <div className="flex gap-x-10 gap-y-4 flex-wrap">
       {CATEGORY_ORDER.map((category) => {
         const categoryItems = groupedItems[category];
         if (!categoryItems) return null;
 
         return (
           <div key={category}>
-            <h3 className="text-xl font-semibold text-primary-300 mb-2 capitalize">
-              {category}
-            </h3>
+            <h3 className="text-xl font-semibold text-primary-300 mb-2 capitalize">{category}</h3>
             <ul className="flex flex-wrap gap-2 text-lg text-white">
               {categoryItems.map((item, index) => {
                 const icon = techIcons[item.key];
 
                 return (
-                  <li
-                    className="tooltip relative group"
-                    key={`${item.key}-${index}`}
-                    title={item.name}
-                  >
+                  <li className="tooltip relative group" key={`${item.key}-${index}`} title={item.name}>
                     {useLinks ? (
                       <Link
                         className="flex justify-center items-center gap-2 bg-gray-800 px-2 py-1 rounded hover:bg-gray-700 transition"
