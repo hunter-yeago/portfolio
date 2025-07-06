@@ -1,6 +1,12 @@
-<>
+<ul className="flex flex-wrap gap-2 my-8">
+  <JumpLink id="about-the-project" text="About The Project" />
+  <JumpLink id="example-buildings" text="Example Buildings" />
+  <JumpLink id="my-contributions" text="My Contributions" />
+  <JumpLink id="technical-details" text="Next Steps" />
+  <JumpLink id="technical-details" text="Technical Details" />
+</ul>
 
-<Section>
+<Section id="about-the-project">
   <Title title="About The Project" />
   <Paragraph>
     69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan.{" "}
@@ -10,7 +16,7 @@
   </Paragraph>
 </Section>
 
-<Section>
+<Section id="example-buildings">
   <Title title="Example Buildings" />
   <Paragraph>Take the following buildings for example:</Paragraph>
   <div className="flex flex-wrap justify-center items-center gap-4">
@@ -57,7 +63,7 @@
 
 <Callout type="info">69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan.</Callout>
 
-<Section>
+<Section id="my-contributions">
   <Title title="My Contributions" />
   <Paragraph>
     I am currently working on the City-Wide statistics page, which will give a year over year analysis of the greenhouse gas emissions and other statistics for
@@ -69,7 +75,7 @@
 
 {" "}
 
-<Section>
+<Section id="next-steps">
   <Title title="Next Steps" />
   <Paragraph>
     The current version only does all buildings but the next step is to make it so that it can be broken down by building type (mixed residential, healthcare,
@@ -77,8 +83,9 @@
   </Paragraph>
 </Section>
 
-  <Section>
-    <Title title="Technical Details" />
-    <Paragraph>The frontend is built in VueJS, and uses the Gridsome Jamstack framework.</Paragraph>
-  </Section>
-</>
+{" "}
+
+<Section id="technical-details">
+  <Title title="Technical Details" />
+  <Paragraph>The frontend is built in VueJS, and uses the Gridsome Jamstack framework.</Paragraph>
+</Section>

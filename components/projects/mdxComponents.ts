@@ -7,6 +7,7 @@ import Title from "./Title";
 import Paragraph from "./Paragraph";
 import CityWideStats from "./CityWideStats";
 import SectionLink from "./SectionLink";
+import JumpLink from "./JumpLink";
 
 export const components = {
   EmissionsChart,
@@ -18,4 +19,5 @@ export const components = {
   Paragraph,
   CityWideStats,
   SectionLink,
+  JumpLink,
 };
