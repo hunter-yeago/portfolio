@@ -1,10 +1,14 @@
 import fs from "fs";
 import path from "path";
 import { serialize } from "next-mdx-remote/serialize";
-
-import MDXContent from "@/components/projects/mdx/MDXContent";
 import { notFound } from "next/navigation";
 import { projectMeta, projectMetaMap, ProjectSlug } from "@/lib/projectMeta";
+import dynamic from "next/dynamic";
+
+const MDXContent = dynamic(
+  () => import("@/components/projects/mdx/MDXContent"),
+  { ssr: false } // prevents server-side rendering
+);
 
 interface Props {
   params: { slug: string };
@@ -29,7 +33,6 @@ export default async function ProjectPage({ params }: Props) {
 
   const mdxContent = fs.readFileSync(mdxFilePath, "utf-8");
   const mdxSource = await serialize(mdxContent);
-
   const meta = projectMeta(slug as ProjectSlug);
 
   return <MDXContent source={mdxSource} meta={meta} />;

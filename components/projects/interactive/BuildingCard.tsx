@@ -25,7 +25,7 @@ interface Props {
   electrified: boolean;
 }
 
-export function BuildingCard({ building, electrified, note, path, image }: Props) {
+export default function BuildingCard({ building, electrified, note, path, image }: Props) {
   return (
     <article className="max-w-80 border">
       {note && (

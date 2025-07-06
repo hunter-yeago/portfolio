@@ -1,10 +1,11 @@
 "use client";
 
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { components } from "./mdxComponents";
+
 import { ProjectMeta } from "@/types/types";
 import HeroImage from "../core/HeroImage";
 import TechStackList from "../interactive/TechStackList";
+import components from "./mdxComponents";
 
 interface MDXContentProps {
   source: MDXRemoteSerializeResult;
