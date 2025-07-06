@@ -8,6 +8,8 @@ projects
 - instead of "projects", do "development experience"?
 - lettuce projects page? go more into details than I could on resume page
 - instead of copy only, copy/image, etc. make full width, half and half, then pass in params
+- repo link / site link
+- add docker? too many categories lol. could be.. Dev Ops? Docker, GCP, etc.
 
 - articles
 - php tek article

@@ -15,7 +15,7 @@ function groupByCategory(items: TechStackItem[]) {
   }, {});
 }
 
-const CATEGORY_ORDER = ["Frontend", "Backend", "Data"];
+const CATEGORY_ORDER = ["Frontend", "Backend", "Data", "Infrastructure"];
 
 export default function TechStackList({ items, useLinks }: Props) {
   const groupedItems = groupByCategory(items);

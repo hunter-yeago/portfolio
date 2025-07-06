@@ -1,6 +1,5 @@
-import { getAllProjects } from "@/lib/projects";
-import ProjectSection from "@components/projects/ProjectSection";
+import { notFound } from "next/navigation";
 
 export default function ProjectsPage() {
-  return <ProjectSection projects={getAllProjects()} />;
+  return notFound();
 }

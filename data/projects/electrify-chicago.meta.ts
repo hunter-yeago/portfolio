@@ -70,5 +70,13 @@ export const electrifyMeta = {
       tooltip: "CSS preprocessor that adds features like variables, nesting, and mixins.",
       category: "Frontend",
     },
+    {
+      name: "Docker",
+      key: "docker",
+      url: "https://www.docker.com/",
+      tooltip:
+        "Platform that allows developers to package applications and their dependencies into lightweight, portable containers that can run consistently across different environments",
+      category: "Infrastructure",
+    },
   ],
 };

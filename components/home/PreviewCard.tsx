@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { SingleProject } from "../../types/types";
 import Link from "next/link";
-import TechStackList from "./TechStackList";
+import TechStackList from "../projects/interactive/TechStackList";
 
 interface Props {
   project: SingleProject;
 }
 
-export default function ProjectPreview({ project }: Props) {
+export default function PreviewCard({ project }: Props) {
   return (
     <Link
       className="p-6 border-4 cursor-pointer focus:border-gray-800 focus:outline-none grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-14 justify-between rounded-xl shadow-lg hover:border-gray-800 hover:shadow-xl"

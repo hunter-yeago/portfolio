@@ -1,4 +1,4 @@
-type TechCategories = "Frontend" | "Backend" | "Data" | (string & {}); // allow custom categories
+type TechCategories = "Frontend" | "Backend" | "Data" | "Infrastructure" | (string & {}); // allow custom categories
 
 export interface TechStackItem {
   name: string;
@@ -8,7 +8,7 @@ export interface TechStackItem {
   category: TechCategories;
 }
 
-export interface ProjectSection {
+export interface ProjectPreview {
   title: string;
   text: {
     information: string;
@@ -35,7 +35,7 @@ export interface SingleProject {
     alt: string;
   };
   tech_stack: TechStackItem[];
-  sections?: ProjectSection[];
+  sections?: ProjectPreview[];
 }
 
 export interface Annotation {
