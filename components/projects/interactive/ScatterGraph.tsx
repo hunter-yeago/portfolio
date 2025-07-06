@@ -123,10 +123,10 @@ export default function ScatterGraph({ data, color, yAxisLabel, title }: Props) 
   }, [data, color, yAxisLabel]);
 
   return (
-    <div ref={containerRef} className="relative w-full" style={{ minHeight: 320 }}>
-      <h2 className="text-lg font-bold mb-2">
+    <div ref={containerRef} className="relative w-[min(900px,90%)] mx-auto" style={{ minHeight: 320 }}>
+      <h3 className="text-lg font-bold mb-2 mt-4">
         {title} ({yAxisLabel})
-      </h2>
+      </h3>
       <div
         ref={tooltipRef}
         className="absolute pointer-events-none bg-white border border-gray-300 rounded px-2 py-1 text-sm shadow text-black opacity-0"

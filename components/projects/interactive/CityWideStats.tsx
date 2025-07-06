@@ -20,7 +20,6 @@ const graphs = [
 export default function CityWideStats() {
   return (
     <article aria-label="green house gas emissions staistics from buildings across chicago">
-      <h1 className="text-2xl font-bold text-center mt-10 mb-6">Citywide Stats</h1>
       {graphs.map((g) => (
         <ScatterGraph key={g.key} title={g.title} data={extractMetricData(historicStats, g.key as any, "50%")} yAxisLabel={g.yAxisLabel} color={g.color} />
       ))}

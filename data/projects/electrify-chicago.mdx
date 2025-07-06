@@ -1,7 +1,6 @@
 <ul className="flex flex-wrap gap-2 my-8">
   <JumpLink id="about-the-project" text="About The Project" />
   <JumpLink id="my-contributions" text="My Contributions" />
-  <JumpLink id="technical-details" text="Next Steps" />
   <JumpLink id="technical-details" text="Technical Details" />
 </ul>
 
@@ -22,7 +21,7 @@
     and building owners.{" "}
   </Paragraph>
 
-  <Paragraph> Check out the data on a few of Chicago's iconic buildings downtown: </Paragraph>
+  <Paragraph> Check out the data on a few of Chicago's iconic downtown buildings: </Paragraph>
   <div className="flex flex-wrap justify-center items-center gap-4 my-4">
     <BuildingCard
       name="Marina Towers Condominium"
@@ -90,12 +89,13 @@
 </Section>
 
 <Section id="my-contributions">
-  <Title title="My Contributions" />
+  <Title title="My Contributions - Citywide Stats" />
   <Paragraph>
-    I am currently working on the City-Wide statistics page, which will give a year over year analysis of the greenhouse gas emissions and other statistics for
-    all of the buildings we have data for.
+    I am currently working on this <SectionLink text=" Citywide Stats Page Github Pull Request" link="https://github.com/vkoves/electrify-chicago/pull/192" />,
+    which will give a year over year analysis of the greenhouse gas emissions and other statistics for all of the buildings we have data for. I used Pandas to
+    take our existing data and organize it by year, pass that data to Vue and render out the information with D3.
   </Paragraph>
-  <Paragraph>I used Pandas to take our existing data and organize it by year, pass that data to Vue and render out the information with D3.</Paragraph>
+  <Paragraph>Here are a couple of examples of the charts interactive charts I've created for it:</Paragraph>
   <CityWideStats />
 </Section>
 
@@ -113,5 +113,8 @@
 
 <Section id="technical-details">
   <Title title="Technical Details" />
-  <Paragraph>The frontend is built in VueJS, and uses the Gridsome Jamstack framework.</Paragraph>
+  <Paragraph>
+    The frontend is built in VueJS, and uses a Jamstack framework called Gridsome. Data is collected from the{" "}
+    <SectionLink text="Chicago Data Portal" link="https://data.cityofchicago.org/" /> and is sent through a Python / Pandas data pipeline.
+  </Paragraph>
 </Section>
