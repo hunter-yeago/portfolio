@@ -2,15 +2,17 @@
 
 <Section>
   <Title title="About The Project" />
-  <Paragraph
-    paragraph="69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan. Electrify Chicago is a Chi Hack Night project led by
-    Viktor Köves that transforms data into easy to understand analysis and charts so Chicagoans can understand the impact of their buildings on the climate."
-  />
+  <Paragraph>
+    69% of emissions in Chicago come from buildings according to the 2022 Chicago Climate Action Plan.{" "}
+    <SectionLink text="Electrify Chicago" link="https://electrifychicago.net/" /> is a <SectionLink text="Chi Hack Night" link="https://chihacknight.org/" />{" "}
+    project led by <SectionLink text="Viktor Köves" link="https://viktorkoves.com/" /> that transforms data into easy to understand analysis and charts so
+    Chicagoans can understand the impact of their buildings on the climate.
+  </Paragraph>
 </Section>
 
 <Section>
   <Title title="Example Buildings" />
-  <Paragraph paragraph="Take the following buildings for example:" />
+  <Paragraph>Take the following buildings for example:</Paragraph>
   <div className="flex flex-wrap justify-center items-center gap-4">
     <BuildingCard
       name="Marina Towers Condominium"
@@ -57,11 +59,11 @@
 
 <Section>
   <Title title="My Contributions" />
-  <Paragraph
-    paragraph="I am currently working on the City-Wide statistics page, which will give a year over year analysis of the greenhouse gas emissions and other statistics for
-    all of the buildings we have data for."
-  />
-  <Paragraph paragraph="I used Pandas to take our existing data and organize it by year, pass that data to Vue and render out the information with D3." />
+  <Paragraph>
+    I am currently working on the City-Wide statistics page, which will give a year over year analysis of the greenhouse gas emissions and other statistics for
+    all of the buildings we have data for.
+  </Paragraph>
+  <Paragraph>I used Pandas to take our existing data and organize it by year, pass that data to Vue and render out the information with D3.</Paragraph>
   <CityWideStats />
 </Section>
 
@@ -69,14 +71,14 @@
 
 <Section>
   <Title title="Next Steps" />
-  <Paragraph
-    paragraph="The current version only does all buildings but the next step is to make it so that it can be broken down by building type (mixed residential, healthcare,
-    College, Data Center, etc). Once setting up the Pandas data pipeline, I sent that over to my graphs I made in D3 and rendered them to the screen!"
-  />
+  <Paragraph>
+    The current version only does all buildings but the next step is to make it so that it can be broken down by building type (mixed residential, healthcare,
+    College, Data Center, etc). Once setting up the Pandas data pipeline, I sent that over to my graphs I made in D3 and rendered them to the screen!
+  </Paragraph>
 </Section>
 
   <Section>
     <Title title="Technical Details" />
-    <Paragraph paragraph="The frontend is built in VueJS, and uses the Gridsome Jamstack framework." />
+    <Paragraph>The frontend is built in VueJS, and uses the Gridsome Jamstack framework.</Paragraph>
   </Section>
 </>
