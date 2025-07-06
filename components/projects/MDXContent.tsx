@@ -13,7 +13,7 @@ interface MDXContentProps {
 
 export default function MDXContent({ source, meta }: MDXContentProps) {
   return (
-    <main className="prose mx-auto px-4">
+    <main className="mx-auto px-4">
       <h1 className="text-2xl font-bold mt-12">{meta.title}</h1>
       <HeroImage url={meta.hero.url} alt={meta.hero.alt} />
 
