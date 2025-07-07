@@ -3,7 +3,7 @@ import LinkItem from "./LinkItem";
 
 export default function LinkList({ items, showTooltips = false }: LinkListProps) {
   return (
-    <ul className="flex flex-wrap gap-2">
+    <ul className="flex flex-wrap gap-2  justify-center sm:justify-normal">
       {items.map((item, index) => (
         <li
           key={item.key || `${item.name}-${index}`}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function LinkItem({ name, url, icon, disabled = false }: LinkData) {
   const baseClasses = "flex justify-center items-center gap-2 px-2 py-1 rounded text-lg";
-  const enabledClasses = "text-white bg-gray-800 hover:bg-gray-700 transition";
+  const enabledClasses = "text-white bg-gray-800";
   const disabledClasses = "bg-gray-300";
 
   const classes = `${baseClasses} ${disabled ? disabledClasses : enabledClasses}`;

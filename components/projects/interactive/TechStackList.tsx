@@ -40,7 +40,7 @@ export default function TechStackList({ items, useLinks }: Props) {
   const groupedItems = groupByCategory(items);
 
   return (
-    <div className="flex gap-x-10 gap-y-4 flex-wrap">
+    <div className="flex gap-x-10 gap-y-4 flex-wrap justify-center sm:justify-normal">
       {Object.entries(groupedItems).map(([category, categoryItems]) => {
         const linkData = categoryItems.map((item) => ({
           name: item.name,
@@ -52,7 +52,6 @@ export default function TechStackList({ items, useLinks }: Props) {
 
         return (
           <div key={category}>
-            <h3 className="text-xl font-semibold text-primary-300 mt-4 mb-2 capitalize">{category}</h3>
             <LinkList items={linkData} showTooltips={true} className="text-lg text-white" />
           </div>
         );

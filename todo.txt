@@ -8,6 +8,8 @@ projects
 - instead of "projects", do "development experience"?
 - lettuce entertain you
 - portfolio site
+- suspense
+- sitemap
 
 - articles
 - php tek article
