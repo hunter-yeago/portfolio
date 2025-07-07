@@ -5,7 +5,6 @@ site
 projects
 - electrify chicago copy
 - essay writing copy
-- instead of "projects", do "development experience"?
 - lettuce entertain you
 - portfolio site
 - suspense
