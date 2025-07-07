@@ -16,7 +16,8 @@ export default function PreviewCard({ project }: Props) {
     >
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold">
-          {project.title} -<span className="text-gray-500"> {project.type}</span>
+          {project.title} -
+          <span className="text-gray-500"> {project.type}</span>
         </h2>
 
         <div className="flex flex-col gap-1">
@@ -29,7 +30,13 @@ export default function PreviewCard({ project }: Props) {
       </div>
 
       <div className="hidden md:block relative overflow-hidden">
-        <Image className="absolute w-full h-full object-contain" src={project.preview.image} alt={`${project.title} preview image`} width={300} height={300} />
+        <Image
+          className="absolute w-full h-full object-contain"
+          src={project.preview.image}
+          alt={`${project.title} preview image`}
+          width={300}
+          height={300}
+        />
       </div>
     </Link>
   );

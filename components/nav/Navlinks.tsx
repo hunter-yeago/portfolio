@@ -15,7 +15,11 @@ export default function NavLinks({ onClick }: Props) {
     <ul className="flex w-fit flex-wrap gap-4 align-center lg:items-center">
       {navData.map((item: NavItem) => (
         <li key={item.name}>
-          <Link href={item.path} className="hover:text-gray-400" onClick={onClick}>
+          <Link
+            href={item.path}
+            className="hover:text-gray-400"
+            onClick={onClick}
+          >
             {item.name}
           </Link>
         </li>

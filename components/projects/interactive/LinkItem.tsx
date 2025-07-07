@@ -3,8 +3,14 @@ import { TechIcon } from "@/utils/techIcons";
 
 import Link from "next/link";
 
-export default function LinkItem({ name, url, icon, disabled = false }: TechLink) {
-  const baseClasses = "flex justify-center items-center gap-2 px-2 py-1 rounded text-lg";
+export default function LinkItem({
+  name,
+  url,
+  icon,
+  disabled = false,
+}: TechLink) {
+  const baseClasses =
+    "flex justify-center items-center gap-2 px-2 py-1 rounded text-lg";
   const enabledClasses = "text-white bg-gray-800";
   const disabledClasses = "bg-gray-300";
 
@@ -20,7 +26,12 @@ export default function LinkItem({ name, url, icon, disabled = false }: TechLink
   }
 
   return (
-    <Link href={url} target="_blank" aria-label={`${name} - opens in a new tab`} className={classes}>
+    <Link
+      href={url}
+      target="_blank"
+      aria-label={`${name} - opens in a new tab`}
+      className={classes}
+    >
       <span>{name}</span>
       <TechIcon icon={icon} />
     </Link>

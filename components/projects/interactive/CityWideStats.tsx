@@ -21,7 +21,13 @@ export default function CityWideStats() {
   return (
     <article aria-label="green house gas emissions staistics from buildings across chicago">
       {graphs.map((g) => (
-        <ScatterGraph key={g.key} title={g.title} data={extractMetricData(historicStats, g.key as any, "50%")} yAxisLabel={g.yAxisLabel} color={g.color} />
+        <ScatterGraph
+          key={g.key}
+          title={g.title}
+          data={extractMetricData(historicStats, g.key as any, "50%")}
+          yAxisLabel={g.yAxisLabel}
+          color={g.color}
+        />
       ))}
     </article>
   );

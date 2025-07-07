@@ -14,5 +14,9 @@ export function Callout({ type = "info", children }: CalloutProps) {
     danger: "bg-red-100 text-red-800 border-red-300",
   };
 
-  return <div className={`border-l-4 p-4 my-6 rounded-md ${colors[type]}`}>{children}</div>;
+  return (
+    <div className={`border-l-4 p-4 my-6 rounded-md ${colors[type]}`}>
+      {children}
+    </div>
+  );
 }

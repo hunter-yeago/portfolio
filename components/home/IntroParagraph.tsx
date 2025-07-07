@@ -4,7 +4,7 @@ import Image from "next/image";
 import stationImage from "@images/station.jpg";
 import ProfessionalLinks from "./ProfessionalLinks";
 import { annotations } from "@/data/annotations";
-import { useAnnotations } from "@/hooks/useAnnotations";
+import { useAnnotations } from "@/lib/hooks/useAnnotations";
 import { IntroParagraphData } from "@/lib/intro_paragraph";
 
 interface Props {
