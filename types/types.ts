@@ -4,7 +4,7 @@
 
 export type TechCategories = "Frontend" | "Backend" | "Data" | "Infrastructure" | (string & {});
 
-export interface Image {
+export interface i_Image {
   url: string;
   alt: string;
 }
@@ -48,9 +48,9 @@ export interface SingleProject {
   title: string;
   type: string;
   slug: string;
-  links: ProjectLinks;
+  links?: ProjectLinks;
   preview: ProjectPreview;
-  hero: Image;
+  hero: i_Image;
   tech_stack: LinkData[];
 }
 

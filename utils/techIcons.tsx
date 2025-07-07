@@ -14,9 +14,13 @@ import {
   SiDocker,
   SiGithub,
   SiVercel,
+  SiWordpress,
+  SiGoogleanalytics,
+  SiGooglecloud,
+  SiGoogletagmanager,
+  SiGridsome,
+  SiInertia,
 } from "react-icons/si";
-import InertiaLogo from "@/components/logos/InertiaLogo";
-import GridsomeLogo from "@components/logos/GridsomeLogo";
 
 const techIcons: Record<string, JSX.Element> = {
   laravel: <SiLaravel title="Laravel" />,
@@ -26,21 +30,22 @@ const techIcons: Record<string, JSX.Element> = {
   python: <SiPython title="Python" />,
   pandas: <SiPandas title="Pandas" />,
   sass: <SiSass title="SASS" />,
-  inertiajs: <InertiaLogo />,
   typescript: <SiTypescript title="Typescript" />,
   php: <SiPhp title="PHP" />,
-  gridsome: <GridsomeLogo />,
-  graphql: <SiGraphql />,
-  d3js: <SiD3Dotjs />,
-  docker: <SiDocker />,
-  github: <SiGithub />,
-  live_site: <SiVercel />,
+  graphql: <SiGraphql title="GraphQL" />,
+  d3js: <SiD3Dotjs title="D3.js" />,
+  docker: <SiDocker title="Docker" />,
+  github: <SiGithub title="GitHub" />,
+  live_site: <SiVercel title="Live Site" />,
+  gcp: <SiGooglecloud />,
+  wordpress: <SiWordpress title="WordPress" />,
+  ga4: <SiGoogleanalytics />,
+  gtm: <SiGoogletagmanager />,
+  gridsome: <SiGridsome />,
+  inertiajs: <SiInertia />,
 };
 
-export default techIcons;
-
 export function TechIcon({ icon }: { icon: string | undefined }) {
-  if (!icon) return null;
-
+  if (!icon || !(icon in techIcons)) return null;
   return <span className="text-lg">{techIcons[icon]}</span>;
 }

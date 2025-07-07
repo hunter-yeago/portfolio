@@ -1,25 +1,31 @@
 
-site
-- resume page
 
 projects
 - electrify chicago copy
 - essay writing copy
 - lettuce entertain you
 - portfolio site
-- suspense
-- sitemap
+
+- sitemap - robots.txt
 
 - articles
-- php tek article
-- Can Web Development Help Save Global Conflict article - how to get uncon video
+-- php tek article
+-- Can Web Development Help Save Global Conflict article - how to get uncon video
 
 - brand
-- doc with brand identity details
-- list of sites - what do I like? what do I dislike?
+-- doc with brand identity details
+-- list of sites - what do I like? what do I dislike?
 
-add caption to images, especially the copyrighted one for the essay project 
 
 - contact form
 - recaptcha
 - honeypot
+
+- responding to the email from zoho doesn't work?
+
+
+
+wait until after new design
+- suspense
+- add caption to images, especially the copyrighted one for the essay project 
+- resume page
