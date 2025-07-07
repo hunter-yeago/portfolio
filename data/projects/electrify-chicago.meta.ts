@@ -7,13 +7,13 @@ export const electrifyMeta = {
       name: "Github",
       icon: "github",
       url: "https://github.com/vkoves/electrify-chicago/",
-      category: "Infrastructure",
+      category: "Project Links",
     },
     live_site: {
       name: "Live Site",
       icon: "live_site",
       url: "https://electrifychicago.net/",
-      category: "Infrastructure",
+      category: "Project Links",
     },
   },
   preview: {

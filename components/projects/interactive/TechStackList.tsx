@@ -7,7 +7,7 @@ interface Props {
 }
 
 function groupByCategory(items: TechLink[]) {
-  const CATEGORY_ORDER = ["Frontend", "Backend", "Data", "Infrastructure"];
+  const CATEGORY_ORDER = ["Frontend", "Backend", "Infrastructure", "Data"];
   const result: Record<string, TechLink[]> = {};
 
   for (const item of items) {

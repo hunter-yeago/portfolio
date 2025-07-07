@@ -17,9 +17,7 @@ export default function ContactForm() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
-    null,
-  );
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,9 +46,7 @@ export default function ContactForm() {
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
@@ -60,21 +56,14 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="flex flex-col gap-4 items-center">
+    <section className="flex flex-col gap-4 w-[min(900px,90%)] mx-auto items-center">
       <h2 className="text-3xl">Contact</h2>
       <div className="p-6 bg-white rounded-lg shadow-lg w-full">
         <FormStatus status={submitStatus} />
 
         {submitStatus !== "success" && (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <FormInput
-              id="name"
-              label="Name *"
-              value={formData.name}
-              error={errors.name}
-              placeholder="Your full name"
-              onChange={handleChange}
-            />
+            <FormInput id="name" label="Name *" value={formData.name} error={errors.name} placeholder="Your full name" onChange={handleChange} />
 
             <FormInput
               id="email"

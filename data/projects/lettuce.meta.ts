@@ -3,10 +3,7 @@ export const lettuceMeta = {
   type: "Professional",
   slug: "lettuce",
   preview: {
-    description: [
-      "Led fullstack development and infrastructure for over 40 restaurant websites using Next.js, WordPress, PHP, and Google Cloud.",
-      "Implemented automated workflows, responsive design, and accessibility while enabling marketing teams to customize content via WordPress without dev support.",
-    ],
+    description: ["Worked with fullstack development and infrastructure for over 40 restaurant websites using Next.js, WordPress, PHP, and Google Cloud."],
     image: "/images/lettuce/preview.png",
   },
   hero: {
