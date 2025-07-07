@@ -10,7 +10,7 @@ interface Props {
 export default function PreviewCard({ project }: Props) {
   return (
     <Link
-      className="p-6 border-4 cursor-pointer focus:border-gray-800 focus:outline-none grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-14 justify-between rounded-xl shadow-lg hover:border-gray-800 hover:shadow-xl"
+      className="p-6 border-4 cursor-pointer focus:border-gray-800 focus:outline-none grid grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-14 justify-between rounded-xl shadow-lg hover:border-gray-800 hover:shadow-xl"
       aria-label={`learn about my work on the ${project.title} project`}
       href={`/projects/${project.slug}`}
     >
@@ -28,8 +28,8 @@ export default function PreviewCard({ project }: Props) {
         <TechStackList items={project.tech_stack} useLinks={false} />
       </div>
 
-      <div className="relative overflow-hidden">
-        <Image className="absolute w-full h-full object-cover" src={project.preview.image} alt={`${project.title} preview image`} width={300} height={300} />
+      <div className="hidden md:block relative overflow-hidden">
+        <Image className="absolute w-full h-full object-contain" src={project.preview.image} alt={`${project.title} preview image`} width={300} height={300} />
       </div>
     </Link>
   );

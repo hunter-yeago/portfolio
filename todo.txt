@@ -6,6 +6,8 @@ projects
 - lettuce entertain you
 - portfolio site
 
+- add mysql / postgres to projects 
+
 - sitemap - robots.txt
 
 - articles
@@ -16,6 +18,7 @@ projects
 -- doc with brand identity details
 -- list of sites - what do I like? what do I dislike?
 
+-/fr version
 
 - contact form
 - recaptcha
