@@ -33,7 +33,7 @@ export default async function ProjectPage({ params }: Props) {
 
   const mdxContent = fs.readFileSync(mdxFilePath, "utf-8");
   const mdxSource = await serialize(mdxContent);
-  const meta = projectMeta(slug as ProjectSlug);
+  const project = projectMeta(slug as ProjectSlug);
 
-  return <MDXContent source={mdxSource} meta={meta} />;
+  return <MDXContent source={mdxSource} project={project} />;
 }

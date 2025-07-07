@@ -8,7 +8,7 @@ export default function ProjectPreview() {
 
   return (
     <section className="flex flex-col gap-4 justify-center items-center">
-      <h2 className="text-3xl">Projects</h2>
+      <h2 className="text-3xl">Development Experience</h2>
       <div className="flex flex-col gap-4 justify-center">
         {projects.map((project) => (
           <PreviewCard key={project.slug} project={project} />

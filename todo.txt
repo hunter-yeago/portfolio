@@ -1,26 +1,31 @@
 
-site
-- contact page
-- resume page
 
 projects
 - electrify chicago copy
-- instead of "projects", do "development experience"?
-- lettuce projects page? go more into details than I could on resume page
-- instead of copy only, copy/image, etc. make full width, half and half, then pass in params
-- repo link / site link
-- add docker? too many categories lol. could be.. Dev Ops? Docker, GCP, etc.
+- essay writing copy
+- lettuce entertain you
+- portfolio site
+
+- sitemap - robots.txt
 
 - articles
-- php tek article
-- Can Web Development Help Save Global Conflict article - how to get uncon video
-- how to include d3 into an article with my system
-- op ed about picnic tables (reach out to alderman first and include it in my op ed?)
-
+-- php tek article
+-- Can Web Development Help Save Global Conflict article - how to get uncon video
 
 - brand
-- doc with brand identity details
-- list of sites - what do I like? what do I dislike?
+-- doc with brand identity details
+-- list of sites - what do I like? what do I dislike?
 
-add caption to images, especially the copyrighted one for the essay project 
-- MDX problem - trash projects/fdjsakl slugs do not show 404
+
+- contact form
+- recaptcha
+- honeypot
+
+- responding to the email from zoho doesn't work?
+
+
+
+wait until after new design
+- suspense
+- add caption to images, especially the copyrighted one for the essay project 
+- resume page

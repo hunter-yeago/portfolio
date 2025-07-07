@@ -1,64 +1,58 @@
-import { TechStackItem } from "@/types/types";
-import techIcons from "@/utils/techIcons";
-import Link from "next/link";
+import { TechLink } from "@/types/types";
+import LinkList from "./LinkList";
 
 interface Props {
-  items: TechStackItem[];
+  items: TechLink[];
   useLinks: boolean;
 }
 
-function groupByCategory(items: TechStackItem[]) {
-  return items.reduce<Record<string, TechStackItem[]>>((acc, item) => {
-    if (!acc[item.category]) acc[item.category] = [];
-    acc[item.category].push(item);
-    return acc;
-  }, {});
-}
+function groupByCategory(items: TechLink[]) {
+  const CATEGORY_ORDER = ["Frontend", "Backend", "Data", "Infrastructure"];
+  const result: Record<string, TechLink[]> = {};
 
-const CATEGORY_ORDER = ["Frontend", "Backend", "Data", "Infrastructure"];
+  for (const item of items) {
+    const category = item.category;
+    if (!result[category]) {
+      result[category] = [];
+    }
+    result[category].push(item);
+  }
+
+  // Return only the categories that exist, in the specified order
+  const orderedResult: Record<string, TechLink[]> = {};
+  for (const category of CATEGORY_ORDER) {
+    if (result[category]) {
+      orderedResult[category] = result[category];
+    }
+  }
+
+  // Add any categories not in CATEGORY_ORDER at the end
+  for (const category in result) {
+    if (!CATEGORY_ORDER.includes(category)) {
+      orderedResult[category] = result[category];
+    }
+  }
+
+  return orderedResult;
+}
 
 export default function TechStackList({ items, useLinks }: Props) {
   const groupedItems = groupByCategory(items);
 
   return (
-    <div className="flex gap-x-10 gap-y-4 flex-wrap">
-      {CATEGORY_ORDER.map((category) => {
-        const categoryItems = groupedItems[category];
-        if (!categoryItems) return null;
+    <div className="flex gap-x-10 gap-y-4 flex-wrap justify-center sm:justify-normal">
+      {Object.entries(groupedItems).map(([category, categoryItems]) => {
+        const TechLink = categoryItems.map((item) => ({
+          name: item.name,
+          url: useLinks ? item.url : undefined,
+          icon: item.icon,
+          tooltip: item.tooltip,
+          category: item.category,
+        }));
 
         return (
           <div key={category}>
-            <h3 className="text-xl font-semibold text-primary-300 mb-2 capitalize">{category}</h3>
-            <ul className="flex flex-wrap gap-2 text-lg text-white">
-              {categoryItems.map((item, index) => {
-                const icon = techIcons[item.key];
-
-                return (
-                  <li className="tooltip relative group" key={`${item.key}-${index}`} title={item.name}>
-                    {useLinks ? (
-                      <Link
-                        className="flex justify-center items-center gap-2 bg-gray-800 px-2 py-1 rounded hover:bg-gray-700 transition"
-                        href={item.url}
-                        target="_blank"
-                        aria-label={`${item.name} - opens in a new tab`}
-                      >
-                        <span>{item.name}</span>
-                        {icon && <span className="text-lg">{icon}</span>}
-                      </Link>
-                    ) : (
-                      <div className="flex justify-center items-center gap-2 bg-gray-800 px-2 py-1 rounded">
-                        <span>{item.name}</span>
-                        {icon && <span className="text-lg">{icon}</span>}
-                      </div>
-                    )}
-
-                    <span className="tooltiptext absolute left-1/2 -translate-x-1/2 mt-1 w-max px-2 py-1 text-sm text-white bg-black bg-opacity-80 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none z-10">
-                      {item.tooltip}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
+            <LinkList items={TechLink} showTooltips={true} />
           </div>
         );
       })}

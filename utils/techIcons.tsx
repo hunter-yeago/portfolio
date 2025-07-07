@@ -1,23 +1,57 @@
 import React from "react";
-import { SiLaravel, SiReact, SiTailwindcss, SiVuedotjs, SiPython, SiPandas, SiSass, SiTypescript, SiPhp, SiGraphql, SiD3Dotjs, SiDocker } from "react-icons/si";
-import InertiaLogo from "@/components/logos/InertiaLogo";
-import GridsomeLogo from "@components/logos/GridsomeLogo";
+import {
+  SiLaravel,
+  SiReact,
+  SiTailwindcss,
+  SiVuedotjs,
+  SiPython,
+  SiPandas,
+  SiSass,
+  SiTypescript,
+  SiPhp,
+  SiGraphql,
+  SiD3Dotjs,
+  SiDocker,
+  SiGithub,
+  SiVercel,
+  SiWordpress,
+  SiGoogleanalytics,
+  SiGooglecloud,
+  SiGoogletagmanager,
+  SiGridsome,
+  SiInertia,
+  SiDigitalocean,
+  SiNetlify,
+  SiJavascript,
+} from "react-icons/si";
 
 const techIcons: Record<string, JSX.Element> = {
-  laravel: <SiLaravel title="Laravel" />,
-  react: <SiReact title="React" />,
-  tailwind: <SiTailwindcss title="Tailwind CSS" />,
-  vue: <SiVuedotjs title="Vue.JS" />,
-  python: <SiPython title="Python" />,
-  pandas: <SiPandas title="Pandas" />,
-  sass: <SiSass title="SASS" />,
-  inertiajs: <InertiaLogo />,
-  typescript: <SiTypescript title="Typescript" />,
-  php: <SiPhp title="PHP" />,
-  gridsome: <GridsomeLogo />,
+  laravel: <SiLaravel />,
+  react: <SiReact />,
+  tailwind: <SiTailwindcss />,
+  vue: <SiVuedotjs />,
+  python: <SiPython />,
+  pandas: <SiPandas />,
+  sass: <SiSass />,
+  typescript: <SiTypescript />,
+  php: <SiPhp />,
   graphql: <SiGraphql />,
   d3js: <SiD3Dotjs />,
   docker: <SiDocker />,
+  github: <SiGithub />,
+  live_site: <SiVercel />,
+  gcp: <SiGooglecloud />,
+  wordpress: <SiWordpress />,
+  ga4: <SiGoogleanalytics />,
+  gtm: <SiGoogletagmanager />,
+  gridsome: <SiGridsome />,
+  inertiajs: <SiInertia />,
+  digital_ocean: <SiDigitalocean />,
+  netlify: <SiNetlify />,
+  javascript: <SiJavascript />,
 };
 
-export default techIcons;
+export function TechIcon({ icon }: { icon: string | undefined }) {
+  if (!icon || !(icon in techIcons)) return null;
+  return <span className="text-lg">{techIcons[icon]}</span>;
+}
