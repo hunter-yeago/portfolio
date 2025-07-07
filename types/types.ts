@@ -14,7 +14,7 @@ export interface i_Image {
 // ============================================================================
 
 // LinkList component types
-export interface LinkData {
+export interface TechLink {
   name: string;
   url?: string;
   icon?: string;
@@ -22,12 +22,6 @@ export interface LinkData {
   disabled?: boolean;
   category: string;
   key?: string;
-}
-
-export interface LinkListProps {
-  items: LinkData[];
-  showTooltips?: boolean;
-  className?: string;
 }
 
 // ============================================================================
@@ -40,8 +34,8 @@ export interface ProjectPreview {
 }
 
 export interface ProjectLinks {
-  repo: LinkData;
-  live_site: LinkData;
+  repo: TechLink;
+  live_site: TechLink;
 }
 
 export interface SingleProject {
@@ -51,7 +45,7 @@ export interface SingleProject {
   links?: ProjectLinks;
   preview: ProjectPreview;
   hero: i_Image;
-  tech_stack: LinkData[];
+  tech_stack: TechLink[];
 }
 
 // ============================================================================

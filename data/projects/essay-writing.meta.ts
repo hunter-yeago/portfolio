@@ -53,6 +53,13 @@ export const essayWritingMeta: SingleProject = {
       category: "Frontend",
     },
     {
+      name: "JavaScript",
+      icon: "javascript",
+      url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      tooltip: "High-level programming language used to create interactive and dynamic web content.",
+      category: "Frontend",
+    },
+    {
       name: "Inertia.js",
       icon: "inertiajs",
       url: "https://inertiajs.com/",
@@ -65,6 +72,13 @@ export const essayWritingMeta: SingleProject = {
       url: "https://tailwindcss.com/",
       tooltip: "Utility-first CSS framework for rapidly building custom designs.",
       category: "Frontend",
+    },
+    {
+      name: "Digital Ocean",
+      icon: "digital_ocean",
+      url: "https://www.digitalocean.com/",
+      tooltip: "Cloud infrastructure provider offering scalable virtual servers, storage, and networking solutions for developers.",
+      category: "Intrastructure",
     },
   ],
 };

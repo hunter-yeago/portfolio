@@ -1,7 +1,12 @@
-import { LinkListProps } from "@/types/types";
+import { TechLink } from "@/types/types";
 import LinkItem from "./LinkItem";
 
-export default function LinkList({ items, showTooltips = false }: LinkListProps) {
+export interface Props {
+  items: TechLink[];
+  showTooltips?: boolean;
+}
+
+export default function LinkList({ items, showTooltips = false }: Props) {
   return (
     <>
       <h2 className="text-xl font-bold">{items[0].category}</h2>

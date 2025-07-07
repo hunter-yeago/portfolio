@@ -1,14 +1,14 @@
-import { LinkData } from "@/types/types";
+import { TechLink } from "@/types/types";
 import LinkList from "./LinkList";
 
 interface Props {
-  items: LinkData[];
+  items: TechLink[];
   useLinks: boolean;
 }
 
-function groupByCategory(items: LinkData[]) {
+function groupByCategory(items: TechLink[]) {
   const CATEGORY_ORDER = ["Frontend", "Backend", "Data", "Infrastructure"];
-  const result: Record<string, LinkData[]> = {};
+  const result: Record<string, TechLink[]> = {};
 
   for (const item of items) {
     const category = item.category;
@@ -19,7 +19,7 @@ function groupByCategory(items: LinkData[]) {
   }
 
   // Return only the categories that exist, in the specified order
-  const orderedResult: Record<string, LinkData[]> = {};
+  const orderedResult: Record<string, TechLink[]> = {};
   for (const category of CATEGORY_ORDER) {
     if (result[category]) {
       orderedResult[category] = result[category];
@@ -42,7 +42,7 @@ export default function TechStackList({ items, useLinks }: Props) {
   return (
     <div className="flex gap-x-10 gap-y-4 flex-wrap justify-center sm:justify-normal">
       {Object.entries(groupedItems).map(([category, categoryItems]) => {
-        const linkData = categoryItems.map((item) => ({
+        const TechLink = categoryItems.map((item) => ({
           name: item.name,
           url: useLinks ? item.url : undefined,
           icon: item.icon,
@@ -52,7 +52,7 @@ export default function TechStackList({ items, useLinks }: Props) {
 
         return (
           <div key={category}>
-            <LinkList items={linkData} showTooltips={true} className="text-lg text-white" />
+            <LinkList items={TechLink} showTooltips={true} />
           </div>
         );
       })}

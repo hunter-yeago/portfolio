@@ -1,9 +1,9 @@
-import { LinkData } from "@/types/types";
+import { TechLink } from "@/types/types";
 import { TechIcon } from "@/utils/techIcons";
 
 import Link from "next/link";
 
-export default function LinkItem({ name, url, icon, disabled = false }: LinkData) {
+export default function LinkItem({ name, url, icon, disabled = false }: TechLink) {
   const baseClasses = "flex justify-center items-center gap-2 px-2 py-1 rounded text-lg";
   const enabledClasses = "text-white bg-gray-800";
   const disabledClasses = "bg-gray-300";

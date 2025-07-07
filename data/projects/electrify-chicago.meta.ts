@@ -92,5 +92,12 @@ export const electrifyMeta = {
         "Platform that allows developers to package applications and their dependencies into lightweight, portable containers that can run consistently across different environments",
       category: "Infrastructure",
     },
+    {
+      name: "Netlify",
+      icon: "netlify",
+      url: "https://www.netlify.com/",
+      tooltip: "Platform for deploying and hosting static sites and frontend applications with built-in CI/CD, serverless functions, and edge features.",
+      category: "Infrastructure",
+    },
   ],
 };
