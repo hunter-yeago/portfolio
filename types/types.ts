@@ -1,42 +1,62 @@
-type TechCategories = "Frontend" | "Backend" | "Data" | "Infrastructure" | (string & {}); // allow custom categories
+// ============================================================================
+// CORE TYPES
+// ============================================================================
 
-export interface TechStackItem {
-  name: string;
-  key: string;
+export type TechCategories = "Frontend" | "Backend" | "Data" | "Infrastructure" | (string & {});
+
+export interface Image {
   url: string;
-  tooltip: string;
-  category: TechCategories;
+  alt: string;
 }
 
+// ============================================================================
+// COMPONENT TYPES
+// ============================================================================
+
+// LinkList component types
+export interface LinkData {
+  name: string;
+  url?: string;
+  icon?: string;
+  tooltip?: string;
+  disabled?: boolean;
+  category: string;
+  key?: string;
+}
+
+export interface LinkListProps {
+  items: LinkData[];
+  showTooltips?: boolean;
+  className?: string;
+}
+
+// ============================================================================
+// PROJECT TYPES
+// ============================================================================
+
 export interface ProjectPreview {
-  title: string;
-  text: {
-    information: string;
-    image: {
-      url: string;
-      alt: string;
-    };
-  }[];
-  type: string;
+  description: string[];
   image: string;
-  alt: string;
+}
+
+export interface ProjectLinks {
+  repo: LinkData;
+  live_site: LinkData;
 }
 
 export interface SingleProject {
   title: string;
   type: string;
   slug: string;
-  preview: {
-    description: string[];
-    image: string;
-  };
-  hero: {
-    url: string;
-    alt: string;
-  };
-  tech_stack: TechStackItem[];
-  sections?: ProjectPreview[];
+  links: ProjectLinks;
+  preview: ProjectPreview;
+  hero: Image;
+  tech_stack: LinkData[];
 }
+
+// ============================================================================
+// UI TYPES
+// ============================================================================
 
 export interface Annotation {
   id: string;
@@ -55,6 +75,10 @@ export type NavItem = {
   path: string;
 };
 
+// ============================================================================
+// FORM TYPES
+// ============================================================================
+
 export interface FormData {
   name: string;
   email: string;
@@ -67,25 +91,4 @@ export interface FormErrors {
   email?: string;
   subject?: string;
   message?: string;
-}
-
-export interface ProjectMeta {
-  title: string;
-  type: string;
-  slug: string;
-  preview: {
-    description: string[];
-    image: string;
-  };
-  hero: {
-    url: string;
-    alt: string;
-  };
-  tech_stack: {
-    name: string;
-    key: string;
-    url: string;
-    tooltip: string;
-    category: TechCategories;
-  }[];
 }

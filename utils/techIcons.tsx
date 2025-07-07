@@ -1,5 +1,20 @@
 import React from "react";
-import { SiLaravel, SiReact, SiTailwindcss, SiVuedotjs, SiPython, SiPandas, SiSass, SiTypescript, SiPhp, SiGraphql, SiD3Dotjs, SiDocker } from "react-icons/si";
+import {
+  SiLaravel,
+  SiReact,
+  SiTailwindcss,
+  SiVuedotjs,
+  SiPython,
+  SiPandas,
+  SiSass,
+  SiTypescript,
+  SiPhp,
+  SiGraphql,
+  SiD3Dotjs,
+  SiDocker,
+  SiGithub,
+  SiVercel,
+} from "react-icons/si";
 import InertiaLogo from "@/components/logos/InertiaLogo";
 import GridsomeLogo from "@components/logos/GridsomeLogo";
 
@@ -18,6 +33,14 @@ const techIcons: Record<string, JSX.Element> = {
   graphql: <SiGraphql />,
   d3js: <SiD3Dotjs />,
   docker: <SiDocker />,
+  github: <SiGithub />,
+  live_site: <SiVercel />,
 };
 
 export default techIcons;
+
+export function TechIcon({ icon }: { icon: string | undefined }) {
+  if (!icon) return null;
+
+  return <span className="text-lg">{techIcons[icon]}</span>;
+}

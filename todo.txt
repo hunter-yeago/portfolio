@@ -1,13 +1,13 @@
 
 site
-- contact page
 - resume page
 
 projects
 - electrify chicago copy
+- essay writing copy
 - instead of "projects", do "development experience"?
-- lettuce projects page? go more into details than I could on resume page
-- repo link / site link
+- lettuce entertain you
+- portfolio site
 
 - articles
 - php tek article
