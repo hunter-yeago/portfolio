@@ -39,32 +39,28 @@ export const electrifyMeta = {
       name: "Gridsome",
       icon: "gridsome",
       url: "https://gridsome.org",
-      tooltip:
-        "Vue-powered static site generator optimized for performance and SEO.",
+      tooltip: "Vue-powered static site generator optimized for performance and SEO.",
       category: "Frontend",
     },
     {
       name: "Typescript",
       icon: "typescript",
       url: "https://www.typescriptlang.org",
-      tooltip:
-        "Superset of JavaScript that adds static typing and other features.",
+      tooltip: "Superset of JavaScript that adds static typing and other features.",
       category: "Frontend",
     },
     {
       name: "Python",
       icon: "python",
       url: "https://www.python.org/",
-      tooltip:
-        "High-level programming language known for its wide use across data science, web development, and automation.",
+      tooltip: "High-level programming language known for its wide use across data science, web development, and automation.",
       category: "Backend",
     },
     {
       name: "GraphQL",
       icon: "graphql",
       url: "https://graphql.org/",
-      tooltip:
-        "Query language for APIs that allows clients to request exactly the data they need.",
+      tooltip: "Query language for APIs that allows clients to request exactly the data they need.",
       category: "Backend",
     },
     {
@@ -85,8 +81,7 @@ export const electrifyMeta = {
       name: "Sass",
       icon: "sass",
       url: "https://sass-lang.com/",
-      tooltip:
-        "CSS preprocessor that adds features like variables, nesting, and mixins.",
+      tooltip: "CSS preprocessor that adds features like variables, nesting, and mixins.",
       category: "Frontend",
     },
     {
@@ -101,9 +96,15 @@ export const electrifyMeta = {
       name: "Netlify",
       icon: "netlify",
       url: "https://www.netlify.com/",
-      tooltip:
-        "Platform for deploying and hosting static sites and frontend applications with built-in CI/CD, serverless functions, and edge features.",
+      tooltip: "Platform for deploying and hosting static sites and frontend applications with built-in CI/CD, serverless functions, and edge features.",
       category: "Infrastructure",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "postgres",
+      url: "https://www.postgresql.org/",
+      tooltip: "Open-source relational database system that is ACID compliance.",
+      category: "Data",
     },
   ],
 };
