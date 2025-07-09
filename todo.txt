@@ -11,8 +11,6 @@ projects
 - skip back?
 - skip jumplinks? too much?
 
-- sitemap - robots.txt
-
 - articles
 -- php tek article
 -- Can Web Development Help Save Global Conflict article - how to get uncon video
