@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-export default function SectionLink({ text, link }: { text: string; link: string }) {
+export default function SectionLink({
+  text,
+  link,
+}: {
+  text: string;
+  link: string;
+}) {
   const isExternal = link.startsWith("http://") || link.startsWith("https://");
   return (
     <Link

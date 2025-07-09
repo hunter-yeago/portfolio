@@ -6,9 +6,10 @@ projects
 - lettuce entertain you
 - portfolio site
 
-- add mysql / postgres to projects 
-
-- sitemap - robots.txt
+- skip to main top button
+- skip tech links
+- skip back?
+- skip jumplinks? too much?
 
 - articles
 -- php tek article

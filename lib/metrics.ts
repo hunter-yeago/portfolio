@@ -1,4 +1,12 @@
-type MetricDetail = "count" | "mean" | "std" | "min" | "max" | "25%" | "50%" | "75%";
+type MetricDetail =
+  | "count"
+  | "mean"
+  | "std"
+  | "min"
+  | "max"
+  | "25%"
+  | "50%"
+  | "75%";
 
 interface MetricStats {
   count: number;
@@ -36,7 +44,11 @@ const detailKeyMap: Record<MetricDetail, keyof MetricStats> = {
   "75%": "seventyFifthPercentile",
 };
 
-export function extractMetricData(historicStats: Record<string, YearData>, metricName: keyof YearData, detail: MetricDetail): DataPoint[] {
+export function extractMetricData(
+  historicStats: Record<string, YearData>,
+  metricName: keyof YearData,
+  detail: MetricDetail,
+): DataPoint[] {
   return Object.entries(historicStats)
     .map(([year, yearData]) => {
       const stats = yearData[metricName];

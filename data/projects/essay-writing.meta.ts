@@ -34,7 +34,8 @@ export const essayWritingMeta: SingleProject = {
       name: "Laravel",
       icon: "laravel",
       url: "https://laravel.com/",
-      tooltip: "PHP web framework known for its elegant syntax and developer-friendly tools.",
+      tooltip:
+        "PHP web framework known for its elegant syntax and developer-friendly tools.",
       category: "Backend",
     },
     {
@@ -48,36 +49,49 @@ export const essayWritingMeta: SingleProject = {
       name: "React.js",
       icon: "react",
       url: "https://react.dev/",
-      tooltip: "JavaScript library for building user interfaces using a component-based approach.",
+      tooltip:
+        "JavaScript library for building user interfaces using a component-based approach.",
       category: "Frontend",
     },
     {
       name: "JavaScript",
       icon: "javascript",
       url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      tooltip: "High-level programming language used to create interactive and dynamic web content.",
+      tooltip:
+        "High-level programming language used to create interactive and dynamic web content.",
       category: "Frontend",
     },
     {
       name: "Inertia.js",
       icon: "inertiajs",
       url: "https://inertiajs.com/",
-      tooltip: "Laravel Monolith that lets you build modern single-page apps using classic server-side routing and controllers.",
+      tooltip:
+        "Laravel Monolith that lets you build modern single-page apps using classic server-side routing and controllers.",
       category: "Backend",
     },
     {
       name: "Tailwind",
       icon: "tailwind",
       url: "https://tailwindcss.com/",
-      tooltip: "Utility-first CSS framework for rapidly building custom designs.",
+      tooltip:
+        "Utility-first CSS framework for rapidly building custom designs.",
       category: "Frontend",
     },
     {
       name: "Digital Ocean",
       icon: "digital_ocean",
       url: "https://www.digitalocean.com/",
-      tooltip: "Cloud infrastructure provider offering scalable virtual servers, storage, and networking solutions for developers.",
+      tooltip:
+        "Cloud infrastructure provider offering scalable virtual servers, storage, and networking solutions for developers.",
       category: "Intrastructure",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "postgres",
+      url: "https://www.postgresql.org/",
+      tooltip:
+        "Open-source relational database system that is ACID compliance.",
+      category: "Data",
     },
   ],
 };

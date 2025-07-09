@@ -8,5 +8,14 @@ interface Props {
 }
 
 export default function HeroImage({ image }: Props) {
-  return <Image className="aspect-[16/7] my-8 rounded-lg overflow-hidden shadow-lg" src={image.url} alt={image.alt} width={1200} height={500} priority />;
+  return (
+    <Image
+      className="aspect-[16/7] my-8 rounded-lg overflow-hidden shadow-lg"
+      src={image.url}
+      alt={image.alt}
+      width={1200}
+      height={500}
+      priority
+    />
+  );
 }

@@ -23,6 +23,8 @@ import {
   SiDigitalocean,
   SiNetlify,
   SiJavascript,
+  SiPostgresql,
+  SiMysql,
 } from "react-icons/si";
 
 const techIcons: Record<string, JSX.Element> = {
@@ -49,6 +51,8 @@ const techIcons: Record<string, JSX.Element> = {
   digital_ocean: <SiDigitalocean />,
   netlify: <SiNetlify />,
   javascript: <SiJavascript />,
+  postgres: <SiPostgresql />,
+  mysql: <SiMysql />,
 };
 
 export function TechIcon({ icon }: { icon: string | undefined }) {

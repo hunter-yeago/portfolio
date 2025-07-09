@@ -15,7 +15,12 @@ interface Props {
   title: string;
 }
 
-export default function ScatterGraph({ data, color, yAxisLabel, title }: Props) {
+export default function ScatterGraph({
+  data,
+  color,
+  yAxisLabel,
+  title,
+}: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
@@ -57,7 +62,11 @@ export default function ScatterGraph({ data, color, yAxisLabel, title }: Props) 
       const maxValue = d3.max(data, (d) => d.value)!;
       const paddedMax = maxValue * 1.2;
 
-      const y = d3.scaleLinear().domain([0, paddedMax]).nice().range([height, 0]);
+      const y = d3
+        .scaleLinear()
+        .domain([0, paddedMax])
+        .nice()
+        .range([height, 0]);
 
       // Axes
       const graphYears = data.map((d) => d.year);
@@ -65,7 +74,9 @@ export default function ScatterGraph({ data, color, yAxisLabel, title }: Props) 
       svg
         .append("g")
         .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x).tickFormat(d3.format("d")).tickValues(graphYears));
+        .call(
+          d3.axisBottom(x).tickFormat(d3.format("d")).tickValues(graphYears),
+        );
 
       svg.append("g").call(d3.axisLeft(y).ticks(5).tickFormat(formatValue));
 
@@ -87,7 +98,13 @@ export default function ScatterGraph({ data, color, yAxisLabel, title }: Props) 
         .y((d) => y(d.value))
         .curve(d3.curveMonotoneX);
 
-      svg.append("path").datum(data).attr("fill", "none").attr("stroke", color).attr("stroke-width", 2).attr("d", line);
+      svg
+        .append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", color)
+        .attr("stroke-width", 2)
+        .attr("d", line);
 
       // Circles
       const circles = svg
@@ -106,11 +123,15 @@ export default function ScatterGraph({ data, color, yAxisLabel, title }: Props) 
         .on("mousemove", (event, d) => {
           const [xPos, yPos] = d3.pointer(event, container.node());
           tooltip
-            .html(`<strong>${d.year}</strong><br/>${formatValue(d.value)} ${yAxisLabel}`)
+            .html(
+              `<strong>${d.year}</strong><br/>${formatValue(d.value)} ${yAxisLabel}`,
+            )
             .style("left", `${xPos + 15}px`)
             .style("top", `${yPos + 15}px`);
         })
-        .on("mouseout", () => tooltip.transition().duration(200).style("opacity", 0));
+        .on("mouseout", () =>
+          tooltip.transition().duration(200).style("opacity", 0),
+        );
     };
 
     renderChart();
@@ -123,7 +144,11 @@ export default function ScatterGraph({ data, color, yAxisLabel, title }: Props) 
   }, [data, color, yAxisLabel]);
 
   return (
-    <div ref={containerRef} className="relative w-[min(900px,90%)] mx-auto" style={{ minHeight: 320 }}>
+    <div
+      ref={containerRef}
+      className="relative w-[min(900px,90%)] mx-auto"
+      style={{ minHeight: 320 }}
+    >
       <h3 className="text-lg font-bold mb-2 mt-4">
         {title} ({yAxisLabel})
       </h3>

@@ -91,11 +91,20 @@
 <Section id="my-contributions">
   <Title title="My Contributions - Citywide Stats" />
   <Paragraph>
-    I am currently working on this <SectionLink text=" Citywide Stats Page Github Pull Request" link="https://github.com/vkoves/electrify-chicago/pull/192" />,
-    which will give a year over year analysis of the greenhouse gas emissions and other statistics for all of the buildings we have data for. I used Pandas to
-    take our existing data and organize it by year, pass that data to Vue and render out the information with D3.
+    I am currently working on this{" "}
+    <SectionLink
+      text=" Citywide Stats Page Github Pull Request"
+      link="https://github.com/vkoves/electrify-chicago/pull/192"
+    />
+    , which will give a year over year analysis of the greenhouse gas emissions
+    and other statistics for all of the buildings we have data for. I used
+    Pandas to take our existing data and organize it by year, pass that data to
+    Vue and render out the information with D3.
   </Paragraph>
-  <Paragraph>Here are a couple of examples of the charts interactive charts I've created for it:</Paragraph>
+  <Paragraph>
+    Here are a couple of examples of the charts interactive charts I've created
+    for it:
+  </Paragraph>
   <CityWideStats />
 </Section>
 
@@ -104,8 +113,11 @@
 <Section id="next-steps">
   <Title title="Next Steps" />
   <Paragraph>
-    The current version only does all buildings but the next step is to make it so that it can be broken down by building type (mixed residential, healthcare,
-    College, Data Center, etc). Once setting up the Pandas data pipeline, I sent that over to my graphs I made in D3 and rendered them to the screen!
+    The current version only does all buildings but the next step is to make it
+    so that it can be broken down by building type (mixed residential,
+    healthcare, College, Data Center, etc). Once setting up the Pandas data
+    pipeline, I sent that over to my graphs I made in D3 and rendered them to
+    the screen!
   </Paragraph>
 </Section>
 
@@ -114,7 +126,12 @@
 <Section id="technical-details">
   <Title title="Technical Details" />
   <Paragraph>
-    The frontend is built in VueJS, and uses a Jamstack framework called Gridsome. Data is collected from the{" "}
-    <SectionLink text="Chicago Data Portal" link="https://data.cityofchicago.org/" /> and is sent through a Python / Pandas data pipeline.
+    The frontend is built in VueJS, and uses a Jamstack framework called
+    Gridsome. Data is collected from the{" "}
+    <SectionLink
+      text="Chicago Data Portal"
+      link="https://data.cityofchicago.org/"
+    />{" "}
+    and is sent through a Python / Pandas data pipeline.
   </Paragraph>
 </Section>

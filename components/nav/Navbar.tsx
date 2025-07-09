@@ -10,7 +10,10 @@ export default function Navbar() {
   return (
     <nav className="text-black pt-6">
       <div className="text-lg flex justify-center lg:justify-between items-center">
-        <Link href="/" className="font-bold hidden md:block w-max whitespace-nowrap">
+        <Link
+          href="/"
+          className="font-bold hidden md:block w-max whitespace-nowrap"
+        >
           Hunter Yeago
         </Link>
         <NavLinks onClick={toggleMenu} />
