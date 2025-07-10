@@ -2,12 +2,7 @@
 // CORE TYPES
 // ============================================================================
 
-export type TechCategories =
-  | "Frontend"
-  | "Backend"
-  | "Data"
-  | "Infrastructure"
-  | (string & {});
+export type TechCategories = "Frontend" | "Backend" | "Data" | "Infrastructure" | (string & {});
 
 export interface i_Image {
   url: string;
@@ -64,10 +59,7 @@ export interface Annotation {
   padding?: [number, number];
   iterations?: number;
   multiline?: boolean;
-  brackets?: [
-    "left" | "right" | "top" | "bottom",
-    "left" | "right" | "top" | "bottom",
-  ];
+  brackets?: ["left" | "right" | "top" | "bottom", "left" | "right" | "top" | "bottom"];
   strokeWidth?: number;
   animationDuration?: number;
 }
@@ -86,6 +78,7 @@ export interface FormData {
   email: string;
   subject: string;
   message: string;
+  website?: string;
 }
 
 export interface FormErrors {

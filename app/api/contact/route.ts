@@ -9,10 +9,8 @@ const contactSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
   email: z.string().email("Invalid email address"),
   subject: z.string().min(1, "Subject is required").max(200),
-  message: z
-    .string()
-    .min(10, "Message must be at least 10 characters")
-    .max(2000),
+  website: z.string().optional().or(z.literal("")),
+  message: z.string().min(10, "Message must be at least 10 characters").max(2000),
 });
 
 // Rate limiting (simple in-memory store - use Redis in production)
@@ -28,9 +26,7 @@ function checkRateLimit(ip: string): boolean {
     rateLimitStore.set(ip, []);
   }
 
-  const requests = rateLimitStore
-    .get(ip)
-    .filter((time: number) => time > windowStart);
+  const requests = rateLimitStore.get(ip).filter((time: number) => time > windowStart);
   rateLimitStore.set(ip, requests);
 
   if (requests.length >= RATE_LIMIT_MAX_REQUESTS) {
@@ -44,26 +40,17 @@ function checkRateLimit(ip: string): boolean {
 
 // Sanitize input to prevent XSS
 function sanitizeInput(input: string): string {
-  return input
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#x27;")
-    .replace(/\//g, "&#x2F;");
+  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;").replace(/\//g, "&#x2F;");
 }
 
 export async function POST(request: NextRequest) {
   try {
     // Get client IP for rate limiting
-    const ip =
-      request.ip || request.headers.get("x-forwarded-for") || "unknown";
+    const ip = request.ip || request.headers.get("x-forwarded-for") || "unknown";
 
     // Check rate limit
     if (!checkRateLimit(ip)) {
-      return NextResponse.json(
-        { error: "Too many requests. Please try again later." },
-        { status: 429 },
-      );
+      return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 });
     }
 
     const body = await request.json();
@@ -71,16 +58,23 @@ export async function POST(request: NextRequest) {
     // Validate input
     const validationResult = contactSchema.safeParse(body);
     if (!validationResult.success) {
-      return NextResponse.json(
-        { error: "Invalid input", details: validationResult.error.errors },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Invalid input", details: validationResult.error.errors }, { status: 400 });
     }
 
-    const { name, email, subject, message } = validationResult.data;
+    const { name, email, subject, message, website } = validationResult.data;
+
+    const honeypot = website;
+
+    console.log("the honeypot", honeypot);
+    console.log("the website", website);
+    if (honeypot && honeypot.trim() !== "") {
+      console.warn("honeypot alert! Detected bot submission with:", honeypot);
+      return NextResponse.json({ error: "Bot detected" }, { status: 400 });
+    }
 
     // Sanitize inputs
     const sanitizedName = sanitizeInput(name);
+    const sanitizedEmail = sanitizeInput(email);
     const sanitizedSubject = sanitizeInput(subject);
     const sanitizedMessage = sanitizeInput(message);
 
@@ -89,14 +83,15 @@ export async function POST(request: NextRequest) {
       from: process.env.EMAIL_USER!,
       to: process.env.RECIPIENT_EMAIL!,
       subject: `Contact Form: ${sanitizedSubject}`,
+      replyTo: sanitizedEmail,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px;">
             New Contact Form Submission
           </h2>
-          <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
+          <div style="border: 1px solid magenta; background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
             <p><strong>Name:</strong> ${sanitizedName}</p>
-            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Email:</strong> ${sanitizedEmail}</p>
             <p><strong>Subject:</strong> ${sanitizedSubject}</p>
           </div>
           <div style="background-color: #fff; padding: 20px; border: 1px solid #dee2e6; border-radius: 5px;">
@@ -114,7 +109,7 @@ export async function POST(request: NextRequest) {
         New Contact Form Submission
         
         Name: ${sanitizedName}
-        Email: ${email}
+        Email: ${sanitizedEmail}
         Subject: ${sanitizedSubject}
         
         Message:
@@ -133,10 +128,7 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error("Contact form error:", error);
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
 
@@ -148,13 +140,7 @@ import sgMail from "@sendgrid/mail";
 // Initialize once with your API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-async function sendEmail(options: {
-  from: string;
-  to: string;
-  subject: string;
-  html: string;
-  text: string;
-}) {
+async function sendEmail(options: { from: string; to: string; subject: string; html: string; text: string; replyTo?: string }) {
   try {
     const msg = {
       to: options.to,
@@ -162,6 +148,7 @@ async function sendEmail(options: {
       subject: options.subject,
       text: options.text,
       html: options.html,
+      replyTo: options.replyTo,
     };
 
     await sgMail.send(msg);

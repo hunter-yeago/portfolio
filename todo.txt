@@ -22,10 +22,7 @@ projects
 -/fr version
 
 - contact form
-- recaptcha
-- honeypot
-
-- responding to the email from zoho doesn't work?
+-- recaptcha
 
 
 
@@ -33,3 +30,9 @@ wait until after new design
 - suspense
 - add caption to images, especially the copyrighted one for the essay project 
 - resume page
+
+-- advanced
+
+From this Stack Overflow - https://stackoverflow.com/questions/36227376/better-honeypot-implementation-form-anti-spam
+https://blog.cloudflare.com/using-the-cloudflare-api-to-report-spam-on-yo/
+Many services allow you to report known spambot IPs via an API or by uploading a list. (Such as CloudFlare) Please help make the internet a safer place by reporting all the spambots and spam IPs you find.
