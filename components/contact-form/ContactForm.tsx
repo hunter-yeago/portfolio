@@ -7,19 +7,19 @@ import FormStatus from "./FormStatus";
 import FormTextarea from "./FormTextArea";
 import { FormData, FormErrors } from "@/types/types";
 import { validateForm, submitContactForm } from "@/utils/form";
+import HoneyPot from "./HoneyPot";
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
+    website: "",
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
-    null,
-  );
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ export default function ContactForm() {
 
       if (result.ok) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", subject: "", message: "", website: "" });
       } else {
         setSubmitStatus("error");
       }
@@ -48,9 +48,7 @@ export default function ContactForm() {
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
@@ -67,14 +65,7 @@ export default function ContactForm() {
 
         {submitStatus !== "success" && (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <FormInput
-              id="name"
-              label="Name *"
-              value={formData.name}
-              error={errors.name}
-              placeholder="Your full name"
-              onChange={handleChange}
-            />
+            <FormInput id="name" label="Name *" value={formData.name} error={errors.name} placeholder="Your full name" onChange={handleChange} />
 
             <FormInput
               id="email"
@@ -103,6 +94,8 @@ export default function ContactForm() {
               placeholder="Your message here..."
               onChange={handleChange}
             />
+
+            <HoneyPot value={formData.website} onChange={handleChange} />
 
             <button
               type="submit"
