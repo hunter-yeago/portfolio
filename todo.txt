@@ -23,7 +23,6 @@ projects
 
 - contact form
 -- recaptcha
--- honeypot
 
 
 
