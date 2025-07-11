@@ -12,6 +12,7 @@ import CityWideStats from "../interactive/CityWideStats";
 import SectionLink from "../core/SectionLink";
 import JumpLink from "../interactive/JumpLink";
 import BuildingCard from "../interactive/BuildingCard";
+import HyperLink from "../core/Hyperlink";
 
 interface MDXContentProps {
   source: MDXRemoteSerializeResult;
@@ -27,6 +28,7 @@ export default function MDXContent({ source, project }: MDXContentProps) {
     CityWideStats,
     SectionLink,
     JumpLink,
+    HyperLink,
   };
   return (
     <main className="mx-auto px-4">

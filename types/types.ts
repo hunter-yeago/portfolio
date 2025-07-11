@@ -87,3 +87,8 @@ export interface FormErrors {
   subject?: string;
   message?: string;
 }
+
+export interface HyperLink {
+  link: string;
+  text: string;
+}
