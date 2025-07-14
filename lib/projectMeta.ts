@@ -5,7 +5,7 @@ import { lettuceMeta } from "@/data/projects/lettuce.meta";
 export const projectMetaMap = {
   lettuce: lettuceMeta,
   "electrify-chicago": electrifyMeta,
-  "essay-writing": essayWritingMeta,
+  // "essay-writing": essayWritingMeta,
 } as const;
 
 export type ProjectSlug = keyof typeof projectMetaMap;

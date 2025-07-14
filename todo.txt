@@ -1,5 +1,3 @@
-
-
 projects
 - electrify chicago copy
 - essay writing copy
@@ -13,18 +11,9 @@ projects
 
 - articles
 -- php tek article
--- Can Web Development Help Save Global Conflict article - how to get uncon video
-
-- brand
--- doc with brand identity details
--- list of sites - what do I like? what do I dislike?
+-- Can Web Development Help Save Global Conflict article
 
 -/fr version
-
-- contact form
--- recaptcha
-
-
 
 wait until after new design
 - suspense

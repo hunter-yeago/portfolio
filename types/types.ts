@@ -92,3 +92,14 @@ export interface HyperLink {
   link: string;
   text: string;
 }
+
+// Electrify Chicago
+export interface Building {
+  PropertyName: string;
+  PrimaryPropertyType: string;
+  GHGIntensity: number;
+  TotalGHGEmissions: number;
+  AvgPercentileLetterGrade: string;
+  NaturalGasUse: number;
+  DistrictSteamUse: number;
+}
