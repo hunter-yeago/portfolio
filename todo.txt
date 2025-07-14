@@ -1,6 +1,5 @@
 projects
 - electrify chicago copy
-- essay writing copy
 - lettuce entertain you
 - portfolio site
 
@@ -9,18 +8,16 @@ projects
 - skip back?
 - skip jumplinks? too much?
 
+- suspense
+
+maybe
+- resume page
 - articles
 -- php tek article
 -- Can Web Development Help Save Global Conflict article
 
--/fr version
-
-wait until after new design
-- suspense
-- add caption to images, especially the copyrighted one for the essay project 
-- resume page
-
 -- advanced
+-/fr version (lots of copy)
 
 From this Stack Overflow - https://stackoverflow.com/questions/36227376/better-honeypot-implementation-form-anti-spam
 https://blog.cloudflare.com/using-the-cloudflare-api-to-report-spam-on-yo/
