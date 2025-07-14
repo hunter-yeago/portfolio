@@ -5,7 +5,10 @@ import { notFound } from "next/navigation";
 import { projectMeta, projectMetaMap, ProjectSlug } from "@/lib/projectMeta";
 import dynamic from "next/dynamic";
 
-const MDXContent = dynamic(() => import("@/components/projects/mdx/MDXContent"), { ssr: false });
+const MDXContent = dynamic(
+  () => import("@/components/projects/mdx/MDXContent"),
+  { ssr: false },
+);
 
 interface Props {
   params: { slug: string };

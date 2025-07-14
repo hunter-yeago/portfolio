@@ -20,7 +20,15 @@ export default function RestaurantCard({ image, path, restaurant }: Props) {
         aria-label={`${restaurant.name} - opens in a new tab`}
       >
         <div className="relative aspect-square">
-          {image && <Image src={image.url} alt={image.alt} width={300} height={240} className="w-full h-full object-cover" />}
+          {image && (
+            <Image
+              src={image.url}
+              alt={image.alt}
+              width={300}
+              height={240}
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
 
         <div className="p-4">
