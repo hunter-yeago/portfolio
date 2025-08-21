@@ -4,17 +4,17 @@ export default function ProfessionalLinks() {
     {
       id: "LinkedIn",
       href: "https://www.linkedin.com/in/hunter-yeago/",
-      bgClass: "bg-[#7FBEEB] text-black",
+      bgClass: "bg-[#7FBEEB]",
     },
     {
       id: "Resume",
       href: "https://drive.google.com/file/d/1V4S31joVw0NZeowUtAIvXtexgXu90T7V/view?usp=drive_link",
-      bgClass: "bg-[#C1D37F] text-gold",
+      bgClass: "bg-[#C1D37F]",
     },
     {
       id: "GitHub",
       href: "https://github.com/hunter-yeago",
-      bgClass: "bg-[#fe938c] text-black",
+      bgClass: "bg-[#fe938c]",
     },
   ];
 
