@@ -9,7 +9,8 @@ export default function ProjectPreview() {
   return (
     <section className="flex flex-col gap-4 justify-center items-center">
       <h2 className="text-3xl">Development Experience</h2>
-      <div className="flex flex-col gap-4 justify-center">
+      <p>say a little bit more about something here would be good</p>
+      <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project) => (
           <PreviewCard key={project.slug} project={project} />
         ))}

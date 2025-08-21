@@ -32,7 +32,7 @@ export default function ProfessionalLinks() {
           target="_blank"
           aria-label={`View Hunter Yeago's ${id} - opens in a new tab`}
         >
-          View {id}
+          {id}
         </Link>
       ))}
     </div>
