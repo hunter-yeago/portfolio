@@ -19,6 +19,12 @@ const graphs = [
     yAxisLabel: "metric tons CO2e",
     color: "#3498db",
   },
+  // {
+  //   title: "Electricity Use",
+  //   key: "ElectricityUse",
+  //   yAxisLabel: "kWh",
+  //   color: "#f39c12",
+  // },
 ];
 
 
