@@ -12,7 +12,7 @@ interface Props {
 function IntroParagraph({ data }: Props) {
   const graphs = [
     {
-      title: "Total GHG Emissions",
+      title: "Chicago Median GHG Emissions",
       key: "TotalGHGEmissions",
       yAxisLabel: "metric tons CO2e",
       color: "#e74c3c", // Red for emissions
@@ -39,23 +39,23 @@ function IntroParagraph({ data }: Props) {
 
   return (
     <section
-      className="grid grid-rows gap-4 md-custom:grid-cols-[50%,50%] mx-auto"
+      className="grid grid-rows gap-4 md-custom:grid-cols-2 mx-auto mt-32"
       aria-label="information about hunter yeago and links to his professional profiles"
     >
-      <article className="flex text-center md:text-left flex-col gap-4 py-6">
-        <h1 className="text-4xl font-semibold">
+      <article className="flex text-left flex-col gap-8 py-6">
+        <h1 className="text-5xl font-bold">
           {data.headline}
         </h1>
-        <div className="block max-h-[300px] overflow-hidden rounded-xl md-custom:hidden">
+        {/* <div className="block max-h-[300px] overflow-hidden rounded-xl md-custom:hidden">
           <Image
             className="object-left h-full object-cover"
             priority
             src={stationImage}
             alt="a man holding a broken umbrella stands next to a street light in Melbourne, Australia"
           />
-        </div>
+        </div> */}
         {data.paragraphs.map((text: string, index: number) => (
-          <p key={index} dangerouslySetInnerHTML={{ __html: text }} />
+          <p className="text-xl" key={index} dangerouslySetInnerHTML={{ __html: text }} />
         ))}
         <ProfessionalLinks />
       </article>

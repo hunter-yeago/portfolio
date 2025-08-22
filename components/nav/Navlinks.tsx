@@ -8,8 +8,8 @@ interface Props {
 
 export default function NavLinks({ onClick }: Props) {
   const navData: NavItem[] = [
-    { name: "Electrify Chicago", path: "/projects/electrify-chicago" },
-    { name: "Essay Writing", path: "/projects/essay-writing" },
+    { name: "Projects", path: "#projects" },
+    { name: "Contact", path: "#contact" },
   ];
   return (
     <ul className="flex w-fit flex-wrap gap-4 align-center lg:items-center">
@@ -17,7 +17,7 @@ export default function NavLinks({ onClick }: Props) {
         <li key={item.name}>
           <Link
             href={item.path}
-            className="hover:text-gray-400"
+            className="text-lg hover:text-gray-400"
             onClick={onClick}
           >
             {item.name}
