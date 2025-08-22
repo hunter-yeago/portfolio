@@ -6,7 +6,7 @@ export default function ProfessionalLinks() {
   return (
     <div
       id="prof-links"
-      className="flex w-fit flex-wrap items-center justify-center gap-4 mt-4"
+      className="flex w-fit flex-wrap gap-4 mt-4"
     >
       {links.map(({ id, href, bgClass, hoverClass }) => (
         <Link

@@ -39,7 +39,7 @@ function IntroParagraph({ data }: Props) {
 
   return (
     <section
-      className="grid grid-rows gap-4 md-custom:grid-cols-2 mx-auto mt-32"
+      className="grid grid-rows gap-4 md-custom:grid-cols-2 mx-auto mt-32 max-w-[1200px] p-12"
       aria-label="information about hunter yeago and links to his professional profiles"
     >
       <article className="flex text-left flex-col gap-8 py-6">
