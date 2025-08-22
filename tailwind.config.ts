@@ -18,7 +18,7 @@ const config: Config = {
       },
       screens: {
         "md-custom": "900px",
-        "lg-custom": "1200px",
+        "lg-custom": "1400px",
       },
     },
   },

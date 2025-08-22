@@ -33,7 +33,7 @@ export default function MDXContent({ source, project }: MDXContentProps) {
     RestaurantCard,
   };
   return (
-    <main className="mx-auto px-4">
+    <main className="mx-auto px-4 mt-32">
       <h1 className="text-2xl font-bold mt-12">{project.title}</h1>
       <HeroImage image={{ url: project.hero.url, alt: project.hero.alt }} />
 
