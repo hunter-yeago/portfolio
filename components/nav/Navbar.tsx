@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Logo / Name */}
         <Link
           href="/"
-          className="font-bold text-2xl whitespace-nowrap"
+          className="font-bold text-2xl whitespace-nowrap py-1 px-2"
         >
           Hunter Yeago
         </Link>

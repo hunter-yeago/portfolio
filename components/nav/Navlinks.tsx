@@ -17,7 +17,7 @@ export default function NavLinks({ onClick }: Props) {
         <li key={item.name}>
           <Link
             href={item.path}
-            className="text-lg hover:text-gray-400"
+            className="text-lg hover:text-gray-400 py-1 px-2"
             onClick={onClick}
           >
             {item.name}
