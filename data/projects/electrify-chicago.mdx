@@ -1,4 +1,4 @@
-<ul className="flex flex-wrap gap-2 my-8">
+<ul className="flex flex-wrap gap-x-2 gap-4 my-8">
   <JumpLink id="about-the-project" text="About The Project" />
   <JumpLink id="my-contributions" text="My Contributions" />
   <JumpLink id="technical-details" text="Technical Details" />
@@ -21,7 +21,6 @@
     and building owners.
   </p>
 
-  <p> Check out the data on a few of Chicago's iconic downtown buildings: </p>
   <div className="flex flex-wrap justify-center items-center gap-4 my-4">
     <BuildingCard
       name="Marina Towers Condominium"
@@ -43,6 +42,7 @@
       }}
     />
     <BuildingCard
+      extraClasses="hidden md:block"
       name="John G Shedd Aquarium"
       note="energy demands contribute to a carbon footprint that reflects the difficulty of electrifying older infrastructure."
       grade="C"
@@ -66,6 +66,7 @@
     />
 
     <BuildingCard
+      extraClasses="hidden md:block"
       name="The Art Institute of Chicago"
       note="relies on 66% of it’s energy mix on natural gas and has the 17th highest emissions for buildings in Chicago."
       grade="D"
@@ -103,17 +104,17 @@
     Here are a couple of examples of the charts interactive charts I've created
     for it:
   </p>
-  <CityWideStats graphs={[
-    {
-      title: "Chicago Median GHG Emissions",
-      key: "TotalGHGEmissions",
-      yAxisLabel: "metric tons CO2e",
-      color: "#e74c3c", // Red for emissions
-    },
-  ]}/>
+  <CityWideStats
+    graphs={[
+      {
+        title: "Chicago Median GHG Emissions",
+        key: "TotalGHGEmissions",
+        yAxisLabel: "metric tons CO2e",
+        color: "#e74c3c", // Red for emissions
+      },
+    ]}
+  />
 </Section>
-
-
 
 <Section id="next-steps">
   <Title title="Next Steps" />
@@ -125,8 +126,6 @@
     the screen!
   </p>
 </Section>
-
-
 
 <Section id="technical-details">
   <Title title="Technical Details" />

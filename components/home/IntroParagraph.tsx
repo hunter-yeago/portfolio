@@ -2,7 +2,6 @@
 import ProfessionalLinks from "./ProfessionalLinks";
 import { IntroParagraphData } from "@/lib/intro_paragraph";
 import CityWideStats from "../projects/interactive/CityWideStats";
-import PageTitle from "../core/PageTitle";
 
 interface Props {
   data: IntroParagraphData;
@@ -20,10 +19,10 @@ function IntroParagraph({ data }: Props) {
 
   return (
     <section
-      className="grid grid-rows gap-4 md-custom:grid-cols-2 mx-auto max-w-[1400px] p-12"
+      className="grid grid-rows gap-4 md-custom:grid-cols-2 mx-auto max-w-[1400px] p-3 md:p-12"
       aria-label="information about hunter yeago and links to his professional profiles"
     >
-      <article className="flex text-left flex-col gap-8 py-6">
+      <article className="flex items-center text-center lg:text-left lg:items-start flex-col gap-8 py-6">
         <h1 className="text-3xl">{data.headline}</h1>
         {data.paragraphs.map((text: string, index: number) => (
           <p

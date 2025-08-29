@@ -14,7 +14,9 @@ export default function LinkList({ items, showTooltips = false }: Props) {
         {items.map((item, index) => (
           <li
             key={item.key || `${item.name}-${index}`}
-            className={showTooltips ? "tooltip list-none relative group" : undefined}
+            className={
+              showTooltips ? "tooltip list-none relative group" : undefined
+            }
             title={showTooltips ? item.name : undefined}
           >
             <LinkItem

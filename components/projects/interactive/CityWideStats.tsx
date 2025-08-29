@@ -27,7 +27,6 @@ export default function CityWideStats({ graphs }: { graphs: I_Graph[] }) {
   return (
     <article aria-label="green house gas emissions statistics from buildings across chicago">
       {graphs.map((g: I_Graph) => {
-        
         // Use dummy data instead of extractMetricData for now
         const data = generateDummyData(g.key);
 

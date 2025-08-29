@@ -9,6 +9,7 @@ interface Props {
   image?: i_Image | null;
   note: string;
   electrified: boolean;
+  extraClasses?: string;
 }
 
 export default function BuildingCard({
@@ -17,9 +18,10 @@ export default function BuildingCard({
   note,
   path,
   image,
+  extraClasses
 }: Props) {
   return (
-    <article className="max-w-80 border">
+    <article className={`max-w-80 border ${extraClasses}`}>
       {note && (
         <p className="w-full p-2">
           <span className="font-bold">{building.PropertyName}</span> - {note}

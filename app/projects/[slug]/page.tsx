@@ -36,7 +36,8 @@ export default async function ProjectPage({ params }: Props) {
   const project = projectMeta(slug as ProjectSlug);
 
   return (
-  <div className="mdx-container px-8 md:px-32"><MDXContent source={mdxSource} project={project} /></div>
-  )
-  ;
+    <div className="mdx-container px-8 md:px-16">
+      <MDXContent source={mdxSource} project={project} />
+    </div>
+  );
 }
