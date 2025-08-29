@@ -157,7 +157,7 @@ export default function ScatterGraph({
           .axisBottom(xScale)
           .tickValues(sortedData.map((d) => d.year))
           .tickFormat((d) => String(d.valueOf()))
-          .tickSize(-10)
+          .tickSize(-10),
       )
       .selectAll("text")
       .style("font-size", "12px")
@@ -170,7 +170,7 @@ export default function ScatterGraph({
         d3
           .axisLeft(yScale)
           .tickSize(-10)
-          .tickFormat((d) => (+d === 0 ? "" : d3.format("~s")(d)))
+          .tickFormat((d) => (+d === 0 ? "" : d3.format("~s")(d))),
       )
       .selectAll("text")
       .style("font-size", "12px")
@@ -203,7 +203,12 @@ export default function ScatterGraph({
       .text("Year");
 
     // Trend line (drawn first to appear behind data)
-    let trendLine: d3.Selection<SVGLineElement, unknown, null, undefined> | null = null;
+    let trendLine: d3.Selection<
+      SVGLineElement,
+      unknown,
+      null,
+      undefined
+    > | null = null;
     if (showTrendLine && sortedData.length > 1) {
       const regression = calculateLinearRegression(sortedData);
       trendLine = chartGroup
@@ -265,7 +270,7 @@ export default function ScatterGraph({
       .style("cursor", "pointer")
       .style("opacity", 0)
       .style("filter", "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))")
-      .on("mouseover", function() {
+      .on("mouseover", function () {
         tooltip.style("opacity", 1);
         d3.select(this).transition().duration(200).attr("r", 8);
       })
@@ -276,16 +281,22 @@ export default function ScatterGraph({
         const tooltipOffset = 15;
         const tooltipEdgeBuffer = 30;
 
-        const shouldLeftAlign = x + tooltipEstimatedWidth > containerWidth - tooltipEdgeBuffer;
+        const shouldLeftAlign =
+          x + tooltipEstimatedWidth > containerWidth - tooltipEdgeBuffer;
 
         tooltip
-          .html(`<div><strong>Year:</strong> ${d.year}</div><div><strong>${yAxisLabel}:</strong> ${d3.format(".2s")(d.value)}</div>`)
-          .style("left", shouldLeftAlign 
-            ? `${x - tooltipEstimatedWidth - tooltipOffset}px`
-            : `${x + tooltipOffset}px`)
+          .html(
+            `<div><strong>Year:</strong> ${d.year}</div><div><strong>${yAxisLabel}:</strong> ${d3.format(".2s")(d.value)}</div>`,
+          )
+          .style(
+            "left",
+            shouldLeftAlign
+              ? `${x - tooltipEstimatedWidth - tooltipOffset}px`
+              : `${x + tooltipOffset}px`,
+          )
           .style("top", `${y - tooltipOffset}px`);
       })
-      .on("mouseout", function() {
+      .on("mouseout", function () {
         tooltip.style("opacity", 0);
         d3.select(this).transition().duration(200).attr("r", 6);
       });
@@ -310,7 +321,8 @@ export default function ScatterGraph({
       }
 
       // Animate line
-      const totalLength = (path.node() as SVGPathElement)?.getTotalLength() || 0;
+      const totalLength =
+        (path.node() as SVGPathElement)?.getTotalLength() || 0;
       path
         .attr("stroke-dasharray", `${totalLength} ${totalLength}`)
         .attr("stroke-dashoffset", totalLength)
@@ -342,7 +354,7 @@ export default function ScatterGraph({
           // }
         });
       },
-      { threshold }
+      { threshold },
     );
 
     if (containerRef.current) {
@@ -361,7 +373,18 @@ export default function ScatterGraph({
       // observer.disconnect();
       // resizeObserver.disconnect();
     };
-  }, [data, strokeColor, fillColor, yAxisLabel, title, showGrid, showTrendLine, animationDuration, hasAnimated]);
+  }, [
+    data,
+    strokeColor,
+    fillColor,
+    yAxisLabel,
+    title,
+    showGrid,
+    showTrendLine,
+    animationDuration,
+    hasAnimated,
+    sortedData,
+  ]);
 
   return (
     <div className="relative w-full max-w-5xl mx-auto p-4">
@@ -370,13 +393,13 @@ export default function ScatterGraph({
           <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin"></div>
         </div>
       )}
-      <div 
-        ref={containerRef} 
+      <div
+        ref={containerRef}
         className="w-full min-h-[400px] relative"
-        style={{ 
-          background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
-          borderRadius: '12px',
-          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+        style={{
+          background: "linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)",
+          borderRadius: "12px",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
         }}
       />
     </div>
@@ -398,10 +421,14 @@ function ScatterGraphDemo() {
   return (
     <div className="p-8 space-y-8">
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Enhanced Scatter Graph</h1>
-        <p className="text-gray-600">Fully animated scatter plot with trend line and interactive tooltips</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          Enhanced Scatter Graph
+        </h1>
+        <p className="text-gray-600">
+          Fully animated scatter plot with trend line and interactive tooltips
+        </p>
       </div>
-      
+
       <ScatterGraph
         data={sampleData}
         strokeColor="#3b82f6"
@@ -415,7 +442,7 @@ function ScatterGraphDemo() {
 
       <div className="grid md:grid-cols-2 gap-6 mt-8">
         <ScatterGraph
-          data={sampleData.map(d => ({ ...d, value: d.value * 0.6 }))}
+          data={sampleData.map((d) => ({ ...d, value: d.value * 0.6 }))}
           strokeColor="#10b981"
           fillColor="#059669"
           yAxisLabel="Profit"
@@ -424,7 +451,7 @@ function ScatterGraphDemo() {
           showTrendLine={false}
           animationDuration={800}
         />
-        
+
         <ScatterGraph
           data={[
             { year: 2020, value: 45000 },

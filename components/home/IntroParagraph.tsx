@@ -19,7 +19,7 @@ function IntroParagraph({ data }: Props) {
     },
     // {
     //   title: "Electricity Use",
-    //   key: "ElectricityUse", 
+    //   key: "ElectricityUse",
     //   yAxisLabel: "kWh",
     //   color: "#f39c12", // Orange for electricity
     // },
@@ -43,9 +43,7 @@ function IntroParagraph({ data }: Props) {
       aria-label="information about hunter yeago and links to his professional profiles"
     >
       <article className="flex text-left flex-col gap-8 py-6">
-        <h1 className="text-5xl font-bold">
-          {data.headline}
-        </h1>
+        <h1 className="text-5xl font-bold">{data.headline}</h1>
         {/* <div className="block max-h-[300px] overflow-hidden rounded-xl md-custom:hidden">
           <Image
             className="object-left h-full object-cover"
@@ -55,11 +53,15 @@ function IntroParagraph({ data }: Props) {
           />
         </div> */}
         {data.paragraphs.map((text: string, index: number) => (
-          <p className="text-xl" key={index} dangerouslySetInnerHTML={{ __html: text }} />
+          <p
+            className="text-xl"
+            key={index}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
         ))}
         <ProfessionalLinks />
       </article>
-      
+
       {/* Charts container */}
       <div className="space-y-6">
         <CityWideStats graphs={graphs} />

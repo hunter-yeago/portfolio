@@ -68,7 +68,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="flex flex-col px-4 md:px-16 gap-4 w-[min(900px,100%)] mx-auto items-center scroll-mt-12" id="contact">
+    <section
+      className="flex flex-col px-4 md:px-16 gap-4 w-[min(900px,100%)] mx-auto items-center scroll-mt-12"
+      id="contact"
+    >
       <h2 className="text-3xl">Contact</h2>
       <div className="p-6 bg-white rounded-lg shadow-lg w-full">
         <FormStatus status={submitStatus} />
