@@ -80,12 +80,8 @@ export async function POST(request: NextRequest) {
 
     const { name, email, subject, message, website } = validationResult.data;
 
-    const honeypot = website;
-
-    console.log("the honeypot", honeypot);
-    console.log("the website", website);
-    if (honeypot && honeypot.trim() !== "") {
-      console.warn("honeypot alert! Detected bot submission with:", honeypot);
+    if (website && website.trim() !== "") {
+      console.warn("honeypot alert! Detected bot submission with:", website);
       return NextResponse.json({ error: "Bot detected" }, { status: 400 });
     }
 

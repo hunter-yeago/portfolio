@@ -10,11 +10,11 @@ export default function LinkList({ items, showTooltips = false }: Props) {
   return (
     <>
       <h2 className="text-xl mb-1 font-bold">{items[0].category}</h2>
-      <ul className="flex flex-wrap gap-2  justify-center sm:justify-normal">
+      <ul className="flex flex-wrap gap-2">
         {items.map((item, index) => (
           <li
             key={item.key || `${item.name}-${index}`}
-            className={showTooltips ? "tooltip relative group" : undefined}
+            className={showTooltips ? "tooltip list-none relative group" : undefined}
             title={showTooltips ? item.name : undefined}
           >
             <LinkItem

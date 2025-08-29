@@ -116,38 +116,3 @@ html {
   margin: 0.25em 0;
   margin-left: .85rem;
 }
-
-.mdx-container blockquote {
-  border-left: 4px solid #ddd;
-  margin: 1em 0;
-  padding-left: 1em;
-  color: #555;
-  font-style: italic;
-}
-
-.mdx-container code {
-  background: #f5f5f5;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: monospace;
-}
-
-.mdx-container pre {
-  background: #f5f5f5;
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-}
-
-.mdx-container hr {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 2em 0;
-}
-
-.mdx-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1.5em auto;
-}

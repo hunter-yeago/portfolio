@@ -24,7 +24,7 @@ function IntroParagraph({ data }: Props) {
       aria-label="information about hunter yeago and links to his professional profiles"
     >
       <article className="flex text-left flex-col gap-8 py-6">
-        <PageTitle title={data.headline} />
+        <h1 className="text-3xl">{data.headline}</h1>
         {data.paragraphs.map((text: string, index: number) => (
           <p
             className="text-xl"

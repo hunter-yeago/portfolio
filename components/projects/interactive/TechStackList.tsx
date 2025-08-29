@@ -40,7 +40,7 @@ export default function TechStackList({ items, useLinks }: Props) {
   const groupedItems = groupByCategory(items);
 
   return (
-    <div className="flex gap-x-10 gap-y-4 flex-wrap justify-center sm:justify-normal">
+    <div className="flex gap-x-10 gap-y-4 flex-wrap">
       {Object.entries(groupedItems).map(([category, categoryItems]) => {
         const TechLink = categoryItems.map((item) => ({
           name: item.name,

@@ -36,7 +36,7 @@ export default function MDXContent({ source, project }: MDXContentProps) {
       <HeroImage image={{ url: project.hero.url, alt: project.hero.alt }} />
 
       {project.links && (
-        <div className="w-fit mx-auto sm:mx-0 mb-8">
+        <div className="w-fit sm:mx-0 mb-8">
           <LinkList items={[project.links.repo, project.links.live_site]} />
         </div>
       )}
