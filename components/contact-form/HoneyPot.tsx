@@ -1,7 +1,16 @@
-export default function HoneyPot({ value, onChange }: { value: string | undefined; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) {
+export default function HoneyPot({
+  value,
+  onChange,
+}: {
+  value: string | undefined;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) {
   return (
-    <div hidden>
-      <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="website">
+    <div className="hidden">
+      <label
+        className="block text-sm font-medium text-gray-700 mb-1"
+        htmlFor="website"
+      >
         Honeypot
       </label>
       <input

@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 
 const MDXContent = dynamic(
   () => import("@/components/projects/mdx/MDXContent"),
-  { ssr: false }, // prevents server-side rendering
+  { ssr: false },
 );
 
 interface Props {

@@ -1,26 +1,12 @@
+import { Building, i_Image } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface Building {
-  PropertyName: string;
-  PrimaryPropertyType: string;
-  GHGIntensity: number;
-  TotalGHGEmissions: number;
-  AvgPercentileLetterGrade: string;
-  NaturalGasUse: number;
-  DistrictSteamUse: number;
-}
-
-interface BuildingImage {
-  url: string;
-  alt: string;
-}
-
 interface Props {
   building: Building;
   path: string;
-  image?: BuildingImage | null;
+  image?: i_Image | null;
   note: string;
   electrified: boolean;
 }

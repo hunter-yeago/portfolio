@@ -2,7 +2,12 @@
 // CORE TYPES
 // ============================================================================
 
-export type TechCategories = "Frontend" | "Backend" | "Data" | "Infrastructure" | (string & {});
+export type TechCategories =
+  | "Frontend"
+  | "Backend"
+  | "Data"
+  | "Infrastructure"
+  | (string & {});
 
 export interface i_Image {
   url: string;
@@ -59,7 +64,10 @@ export interface Annotation {
   padding?: [number, number];
   iterations?: number;
   multiline?: boolean;
-  brackets?: ["left" | "right" | "top" | "bottom", "left" | "right" | "top" | "bottom"];
+  brackets?: [
+    "left" | "right" | "top" | "bottom",
+    "left" | "right" | "top" | "bottom",
+  ];
   strokeWidth?: number;
   animationDuration?: number;
 }
@@ -86,4 +94,20 @@ export interface FormErrors {
   email?: string;
   subject?: string;
   message?: string;
+}
+
+export interface i_HyperLink {
+  link: string;
+  text: string;
+}
+
+// Electrify Chicago
+export interface Building {
+  PropertyName: string;
+  PrimaryPropertyType: string;
+  GHGIntensity: number;
+  TotalGHGEmissions: number;
+  AvgPercentileLetterGrade: string;
+  NaturalGasUse: number;
+  DistrictSteamUse: number;
 }

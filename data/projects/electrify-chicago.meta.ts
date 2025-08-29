@@ -21,7 +21,7 @@ export const electrifyMeta = {
       "Find out how much Chicago buildings pollute! This public tool helps citizens understand building emissions in the city.",
       "Built with a modern Jamstack approach using Gridsome and Vue.",
     ],
-    image: "/images/electrify-chicago/preview.png",
+    image: "/images/electrify-chicago/hero.png",
   },
   hero: {
     url: "/images/electrify-chicago/hero.png",

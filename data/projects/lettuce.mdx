@@ -15,6 +15,16 @@
     design and full accessibility compliance to ensure consistent user
     experiences across devices.
   </Paragraph>
+
+<a href="https://docs.google.com/document/d/1XhV_MtijRjFJuC086QL2KpOGNXU0WTi2oVSnKGJgBso/edit?tab=t.vv9tqsjtu4so">
+  Notes while I'm working on getting this thing to work ooooooooo"
+</a>{" "}
+
+Helped onboard my company from using only WordPress to a Next.js frontend with a headless WordPress backend.
+Problem: The old WordPress sites were slow and difficult to maintain.
+Next.js: The WordPress framework lacked reactivity, making it hard to manage and optimize. Our new sites are faster, handle state more efficiently with less code (e.g., showing different menus), and require significantly less time for QA.
+Tailwind: Maintaining SASS code became increasingly difficult after multiple iterations, requiring full-site QA for small updates. With Tailwind, we only need to QA the affected components.
+
   <Paragraph>
     I was project lead on several high-profile restaurant websites, including{" "}
     <strong>Joe's Live</strong> and <strong>Gussip & Dip</strong>, delivering
@@ -23,6 +33,29 @@
     Manager.
   </Paragraph>
 </Section>
+
+{" "}
+
+<section className="flex gap-4 flex-wrap justify-center items-center">
+  <RestaurantCard
+    path="https://joes.net"
+    image={{ url: "/images/lettuce/joes_logo.jpg", alt: "Joes Seafood Logo" }}
+    restaurant={{ name: "Joe's Seafood" }}
+  />
+  <RestaurantCard
+    path="https://bub-city.com"
+    image={{ url: "/images/lettuce/bub_logo.png", alt: "Bub City Logo" }}
+    restaurant={{ name: "Bub City" }}
+  />
+  <RestaurantCard
+    path="https://gussipanddip.com"
+    image={{
+      url: "/images/lettuce/gus_logo.jpg",
+      alt: "Gus' Sip and Dip Logo",
+    }}
+    restaurant={{ name: "Gus' Sip and Dip" }}
+  />
+</section>
 
 <Section id="my-contributions">
   <Title title="My Contributions" />
