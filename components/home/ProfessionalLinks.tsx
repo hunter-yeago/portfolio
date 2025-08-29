@@ -5,7 +5,7 @@ export default function ProfessionalLinks() {
     {
       id: "LinkedIn",
       href: "https://www.linkedin.com/in/hunter-yeago/",
-        bgClass: "bg-[#e74c3c]",
+      bgClass: "bg-[#e74c3c]",
       hoverClass: "focus:bg-[#ef6d5c] hover:bg-[#ef6d5c]", // lighter red
     },
     {

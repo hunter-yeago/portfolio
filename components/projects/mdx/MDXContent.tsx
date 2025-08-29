@@ -33,7 +33,10 @@ export default function MDXContent({ source, project }: MDXContentProps) {
   return (
     <main className="mx-auto mt-32">
       <h1 className="text-2xl font-bold mt-12">{project.title}</h1>
-      <HeroImage mobileImage={project.preview} image={{ url: project.hero.url, alt: project.hero.alt }} />
+      <HeroImage
+        mobileImage={project.preview}
+        image={{ url: project.hero.url, alt: project.hero.alt }}
+      />
 
       {project.links && (
         <div className="w-fit sm:mx-0 mb-8">

@@ -18,7 +18,7 @@ export default function BuildingCard({
   note,
   path,
   image,
-  extraClasses
+  extraClasses,
 }: Props) {
   return (
     <article className={`max-w-80 border ${extraClasses}`}>

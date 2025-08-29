@@ -64,24 +64,23 @@ const baseData: any = {
   // ],
 };
 
-
 const links = [
-    {
-      id: "LinkedIn",
-      href: "https://www.linkedin.com/in/hunter-yeago/",
-      bgClass: "bg-gray-800",
-      hoverClass: "focus:bg-gray-700 hover:bg-gray-700",
-    },
-    {
-      id: "Resume",
-      href: "/resume/resume.pdf",
-      bgClass: "bg-[#aa8af7]",
-      hoverClass: "focus:bg-[#b79cf8] hover:bg-[#b79cf8]", // lighter lavender
-    },
-    // {
-    //   id: "GitHub",
-    //   href: "https://github.com/hunter-yeago",
-    //   bgClass: "bg-[#e74c3c]",
-    //   hoverClass: "focus:bg-[#ef6d5c] hover:bg-[#ef6d5c]", // lighter red
-    // },
-  ];
+  {
+    id: "LinkedIn",
+    href: "https://www.linkedin.com/in/hunter-yeago/",
+    bgClass: "bg-gray-800",
+    hoverClass: "focus:bg-gray-700 hover:bg-gray-700",
+  },
+  {
+    id: "Resume",
+    href: "/resume/resume.pdf",
+    bgClass: "bg-[#aa8af7]",
+    hoverClass: "focus:bg-[#b79cf8] hover:bg-[#b79cf8]", // lighter lavender
+  },
+  // {
+  //   id: "GitHub",
+  //   href: "https://github.com/hunter-yeago",
+  //   bgClass: "bg-[#e74c3c]",
+  //   hoverClass: "focus:bg-[#ef6d5c] hover:bg-[#ef6d5c]", // lighter red
+  // },
+];

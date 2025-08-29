@@ -4,7 +4,7 @@ import { i_Image, i_ProjectPreview } from "@/types/types";
 import Image from "next/image";
 
 interface Props {
-  mobileImage: i_ProjectPreview,
+  mobileImage: i_ProjectPreview;
   image: i_Image;
 }
 

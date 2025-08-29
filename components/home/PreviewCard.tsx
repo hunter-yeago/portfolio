@@ -8,7 +8,6 @@ interface Props {
 }
 
 export default function PreviewCard({ project }: Props) {
-  console.log('project', project.preview.image)
   return (
     <Link
       className="max-w-[1000px] p-6 sm:p-12 border-4 cursor-pointer focus:border-gray-800 focus:outline-none grid grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-14 justify-between rounded-xl shadow-lg hover:border-gray-800 hover:shadow-xl"
@@ -27,21 +26,19 @@ export default function PreviewCard({ project }: Props) {
           ))}
         </div>
 
-          <div className="w-full h-60 md:h-full relative overflow-hidden">
-            <Image
-              className="absolute w-full h-full object-contain"
-              src={project.preview.image}
-              alt={`${project.title} preview image`}
-              width={300}
-              height={300}
-            />
-          </div>
-
+        <div className="w-full h-60 md:h-full relative overflow-hidden">
+          <Image
+            className="absolute w-full h-full object-contain"
+            src={project.preview.image}
+            alt={`${project.title} preview image`}
+            width={300}
+            height={300}
+          />
+        </div>
       </div>
       <div className="hidden md:block">
         <TechStackList items={project.tech_stack} useLinks={false} />
       </div>
-
     </Link>
   );
 }
