@@ -9,7 +9,7 @@ interface SectionProps {
 
 export default function Section({ children, id }: SectionProps) {
   return (
-    <article id={id} className="flex flex-col gap-4 my-4 scroll-mt-12">
+    <article id={id} className="my-12 scroll-mt-12">
       {children}
     </article>
   );

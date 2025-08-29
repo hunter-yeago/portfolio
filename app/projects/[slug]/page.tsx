@@ -35,5 +35,8 @@ export default async function ProjectPage({ params }: Props) {
   const mdxSource = await serialize(mdxContent);
   const project = projectMeta(slug as ProjectSlug);
 
-  return <MDXContent source={mdxSource} project={project} />;
+  return (
+  <div className="mdx-container px-4 md:px-16"><MDXContent source={mdxSource} project={project} /></div>
+  )
+  ;
 }

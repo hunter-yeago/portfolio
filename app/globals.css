@@ -74,3 +74,80 @@ html {
 .grade-D {
   color: #972222;
 }
+
+
+/* Handle HTML in MDX */
+.mdx-container {
+  line-height: 1.6;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.mdx-container h1,
+.mdx-container h2,
+.mdx-container h3,
+.mdx-container h4,
+.mdx-container h5,
+.mdx-container h6 {
+  /* font-weight: 600; */
+  /* line-height: 1.25; */
+  /* margin: 1.5em 0 0.75em; */
+}
+
+.mdx-container p {
+  margin: 1em 0;
+}
+
+.mdx-container ul,
+.mdx-container ol {
+  /* margin: 1em 0 1em 1.5em; */
+  padding: 0;
+}
+
+.mdx-container ul {
+  list-style-type: disc;
+}
+
+.mdx-container ol {
+  list-style-type: decimal;
+}
+
+.mdx-container li {
+  margin: 0.25em 0;
+  margin-left: .85rem;
+}
+
+.mdx-container blockquote {
+  border-left: 4px solid #ddd;
+  margin: 1em 0;
+  padding-left: 1em;
+  color: #555;
+  font-style: italic;
+}
+
+.mdx-container code {
+  background: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.mdx-container pre {
+  background: #f5f5f5;
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.mdx-container hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+
+.mdx-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
+}
