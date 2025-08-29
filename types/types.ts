@@ -33,7 +33,7 @@ export interface TechLink {
 // PROJECT TYPES
 // ============================================================================
 
-export interface ProjectPreview {
+export interface i_ProjectPreview {
   description: string[];
   image: string;
 }
@@ -48,7 +48,7 @@ export interface SingleProject {
   type: string;
   slug: string;
   links?: ProjectLinks;
-  preview: ProjectPreview;
+  preview: i_ProjectPreview;
   hero: i_Image;
   tech_stack: TechLink[];
 }

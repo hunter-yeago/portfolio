@@ -7,7 +7,6 @@ import TechStackList from "../interactive/TechStackList";
 import LinkList from "../interactive/LinkList";
 import Section from "../core/Section";
 import Title from "../core/Title";
-import Paragraph from "../core/Paragraph";
 import CityWideStats from "../interactive/CityWideStats";
 import SectionLink from "../core/SectionLink";
 import JumpLink from "../interactive/JumpLink";
@@ -25,7 +24,6 @@ export default function MDXContent({ source, project }: MDXContentProps) {
     BuildingCard,
     Section,
     Title,
-    Paragraph,
     CityWideStats,
     SectionLink,
     JumpLink,
@@ -33,12 +31,15 @@ export default function MDXContent({ source, project }: MDXContentProps) {
     RestaurantCard,
   };
   return (
-    <main className="mx-auto px-4 mt-32">
+    <main className="mx-auto mt-32">
       <h1 className="text-2xl font-bold mt-12">{project.title}</h1>
-      <HeroImage image={{ url: project.hero.url, alt: project.hero.alt }} />
+      <HeroImage
+        mobileImage={project.preview}
+        image={{ url: project.hero.url, alt: project.hero.alt }}
+      />
 
       {project.links && (
-        <div className="w-fit mx-auto sm:mx-0 mb-8">
+        <div className="w-fit sm:mx-0 mb-8">
           <LinkList items={[project.links.repo, project.links.live_site]} />
         </div>
       )}

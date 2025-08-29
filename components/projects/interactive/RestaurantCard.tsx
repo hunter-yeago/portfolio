@@ -12,7 +12,7 @@ interface Props {
 
 export default function RestaurantCard({ image, path, restaurant }: Props) {
   return (
-    <article className="w-72 border">
+    <article className="w-60 border">
       <Link
         className="border-gray-200 hover:outline outline-2 outline-blue-600"
         href={path}

@@ -18,7 +18,7 @@ export default function ProjectPreview() {
         <p className="text-center">
           say a little bit more about something here would be good
         </p>
-        <div className="grid md:grid-cols-2 gap-8 pt-8">
+        <div className="grid gap-8 pt-8">
           {projects.map((project) => (
             <PreviewCard key={project.slug} project={project} />
           ))}

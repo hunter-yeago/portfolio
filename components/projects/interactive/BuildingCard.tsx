@@ -9,6 +9,7 @@ interface Props {
   image?: i_Image | null;
   note: string;
   electrified: boolean;
+  extraClasses?: string;
 }
 
 export default function BuildingCard({
@@ -17,9 +18,10 @@ export default function BuildingCard({
   note,
   path,
   image,
+  extraClasses,
 }: Props) {
   return (
-    <article className="max-w-80 border">
+    <article className={`max-w-80 border ${extraClasses}`}>
       {note && (
         <p className="w-full p-2">
           <span className="font-bold">{building.PropertyName}</span> - {note}
@@ -31,9 +33,9 @@ export default function BuildingCard({
         target="_blank"
         aria-label={`${building.PropertyName} page on Electrify Chicago - opens in a new tab`}
       >
-        <div className="relative h-60 bg-gradient-to-br from-pink-200 to-blue-200">
+        <div className="relative h-60">
           {electrified && (
-            <div className="absolute top-2 right-2 bg-yellow-200 text-yellow-800 font-bold text-sm px-3 py-1 rounded-full shadow">
+            <div className="absolute top-2 right-2 bg-yellow-200 text-yellow-800 font-bold text-sm px-3 py-1 rounded-full shadow border-2 hover:border-[#87ceeb]">
               ⚡ All Electric
             </div>
           )}
@@ -44,7 +46,7 @@ export default function BuildingCard({
               alt={image.alt}
               width={300}
               height={240}
-              className="w-full h-full object-cover object-[50%_10%]"
+              className="h-full object-cover object-[50%_10%]"
             />
           )}
         </div>

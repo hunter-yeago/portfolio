@@ -74,3 +74,14 @@ html {
 .grade-D {
   color: #972222;
 }
+
+/* Handle HTML in MDX */
+.mdx-container {
+  line-height: 1.6;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.mdx-container p {
+  margin: 1em 0;
+}

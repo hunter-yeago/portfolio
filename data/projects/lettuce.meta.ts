@@ -1,6 +1,6 @@
 export const lettuceMeta = {
   title: "Lettuce Entertain You",
-  type: "Professional",
+  type: "Professional Experience",
   slug: "lettuce",
   preview: {
     description: [

@@ -1,4 +1,4 @@
-<ul className="flex flex-wrap gap-2 my-8">
+<ul className="flex flex-wrap gap-x-2 gap-4 my-8">
   <JumpLink id="about-the-project" text="About The Project" />
   <JumpLink id="my-contributions" text="My Contributions" />
   <JumpLink id="technical-details" text="Technical Details" />
@@ -6,22 +6,17 @@
 
 <Section id="about-the-project">
   <Title title="About The Project" />
-  <Paragraph>
-    <SectionLink text="Electrify Chicago" link="https://electrifychicago.net/" /> is an independent open-source{" "}
-    <SectionLink text="Chi Hack Night" link="https://chihacknight.org/" /> project led by <SectionLink text="Viktor Köves" link="https://viktorkoves.com/" />
-    looking to shed light onto one of the biggest sources of Chicago's CO2 emissions - buildings. By providing more information about some of the city's largest
-    and most polluting buildings, we hope to encourage these buildings to electrify, particularly by mobilizing people related to the building - whether that be
-    students and faculty for a college building or employees and patients at a hospital.
-  </Paragraph>
-  <Paragraph>
-    {" "}
-    According to the 2022 <SectionLink text="Chicago Climate Action Plan" link="https://www.chicago.gov/city/en/sites/climate-action-plan/home.html" />,{" "}
-    <strong>69% of Chicago's emissions come from buildings</strong>, making building emissions our biggest challenge and our biggest opportunity as a city to
-    tackle climate change. At Electrify Chicago, we showcase building performance using publicly available data supplemented by community-submitted photographs
-    and building owners.{" "}
-  </Paragraph>
+  <SectionLink text="Electrify Chicago" link="https://electrifychicago.net/" /> is an independent open-source
+  <SectionLink text="Chi Hack Night" link="https://chihacknight.org/" /> project led by <SectionLink text="Viktor Köves" link="https://viktorkoves.com/" />
+  looking to shed light onto one of the biggest sources of Chicago's CO2 emissions - buildings. By providing more information about some of the city's largest
+  and most polluting buildings, we hope to encourage these buildings to electrify, particularly by mobilizing people related to the building - whether that be
+  students and faculty for a college building or employees and patients at a hospital.
+  
+  According to the 2022 <SectionLink text="Chicago Climate Action Plan" link="https://www.chicago.gov/city/en/sites/climate-action-plan/home.html" />,
+  <strong>69% of Chicago's emissions come from buildings</strong>, making building emissions our biggest challenge and our biggest opportunity as a city to
+  tackle climate change. At Electrify Chicago, we showcase building performance using publicly available data supplemented by community-submitted photographs
+  and building owners.
 
-  <Paragraph> Check out the data on a few of Chicago's iconic downtown buildings: </Paragraph>
   <div className="flex flex-wrap justify-center items-center gap-4 my-4">
     <BuildingCard
       name="Marina Towers Condominium"
@@ -30,7 +25,7 @@
       electrified={true}
       gasUsage="0"
       emissions="4,309"
-      path="https://electrifychicago.net/building/marina-towers-condominium-association/"
+      path="https://electrifychicago.net/building/marina-towers-300-n-state-st/"
       image={{ url: "/images/electrify-chicago/marina-towers.jpg", alt: "The Marina Towers Buildings in Chicago" }}
       building={{
         PropertyName: "Marina Towers Condominium",
@@ -43,6 +38,7 @@
       }}
     />
     <BuildingCard
+      extraClasses="hidden md:block"
       name="John G Shedd Aquarium"
       note="energy demands contribute to a carbon footprint that reflects the difficulty of electrifying older infrastructure."
       grade="C"
@@ -66,6 +62,7 @@
     />
 
     <BuildingCard
+      extraClasses="hidden md:block"
       name="The Art Institute of Chicago"
       note="relies on 66% of it’s energy mix on natural gas and has the 17th highest emissions for buildings in Chicago."
       grade="D"
@@ -90,48 +87,43 @@
 
 <Section id="my-contributions">
   <Title title="My Contributions - Citywide Stats" />
-  <Paragraph>
-    I am currently working on this{" "}
-    <SectionLink
-      text=" Citywide Stats Page Github Pull Request"
-      link="https://github.com/vkoves/electrify-chicago/pull/192"
-    />
-    , which will give a year over year analysis of the greenhouse gas emissions
-    and other statistics for all of the buildings we have data for. I used
-    Pandas to take our existing data and organize it by year, pass that data to
-    Vue and render out the information with D3.
-  </Paragraph>
-  <Paragraph>
-    Here are a couple of examples of the charts interactive charts I've created
-    for it:
-  </Paragraph>
-  <CityWideStats />
+  I created a{" "}
+  <SectionLink
+    text="city wide stats"
+    link="https://github.com/vkoves/electrify-chicago/pull/192"
+  />{" "}
+  page, which gives a year over year analysis of the greenhouse gas emissions
+  and other statistics for all of the buildings we have data for. I used Pandas
+  to take our existing data and organize it by year, pass that data to Vue and
+  render out the information with D3. Here are a couple of examples of the
+  charts interactive charts I've created for it:
+  <CityWideStats
+    graphs={[
+      {
+        title: "Chicago Median GHG Emissions",
+        key: "TotalGHGEmissions",
+        yAxisLabel: "metric tons CO2e",
+        color: "#e74c3c", // Red for emissions
+      },
+    ]}
+  />
 </Section>
-
-{" "}
 
 <Section id="next-steps">
   <Title title="Next Steps" />
-  <Paragraph>
-    The current version only does all buildings but the next step is to make it
-    so that it can be broken down by building type (mixed residential,
-    healthcare, College, Data Center, etc). Once setting up the Pandas data
-    pipeline, I sent that over to my graphs I made in D3 and rendered them to
-    the screen!
-  </Paragraph>
+  The current version only does all buildings but the next step is to make it so
+  that it can be broken down by building type (mixed residential, healthcare,
+  College, Data Center, etc). Once setting up the Pandas data pipeline, I sent
+  that over to my graphs I made in D3 and rendered them to the screen!
 </Section>
-
-{" "}
 
 <Section id="technical-details">
   <Title title="Technical Details" />
-  <Paragraph>
-    The frontend is built in VueJS, and uses a Jamstack framework called
-    Gridsome. Data is collected from the{" "}
-    <SectionLink
-      text="Chicago Data Portal"
-      link="https://data.cityofchicago.org/"
-    />{" "}
-    and is sent through a Python / Pandas data pipeline.
-  </Paragraph>
+  The frontend is built in VueJS, and uses a Jamstack framework called Gridsome.
+  Data is collected from the{" "}
+  <SectionLink
+    text="Chicago Data Portal"
+    link="https://data.cityofchicago.org/"
+  />{" "}
+  and is sent through a Python / Pandas data pipeline.
 </Section>

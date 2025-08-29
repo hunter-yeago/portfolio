@@ -5,8 +5,8 @@ export default function ProfessionalLinks() {
     {
       id: "LinkedIn",
       href: "https://www.linkedin.com/in/hunter-yeago/",
-      bgClass: "bg-gray-800",
-      hoverClass: "focus:bg-gray-700 hover:bg-gray-700",
+      bgClass: "bg-[#e74c3c]",
+      hoverClass: "focus:bg-[#ef6d5c] hover:bg-[#ef6d5c]", // lighter red
     },
     {
       id: "Resume",
@@ -14,16 +14,16 @@ export default function ProfessionalLinks() {
       bgClass: "bg-[#aa8af7]",
       hoverClass: "focus:bg-[#b79cf8] hover:bg-[#b79cf8]", // lighter lavender
     },
-    {
-      id: "GitHub",
-      href: "https://github.com/hunter-yeago",
-      bgClass: "bg-[#e74c3c]",
-      hoverClass: "focus:bg-[#ef6d5c] hover:bg-[#ef6d5c]", // lighter red
-    },
+    // {
+    //   id: "GitHub",
+    //   href: "https://github.com/hunter-yeago",
+    //   bgClass: "bg-[#e74c3c]",
+    //   hoverClass: "focus:bg-[#ef6d5c] hover:bg-[#ef6d5c]", // lighter red
+    // },
   ];
 
   return (
-    <div id="prof-links" className="flex w-fit flex-wrap gap-4 mt-4">
+    <div id="prof-links" className="flex w-fit justify-center flex-wrap gap-4 mt-4">
       {links.map(({ id, href, bgClass, hoverClass }) => (
         <Link
           key={id}
