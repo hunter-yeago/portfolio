@@ -1,7 +1,7 @@
-import { HyperLink } from "@/types/types";
+import { i_HyperLink } from "@/types/types";
 import Link from "next/link";
 
-export default function HyperLink({ text, link }: HyperLink) {
+export default function HyperLink({ text, link }: i_HyperLink) {
   return (
     <Link
       className="px-2 py-1 hover:underline text-blue-800"

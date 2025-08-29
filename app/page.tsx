@@ -5,7 +5,7 @@ import ContactForm from "@/components/contact-form/ContactForm";
 
 export default function Home() {
   return (
-    <main className="mt-32 flex flex-col gap-8" id="main">
+    <main className="flex flex-col gap-8" id="main">
       <IntroParagraph data={getIntroParagraph()} />
       <Projects />
       <ContactForm />

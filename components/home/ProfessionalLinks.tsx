@@ -10,7 +10,7 @@ export default function ProfessionalLinks() {
     },
     {
       id: "Resume",
-      href: "https://drive.google.com/file/d/1V4S31joVw0NZeowUtAIvXtexgXu90T7V/view?usp=drive_link",
+      href: "/resume/resume.pdf",
       bgClass: "bg-[#aa8af7]",
       hoverClass: "focus:bg-[#b79cf8] hover:bg-[#b79cf8]", // lighter lavender
     },

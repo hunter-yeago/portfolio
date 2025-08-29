@@ -96,7 +96,7 @@ export interface FormErrors {
   message?: string;
 }
 
-export interface HyperLink {
+export interface i_HyperLink {
   link: string;
   text: string;
 }
