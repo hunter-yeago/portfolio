@@ -19,10 +19,10 @@ function IntroParagraph({ data }: Props) {
 
   return (
     <section
-      className="grid grid-rows gap-4 md-custom:grid-cols-2 mx-auto max-w-[1400px] p-3 md:p-12"
+      className="grid gap-4 md:grid-cols-2 max-w-[1400px] p-3 md:p-12 mx-auto"
       aria-label="information about hunter yeago and links to his professional profiles"
     >
-      <article className="flex items-center text-center lg:text-left lg:items-start flex-col gap-8 py-6">
+      <article className="flex items-center justify-center text-center lg:text-left lg:items-start flex-col gap-4 px-10 p-6">
         <h1 className="text-3xl">{data.headline}</h1>
         {data.paragraphs.map((text: string, index: number) => (
           <p
@@ -35,9 +35,7 @@ function IntroParagraph({ data }: Props) {
       </article>
 
       {/* Charts container */}
-      <div className="space-y-6">
         <CityWideStats graphs={graphs} />
-      </div>
     </section>
   );
 }
