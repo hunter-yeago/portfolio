@@ -21,8 +21,8 @@ const config: Config = {
       },
 
       colors: {
-        surface: "#f8fafc", 
-      }
+        surface: "#f8fafc",
+      },
     },
   },
   plugins: [],

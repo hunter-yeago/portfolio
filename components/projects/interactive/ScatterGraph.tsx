@@ -299,7 +299,6 @@ export default function ScatterGraph({
         d3.select(this).transition().duration(200).attr("r", 6);
       });
 
-
     // Animation function
     const animateChart = () => {
       if (hasAnimated) return;

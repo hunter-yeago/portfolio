@@ -32,7 +32,7 @@ export default function Nav() {
         <nav className="flex gap-2 sm:gap-0 flex-col sm:flex-row items-center justify-between max-w-page mx-auto py-8">
           {/* Logo / Name */}
           <Link
-            href={(usePathname() === "/") ? "#intro" : "/"}
+            href={usePathname() === "/" ? "#intro" : "/"}
             className="font-bold text-2xl whitespace-nowrap py-1 px-2"
           >
             Hunter Yeago

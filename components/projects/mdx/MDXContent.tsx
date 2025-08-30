@@ -31,14 +31,14 @@ export default function MDXContent({ source, project }: MDXContentProps) {
   return (
     <>
       <h1 className="text-2xl font-bold">{project.title}</h1>
-      
+
       <HeroImage
         mobileImage={project.preview}
         image={{ url: project.hero.url, alt: project.hero.alt }}
       />
 
       {project.links && (
-          <LinkList items={[project.links.repo, project.links.live_site]} />
+        <LinkList items={[project.links.repo, project.links.live_site]} />
       )}
 
       <TechStackList items={project.tech_stack} useLinks />
