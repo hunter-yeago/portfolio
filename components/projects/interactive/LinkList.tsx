@@ -8,8 +8,8 @@ export interface Props {
 
 export default function LinkList({ items, showTooltips = false }: Props) {
   return (
-    <div>
-      <h2 className="text-xl mb-1 font-bold">{items[0].category}</h2>
+    <div className="flex flex-col gap-1">
+      <h2 className="text-xl font-bold">{items[0].category}</h2>
       <ul className="flex flex-wrap gap-2">
         {items.map((item, index) => (
           <li
