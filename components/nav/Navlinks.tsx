@@ -12,7 +12,7 @@ export default function NavLinks({ onClick }: Props) {
   const pathname = usePathname();
 
   const navData: NavItem[] = [
-    { name: "Projects", path: "#projects" },
+    { name: "Development", path: "#development" },
     { name: "Contact", path: "#contact" },
   ];
 
@@ -27,7 +27,7 @@ export default function NavLinks({ onClick }: Props) {
         <li key={item.name}>
           <Link
             href={buildHref(item.path)}
-            className="text-lg hover:text-gray-400 py-1 px-2"
+            className="text-lg hover:text-[#ef6d5c] py-1 px-2"
             onClick={onClick}
           >
             {item.name}

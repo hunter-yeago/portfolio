@@ -6,7 +6,8 @@ export const lettuceMeta = {
     description: [
       "Worked with fullstack development and infrastructure for over 40 restaurant websites using Next.js, WordPress, PHP, and Google Cloud.",
     ],
-    image: "/images/lettuce/preview.png",
+    image: "/images/lettuce/hero.jpg",
+    mobileImage: "/images/lettuce/hero.jpg",
   },
   hero: {
     url: "/images/lettuce/hero.jpg",

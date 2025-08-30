@@ -1,0 +1,2 @@
+# Ignore all MDX files: - running prettier on these files adds undesirable line breaks to the content
+*.mdx

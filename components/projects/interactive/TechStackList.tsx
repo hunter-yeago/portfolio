@@ -1,5 +1,6 @@
 import { TechLink } from "@/types/types";
 import LinkList from "./LinkList";
+import React from "react";
 
 interface Props {
   items: TechLink[];
@@ -40,7 +41,7 @@ export default function TechStackList({ items, useLinks }: Props) {
   const groupedItems = groupByCategory(items);
 
   return (
-    <div className="flex gap-x-10 gap-y-4 flex-wrap">
+    <div className="flex gap-x-10 gap-y-4 flex-wrap items-around h-full">
       {Object.entries(groupedItems).map(([category, categoryItems]) => {
         const TechLink = categoryItems.map((item) => ({
           name: item.name,
@@ -51,9 +52,9 @@ export default function TechStackList({ items, useLinks }: Props) {
         }));
 
         return (
-          <div key={category}>
+          <React.Fragment key={category}>
             <LinkList items={TechLink} showTooltips={true} />
-          </div>
+          </React.Fragment>
         );
       })}
     </div>

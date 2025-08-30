@@ -18,7 +18,10 @@ const config: Config = {
       },
       screens: {
         "md-custom": "900px",
-        "lg-custom": "1400px",
+      },
+
+      colors: {
+        surface: "#f8fafc",
       },
     },
   },

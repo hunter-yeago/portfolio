@@ -1,14 +1,15 @@
-import IntroParagraph from "@components/home/IntroParagraph";
-import Projects from "@/components/home/Projects";
-import { getIntroParagraph } from "@/lib/intro_paragraph";
-import ContactForm from "@/components/contact-form/ContactForm";
+import Intro from "@/components/home/Intro";
+
+import Development from "@/components/home/Development";
+import Contact from "@/components/contact-form/Contact";
+import { getIntro } from "@/lib/intro";
 
 export default function Home() {
   return (
     <main className="flex flex-col gap-8" id="main">
-      <IntroParagraph data={getIntroParagraph()} />
-      <Projects />
-      <ContactForm />
+      <Intro data={getIntro()} />
+      <Development />
+      <Contact />
     </main>
   );
 }
