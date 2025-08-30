@@ -10,6 +10,7 @@ html {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --page-max-width: 1300px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,10 +81,22 @@ html {
   line-height: 1.6;
   color: inherit;
   font-size: 1rem;
+  max-width: var(--page-max-width);
 }
 
 .mdx-container p {
   margin: 1em 0;
+}
+
+@layer base {
+  header .container,
+  section .container {
+    @apply mx-auto max-w-[var(--page-max-width)] px-8 sm:px-8 md:px-12;
+  }
+}
+
+section {
+  @apply py-8;
 }
 
 section,

@@ -3,7 +3,7 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Lora } from "next/font/google";
-import Navbar from "@/components/nav/Navbar";
+import Nav from "@/components/nav/Nav";
 import Footer from "@/components/footer/Footer";
 
 const lora = Lora({
@@ -27,7 +27,7 @@ export default function RootLayout({
       <SpeedInsights />
 
       <body>
-        <Navbar />
+        <Nav />
 
         <div className="mt-32">{children}</div>
 

@@ -8,7 +8,7 @@ import FormTextarea from "./FormTextArea";
 import { FormData, FormErrors } from "@/types/types";
 import { validateForm, submitContactForm } from "@/utils/form";
 import HoneyPot from "./HoneyPot";
-export default function ContactForm() {
+export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",

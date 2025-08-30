@@ -31,7 +31,7 @@ export default function MDXContent({ source, project }: MDXContentProps) {
     RestaurantCard,
   };
   return (
-    <main className="mx-auto mt-32">
+    <>
       <h1 className="text-2xl font-bold mt-12">{project.title}</h1>
       <HeroImage
         mobileImage={project.preview}
@@ -44,10 +44,10 @@ export default function MDXContent({ source, project }: MDXContentProps) {
         </div>
       )}
 
-      <div className="mb-8">
+      <div className="my-8">
         <TechStackList items={project.tech_stack} useLinks />
       </div>
       <MDXRemote {...source} components={components} />
-    </main>
+    </>
   );
 }
