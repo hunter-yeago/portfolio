@@ -1,7 +1,7 @@
 import Intro from "@/components/home/Intro";
 
 import Development from "@/components/home/Development";
-import Contact from "@/components/contact-form/ContactForm";
+import Contact from "@/components/contact-form/Contact";
 import { getIntro } from "@/lib/intro";
 
 export default function Home() {

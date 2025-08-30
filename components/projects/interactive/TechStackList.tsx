@@ -1,5 +1,6 @@
 import { TechLink } from "@/types/types";
 import LinkList from "./LinkList";
+import React from "react";
 
 interface Props {
   items: TechLink[];
@@ -51,9 +52,9 @@ export default function TechStackList({ items, useLinks }: Props) {
         }));
 
         return (
-          <div key={category}>
+          <React.Fragment key={category}>
             <LinkList items={TechLink} showTooltips={true} />
-          </div>
+          </React.Fragment>
         );
       })}
     </div>
