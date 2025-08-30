@@ -12,7 +12,7 @@ export default function NavLinks({ onClick }: Props) {
   const pathname = usePathname();
 
   const navData: NavItem[] = [
-    { name: "Projects", path: "#projects" },
+    { name: "Development", path: "#development" },
     { name: "Contact", path: "#contact" },
   ];
 

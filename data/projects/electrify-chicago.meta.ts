@@ -20,7 +20,7 @@ export const electrifyMeta = {
     description: [
       "Find out how much Chicago buildings pollute! This public tool helps citizens understand building emissions in the city.",
     ],
-    image: "/images/electrify-chicago/hero.png",
+    image: "/images/electrify-chicago/preview.png",
   },
   hero: {
     url: "/images/electrify-chicago/hero.png",

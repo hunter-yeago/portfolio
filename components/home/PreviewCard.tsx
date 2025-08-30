@@ -28,7 +28,7 @@ export default function PreviewCard({ project }: Props) {
 
         <div className="w-full h-60 md:h-full relative overflow-hidden">
           <Image
-            className="absolute w-full h-full object-contain"
+            className="absolute w-full h-full object-cover object-top"
             src={project.preview.image}
             alt={`${project.title} preview image`}
             width={300}
