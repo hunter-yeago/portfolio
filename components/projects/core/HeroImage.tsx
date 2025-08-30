@@ -10,9 +10,9 @@ interface Props {
 
 export default function HeroImage({ mobileImage, image }: Props) {
   return (
-    <div className="relative h-[min(50vh,600px)] overflow-hidden m">
+    <div className="relative h-[min(50vh,600px)] overflow-hidden rounded-lg shadow-lg">
       <Image
-        className="absolute top-0 h-full block sm:hidden my-8 rounded-lg shadow-lg w-full object-cover object-top"
+        className="absolute h-full block sm:hidden object-cover object-top"
         src={mobileImage.mobileImage}
         alt={mobileImage.description[0]}
         width={1200}
@@ -20,7 +20,7 @@ export default function HeroImage({ mobileImage, image }: Props) {
         priority
       />
       <Image
-        className="absolute top-0 h-full hidden sm:block my-8 rounded-lg shadow-lg w-full object-cover max-h-[700px]"
+        className="absolute h-full hidden sm:block object-cover"
         src={image.url}
         alt={image.alt}
         width={1200}

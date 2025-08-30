@@ -1,10 +1,10 @@
-<ul className="flex flex-wrap gap-x-2 gap-4 my-8">
+<ul className="flex flex-wrap gap-x-2 gap-4">
   <JumpLink id="about-the-project" text="About The Project" />
   <JumpLink id="my-contributions" text="My Contributions" />
   <JumpLink id="technical-details" text="Technical Details" />
 </ul>
 
-<Section id="about-the-project">
+<article id="about-the-project">
   <Title title="About The Project" />
   <SectionLink text="Electrify Chicago" link="https://electrifychicago.net/" /> is an independent open-source
   <SectionLink text="Chi Hack Night" link="https://chihacknight.org/" /> project led by <SectionLink text="Viktor Köves" link="https://viktorkoves.com/" />
@@ -83,9 +83,9 @@
     />
 
   </div>
-</Section>
+</article>
 
-<Section id="my-contributions">
+<article id="my-contributions">
   <Title title="My Contributions - Citywide Stats" />
   I created a <SectionLink text="city wide stats" link="https://github.com/vkoves/electrify-chicago/pull/192" /> 
   page, which gives a year over year analysis of the greenhouse gas emissions
@@ -103,20 +103,20 @@
       },
     ]}
   />
-</Section>
+</article>
 
-<Section id="next-steps">
+<article id="next-steps">
   <Title title="Next Steps" />
   The current version only does all buildings but the next step is to make it so
   that it can be broken down by building type (mixed residential, healthcare,
   College, Data Center, etc). Once setting up the Pandas data pipeline, I sent
   that over to my graphs I made in D3 and rendered them to the screen!
-</Section>
+</article>
 
-<Section id="technical-details">
+<article id="technical-details">
   <Title title="Technical Details" />
   The frontend is built in VueJS, and uses a Jamstack framework called Gridsome.
   Data is collected from the <SectionLink
     text="Chicago Data Portal"
     link="https://data.cityofchicago.org/" /> and is sent through a Python / Pandas data pipeline.
-</Section>
+</article>

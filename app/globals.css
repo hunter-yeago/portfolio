@@ -90,7 +90,8 @@ html {
 
 @layer base {
   header .container,
-  section .container {
+  section .container,
+  .mdx-container {
     @apply mx-auto max-w-[var(--page-max-width)] px-8 sm:px-8 md:px-12;
   }
 }

@@ -14,10 +14,10 @@ export default function PreviewCard({ project }: Props) {
       aria-label={`learn about my work on the ${project.title} project`}
       href={`/projects/${project.slug}`}
     >
-      <div className="flex flex-col gap-2">
-        <h2 className="text-xl font-bold">
-          {project.title}
-          <div className="text-gray-500"> {project.type}</div>
+      <div className="flex flex-col gap-3">
+        <h2 className="font-bold">
+          <span className="text-2xl">{project.title}</span>
+          <div className="text-xl text-gray-500"> {project.type}</div>
         </h2>
 
         <div className="flex flex-col gap-1">
@@ -26,9 +26,9 @@ export default function PreviewCard({ project }: Props) {
           ))}
         </div>
 
-        <div className="w-full h-60 md:h-full relative overflow-hidden">
+        <div className="w-full min-h-80 md:h-full relative overflow-hidden">
           <Image
-            className="absolute w-full h-full object-cover object-top"
+            className="absolute w-full h-full object-cover"
             src={project.preview.image}
             alt={`${project.title} preview image`}
             width={300}
