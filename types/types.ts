@@ -36,6 +36,7 @@ export interface TechLink {
 export interface i_ProjectPreview {
   description: string[];
   image: string;
+  mobileImage: string;
 }
 
 export interface ProjectLinks {

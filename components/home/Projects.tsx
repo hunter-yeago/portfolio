@@ -13,7 +13,9 @@ export default function Development() {
     >
       <div className="max-w-[1400px]">
         <h2 className="text-3xl text-center font-bold mb-4">Development</h2>
-        <p className="text-center">say a little bit more about something here would be good</p>
+        <p className="text-center">
+          say a little bit more about something here would be good
+        </p>
         <div className="grid gap-8 pt-8">
           {projects.map((project) => (
             <PreviewCard key={project.slug} project={project} />

@@ -35,7 +35,7 @@ function IntroParagraph({ data }: Props) {
       </article>
 
       {/* Charts container */}
-        <CityWideStats graphs={graphs} />
+      <CityWideStats graphs={graphs} />
     </section>
   );
 }

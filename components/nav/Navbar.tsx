@@ -28,7 +28,7 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <nav className="flex items-center justify-between max-w-5xl mx-auto px-12 py-8">
+      <nav className="flex gap-2 sm:gap-0 flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto px-12 py-8">
         {/* Logo / Name */}
         <Link
           href="/"

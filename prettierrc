@@ -1,13 +1,13 @@
 {
   "plugins": [
     "prettier-plugin-tailwindcss"
-  ],
+  ],  
   "printWidth": 80,
   "overrides": [
     {
       "files": "*.json",
       "options": {
-        "printWidth": 120
+        "printWidth": 140
       }
     }
   ]

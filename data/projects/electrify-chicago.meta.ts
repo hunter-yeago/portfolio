@@ -21,6 +21,7 @@ export const electrifyMeta = {
       "Find out how much Chicago buildings pollute! This public tool helps citizens understand building emissions in the city.",
     ],
     image: "/images/electrify-chicago/preview.png",
+    mobileImage: "/images/electrify-chicago/mobile-preview.png",
   },
   hero: {
     url: "/images/electrify-chicago/hero.png",
