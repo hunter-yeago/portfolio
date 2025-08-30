@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import NavLinks from "./Navlinks";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function Navbar() {
       <nav className="flex gap-2 sm:gap-0 flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto px-12 py-8">
         {/* Logo / Name */}
         <Link
-          href="/"
+          href={(usePathname() === "/") ? "#intro" : "/"}
           className="font-bold text-2xl whitespace-nowrap py-1 px-2"
         >
           Hunter Yeago

@@ -7,7 +7,7 @@ interface Props {
   data: IntroParagraphData;
 }
 
-function IntroParagraph({ data }: Props) {
+function Intro({ data }: Props) {
   const graphs = [
     {
       title: "Chicago Median GHG Emissions",
@@ -21,6 +21,7 @@ function IntroParagraph({ data }: Props) {
     <section
       className="grid gap-4 md:grid-cols-2 max-w-[1400px] p-3 md:p-12 mx-auto"
       aria-label="information about hunter yeago and links to his professional profiles"
+      id="intro"
     >
       <article className="flex items-center justify-center text-center lg:text-left lg:items-start flex-col gap-4 px-10 p-6">
         <h1 className="text-3xl">{data.headline}</h1>
@@ -40,4 +41,4 @@ function IntroParagraph({ data }: Props) {
   );
 }
 
-export default IntroParagraph;
+export default Intro;

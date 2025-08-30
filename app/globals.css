@@ -85,3 +85,8 @@ html {
 .mdx-container p {
   margin: 1em 0;
 }
+
+section,
+article {
+  scroll-margin-top: 12rem;
+}

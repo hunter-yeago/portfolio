@@ -69,7 +69,7 @@ export default function ContactForm() {
 
   return (
     <section
-      className="flex flex-col px-4 md:px-16 gap-4 w-[min(900px,100%)] mx-auto items-center scroll-mt-12"
+      className="flex flex-col px-4 md:px-16 gap-4 w-[min(900px,100%)] mx-auto items-center"
       id="contact"
     >
       <h2 className="text-3xl">Contact</h2>

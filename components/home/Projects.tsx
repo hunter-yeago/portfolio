@@ -8,7 +8,7 @@ export default function Development() {
 
   return (
     <section
-      className="flex flex-col px-4 md:px-16 py-12 gap-4 pt-12 bg-gray-50 justify-center items-center scroll-mt-36"
+      className="flex flex-col px-4 md:px-16 py-12 gap-4 pt-12 bg-gray-50 justify-center items-center"
       id="development"
     >
       <div className="max-w-[1400px]">

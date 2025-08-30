@@ -37,7 +37,6 @@ export default function ScatterGraph({
   animationDuration = 800,
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [loading, setLoading] = useState(true);
   const [hasAnimated, setHasAnimated] = useState(false);
   const intersectionObserverRef = useRef<IntersectionObserver | null>(null);
 
@@ -67,7 +66,6 @@ export default function ScatterGraph({
   useEffect(() => {
     if (!containerRef.current || !sortedData.length) return;
 
-    setLoading(true);
     setHasAnimated(false);
 
     const container = d3.select(containerRef.current);
@@ -301,7 +299,6 @@ export default function ScatterGraph({
         d3.select(this).transition().duration(200).attr("r", 6);
       });
 
-    setLoading(false);
 
     // Animation function
     const animateChart = () => {
@@ -387,12 +384,7 @@ export default function ScatterGraph({
   ]);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto p-4">
-      {/* {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 rounded-xl z-10">
-          <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin"></div>
-        </div>
-      )} */}
+    <div className="relative w-full max-w-5xl mx-auto py-4">
       <div
         ref={containerRef}
         className="w-full min-h-[400px] relative"
